@@ -28,7 +28,7 @@ Window  {
         PageController.closeWindow()
     }
 
-    title: "AmneziaVPN"
+    title: "PotokVPN"
 
     StackViewType {
         id: rootStackView

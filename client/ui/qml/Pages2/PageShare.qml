@@ -78,7 +78,7 @@ PageType {
             }
             case PageShare.ConfigType.ShadowSocks: {
                 ExportController.generateShadowSocksConfig()
-                shareConnectionDrawer.configCaption = qsTr("Save Shadowsocks config")
+                shareConnectionDrawer.configCaption = qsTr("Save ShadowSocks config")
                 shareConnectionDrawer.configExtension = ".json"
                 shareConnectionDrawer.configFileName = "amnezia_for_shadowsocks"
                 break
@@ -118,7 +118,7 @@ PageType {
 
     QtObject {
         id: amneziaConnectionFormat
-        property string name: qsTr("For the AmneziaVPN app")
+        property string name: qsTr("For the PotokVPN app")
         property var type: PageShare.ConfigType.AmneziaConnection
     }
     QtObject {
@@ -138,7 +138,7 @@ PageType {
     }
     QtObject {
         id: shadowSocksConnectionFormat
-        property string name: qsTr("Shadowsocks native format")
+        property string name: qsTr("ShadowSocks native format")
         property var type: PageShare.ConfigType.ShadowSocks
     }
     QtObject {

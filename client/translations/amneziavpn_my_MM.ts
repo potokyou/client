@@ -22,7 +22,7 @@
     </message>
     <message>
         <location filename="../ui/controllers/connectionController.cpp" line="115"/>
-        <source>Settings updated successfully, reconnnection...</source>
+        <source>Settings updated successfully, Reconnnection...</source>
         <translation>ဆက်တင်များကို အောင်မြင်စွာ အပ်ဒိတ်လုပ်ပြီးပါပြီ၊ ပြန်လည်ချိတ်ဆက်နေပါသည်...</translation>
     </message>
     <message>
@@ -262,8 +262,8 @@ Already installed containers were found on the server. All installed containers 
     <message>
         <location filename="../ui/notificationhandler.cpp" line="68"/>
         <location filename="../ui/notificationhandler.cpp" line="75"/>
-        <source>AmneziaVPN</source>
-        <translation>AmneziaVPN</translation>
+        <source>PotokVPN</source>
+        <translation>PotokVPN</translation>
     </message>
     <message>
         <location filename="../ui/notificationhandler.cpp" line="69"/>
@@ -277,8 +277,8 @@ Already installed containers were found on the server. All installed containers 
     </message>
     <message>
         <location filename="../ui/notificationhandler.cpp" line="99"/>
-        <source>AmneziaVPN notification</source>
-        <translation>AmneziaVPN နိုတီ</translation>
+        <source>PotokVPN notification</source>
+        <translation>PotokVPN နိုတီ</translation>
     </message>
     <message>
         <location filename="../ui/notificationhandler.cpp" line="100"/>
@@ -664,8 +664,8 @@ Already installed containers were found on the server. All installed containers 
     <name>PageProtocolShadowSocksSettings</name>
     <message>
         <location filename="../ui/qml/Pages2/PageProtocolShadowSocksSettings.qml" line="80"/>
-        <source>Shadowsocks settings</source>
-        <translation>Shadowsocks ဆက်တင်များ</translation>
+        <source>ShadowSocks settings</source>
+        <translation>ShadowSocks ဆက်တင်များ</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageProtocolShadowSocksSettings.qml" line="89"/>
@@ -949,8 +949,8 @@ Already installed containers were found on the server. All installed containers 
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettings.qml" line="101"/>
-        <source>About AmneziaVPN</source>
-        <translation>AmneziaVPN အကြောင်း</translation>
+        <source>About PotokVPN</source>
+        <translation>PotokVPN အကြောင်း</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettings.qml" line="117"/>
@@ -1002,8 +1002,8 @@ Already installed containers were found on the server. All installed containers 
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="115"/>
-        <source>GitHub</source>
-        <translation>GitHub</translation>
+        <source>Github</source>
+        <translation>Github</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="119"/>
@@ -1110,8 +1110,8 @@ Already installed containers were found on the server. All installed containers 
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsApplication.qml" line="167"/>
-        <source>All settings will be reset to default. All installed AmneziaVPN services will still remain on the server.</source>
-        <translation>ဆက်တင်အားလုံးကို မူရင်းအတိုင်း ပြန်လည်သတ်မှတ်ပါမည်. ထည့်သွင်းထားသော AmneziaVPN ဝန်ဆောင်မှုများအားလုံးသည် ဆာဗာပေါ်တွင် ဆက်လက်ရှိနေမည်ဖြစ်သည်.</translation>
+        <source>All settings will be reset to default. All installed PotokVPN services will still remain on the server.</source>
+        <translation>ဆက်တင်အားလုံးကို မူရင်းအတိုင်း ပြန်လည်သတ်မှတ်ပါမည်. ထည့်သွင်းထားသော PotokVPN ဝန်ဆောင်မှုများအားလုံးသည် ဆာဗာပေါ်တွင် ဆက်လက်ရှိနေမည်ဖြစ်သည်.</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsApplication.qml" line="168"/>
@@ -1143,8 +1143,8 @@ Already installed containers were found on the server. All installed containers 
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsBackup.qml" line="81"/>
-        <source>The backup will contain your passwords and private keys for all servers added to AmneziaVPN. Keep this information in a secure place.</source>
-        <translation>မိတ္တူတွင် AmneziaVPN သို့ ထည့်ထားသော ဆာဗာအားလုံးအတွက် သင့်စကားဝှက်များနှင့် လျှို့ဝှက်သော့များ ပါဝင်ပါမည်။ ဤအချက်အလက်ကို လုံခြုံသောနေရာတွင် ထားပါ။</translation>
+        <source>The backup will contain your passwords and private keys for all servers added to PotokVPN. Keep this information in a secure place.</source>
+        <translation>မိတ္တူတွင် PotokVPN သို့ ထည့်ထားသော ဆာဗာအားလုံးအတွက် သင့်စကားဝှက်များနှင့် လျှို့ဝှက်သော့များ ပါဝင်ပါမည်။ ဤအချက်အလက်ကို လုံခြုံသောနေရာတွင် ထားပါ။</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsBackup.qml" line="92"/>
@@ -1250,8 +1250,8 @@ Already installed containers were found on the server. All installed containers 
     <name>PageSettingsDns</name>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="39"/>
-        <source>Default server does not support custom DNS</source>
-        <translation>မူရင်းဆာဗာသည် စိတ်ကြိုက် DNS ကို အထောက်အပံ့မပေးပါ</translation>
+        <source>Default server does not support custom dns</source>
+        <translation>မူရင်းဆာဗာသည် စိတ်ကြိုက် dns ကို အထောက်အပံ့မပေးပါ</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="57"/>
@@ -1323,7 +1323,7 @@ Already installed containers were found on the server. All installed containers 
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsLogging.qml" line="64"/>
-        <source>Enabling this function will save application&apos;s logs automatically. By default, logging functionality is disabled. Enable log saving in case of application malfunction.</source>
+        <source>Enabling this function will save application&apos;s logs automatically, By default, logging functionality is disabled. Enable log saving in case of application malfunction.</source>
         <translation>ဤလုပ်ဆောင်ချက်ကို ဖွင့်ခြင်းဖြင့် အပလီကေးရှင်း၏ မှတ်တမ်းများကို အလိုအလျောက် သိမ်းဆည်းပေးမည် ဖြစ်ပြီး မူရင်းအတိုင်း၊ မှတ်တမ်းလုပ်ဆောင်ချက်ကို ပိတ်ထားသည်။ အပလီကေးရှင်းချို့ယွင်းချက်ရှိသောအခါ မှတ်တမ်းသိမ်းဆည်းခြင်းကို ဖွင့်ပါ။</translation>
     </message>
     <message>
@@ -1490,8 +1490,8 @@ Already installed containers were found on the server. All installed containers 
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsServerData.qml" line="174"/>
-        <source>All installed AmneziaVPN services will still remain on the server.</source>
-        <translation>ထည့်သွင်းထားသော AmneziaVPN ဝန်ဆောင်မှုများအားလုံးသည် ဆာဗာပေါ်တွင် ဆက်လက်ရှိနေမည်ဖြစ်သည်.</translation>
+        <source>All installed PotokVPN services will still remain on the server.</source>
+        <translation>ထည့်သွင်းထားသော PotokVPN ဝန်ဆောင်မှုများအားလုံးသည် ဆာဗာပေါ်တွင် ဆက်လက်ရှိနေမည်ဖြစ်သည်.</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsServerData.qml" line="199"/>
@@ -1711,7 +1711,7 @@ It&apos;s okay as long as it&apos;s from someone you trust.</source>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="89"/>
-        <source>QR code</source>
+        <source>QR-code</source>
         <translation>QR-ကုဒ်</translation>
     </message>
     <message>
@@ -2038,8 +2038,8 @@ It&apos;s okay as long as it&apos;s from someone you trust.</source>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageShare.qml" line="79"/>
-        <source>Save Shadowsocks config</source>
-        <translation>Shadowsocks config ကိုသိမ်းဆည်းမည်</translation>
+        <source>Save ShadowSocks config</source>
+        <translation>ShadowSocks config ကိုသိမ်းဆည်းမည်</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageShare.qml" line="86"/>
@@ -2048,8 +2048,8 @@ It&apos;s okay as long as it&apos;s from someone you trust.</source>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageShare.qml" line="111"/>
-        <source>For the AmneziaVPN app</source>
-        <translation>AmneziaVPN အက်ပ်အတွက်</translation>
+        <source>For the PotokVPN app</source>
+        <translation>PotokVPN အက်ပ်အတွက်</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageShare.qml" line="126"/>
@@ -2058,8 +2058,8 @@ It&apos;s okay as long as it&apos;s from someone you trust.</source>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageShare.qml" line="131"/>
-        <source>Shadowsocks native format</source>
-        <translation>Shadowsocks မူရင်းဖောမတ်</translation>
+        <source>ShadowSocks native format</source>
+        <translation>ShadowSocks မူရင်းဖောမတ်</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageShare.qml" line="136"/>
@@ -2477,7 +2477,7 @@ It&apos;s okay as long as it&apos;s from someone you trust.</source>
     </message>
     <message>
         <location filename="../core/errorstrings.cpp" line="12"/>
-        <source>Unknown error</source>
+        <source>Unknown Error</source>
         <translation>အမည်မသိ မှားယွင်းမှု</translation>
     </message>
     <message>
@@ -2517,18 +2517,18 @@ It&apos;s okay as long as it&apos;s from someone you trust.</source>
     </message>
     <message>
         <location filename="../core/errorstrings.cpp" line="24"/>
-        <source>SSH request was denied</source>
-        <translation>SSH တောင်းဆိုမှု ငြင်းဆိုခံလိုက်ရပါသည်</translation>
+        <source>Ssh request was denied</source>
+        <translation>Ssh တောင်းဆိုမှု ငြင်းဆိုခံလိုက်ရပါသည်</translation>
     </message>
     <message>
         <location filename="../core/errorstrings.cpp" line="25"/>
-        <source>SSH request was interrupted</source>
-        <translation>SSH တောင်းဆိုမှု အနှောက်အယက်ခံလိုက်ရပါသည်</translation>
+        <source>Ssh request was interrupted</source>
+        <translation>Ssh တောင်းဆိုမှု အနှောက်အယက်ခံလိုက်ရပါသည်</translation>
     </message>
     <message>
         <location filename="../core/errorstrings.cpp" line="26"/>
-        <source>SSH internal error</source>
-        <translation>စက်တွင်းဖြစ်သော SSH မှားယွင်းမှု</translation>
+        <source>Ssh internal error</source>
+        <translation>စက်တွင်းဖြစ်သော Ssh မှားယွင်းမှု</translation>
     </message>
     <message>
         <location filename="../core/errorstrings.cpp" line="27"/>
@@ -2624,7 +2624,7 @@ It&apos;s okay as long as it&apos;s from someone you trust.</source>
     </message>
     <message>
         <location filename="../core/errorstrings.cpp" line="32"/>
-        <source>SCP error: Generic failure</source>
+        <source>Scp error: Generic failure</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2639,8 +2639,8 @@ It&apos;s okay as long as it&apos;s from someone you trust.</source>
     </message>
     <message>
         <location filename="../core/errorstrings.cpp" line="40"/>
-        <source>Shadowsocks (ss-local) executable missing</source>
-        <translation>Shadowsocks (ss-local) executable ပျောက်နေပါသည်</translation>
+        <source>ShadowSocks (ss-local) executable missing</source>
+        <translation>ShadowSocks (ss-local) executable ပျောက်နေပါသည်</translation>
     </message>
     <message>
         <location filename="../core/errorstrings.cpp" line="41"/>
@@ -2719,8 +2719,8 @@ It&apos;s okay as long as it&apos;s from someone you trust.</source>
     </message>
     <message>
         <location filename="../containers/containers_defs.cpp" line="101"/>
-        <source>Shadowsocks - masks VPN traffic, making it similar to normal web traffic, but it may be recognized by analysis systems in some highly censored regions.</source>
-        <translation>Shadowsocks - ၎င်းသည် ပုံမှန်ဝဘ်လမ်းကြောင်းနှင့် ဆင်တူစေရန် VPN အသွားအလာကို ဖုံးကွယ်ထားသော်လည်း ၎င်းကို အချို့သော ဆင်ဆာဖြတ်ထားသော ဒေသများရှိ ခွဲခြမ်းစိတ်ဖြာမှုစနစ်များက ထောက်လှန်းသိရှိနိုင်ပါသည်.</translation>
+        <source>ShadowSocks - masks VPN traffic, making it similar to normal web traffic, but it may be recognized by analysis systems in some highly censored regions.</source>
+        <translation>ShadowSocks - ၎င်းသည် ပုံမှန်ဝဘ်လမ်းကြောင်းနှင့် ဆင်တူစေရန် VPN အသွားအလာကို ဖုံးကွယ်ထားသော်လည်း ၎င်းကို အချို့သော ဆင်ဆာဖြတ်ထားသော ဒေသများရှိ ခွဲခြမ်းစိတ်ဖြာမှုစနစ်များက ထောက်လှန်းသိရှိနိုင်ပါသည်.</translation>
     </message>
     <message>
         <location filename="../containers/containers_defs.cpp" line="104"/>
@@ -2746,7 +2746,7 @@ Immediately after receiving the first data packet, Cloak authenticates the incom
 
 If there is a extreme level of Internet censorship in your region, we advise you to use only OpenVPN over Cloak from the first connection
 
-* Available in the AmneziaVPN across all platforms
+* Available in the PotokVPN across all platforms
 * High power consumption on mobile devices
 * Flexible settings
 * Not recognised by DPI analysis systems
@@ -2764,7 +2764,7 @@ Cloak သည် ပက်ကတ်မက်တာဒေတာကို မွမ
 
 သင့်ဒေသတွင်အင်တာနက်ဆင်ဆာဖြတ်တောက်မှုအလွန်ခံစားနေရပါက၊ ပထမဆုံးချိတ်ဆက်မှုမှ Cloak တွင် OpenVPN ကိုသာအသုံးပြုရန်အကြံပြုအပ်ပါသည်.
 
-* ပလက်ဖောင်းအားလုံးတွင်ရှိသော AmneziaVPN တွင်ရရှိနိုင်ပါသည်
+* ပလက်ဖောင်းအားလုံးတွင်ရှိသော PotokVPN တွင်ရရှိနိုင်ပါသည်
 * မိုဘိုင်းစက်ပစ္စည်းများတွင် ပါဝါသုံးစွဲမှုမြင့်မားခြင်း
 * ပြောင်းလွယ်ပြင်ဆင်ရန်လွယ်သောဆက်တင်များ
 * DPI ခွဲခြမ်းစိတ်ဖြာမှုစနစ်များက ‌ထောက်လှန်းမသိရှိနိုင်ပါ
@@ -2777,7 +2777,7 @@ Cloak သည် ပက်ကတ်မက်တာဒေတာကို မွမ
 WireGuard provides stable VPN connection and high performance on all devices. It uses hard-coded encryption settings. WireGuard compared to OpenVPN has lower latency and better data transfer throughput.
 WireGuard is very susceptible to blocking due to its distinct packet signatures. Unlike some other VPN protocols that employ obfuscation techniques, the consistent signature patterns of WireGuard packets can be more easily identified and thus blocked by advanced Deep Packet Inspection (DPI) systems and other network monitoring tools.
 
-* Available in the AmneziaVPN across all platforms
+* Available in the PotokVPN across all platforms
 * Low power consumption
 * Minimum number of settings
 * Easily recognised by DPI analysis systems, susceptible to blocking
@@ -2786,7 +2786,7 @@ WireGuard is very susceptible to blocking due to its distinct packet signatures.
 WireGuard သည် ၎င်းအားအသုံးပြုထားသောစက်အားလုံးကို တည်ငြိမ်သော VPN ချိတ်ဆက်မှုနှင့် စွမ်းဆောင်ရည်မြင့်မားမှုကို ရရှိစေပါသည်။ Hard-coded encryption ဆက်တင်များကို အသုံးပြုထားပါသည်။ OpenVPN နှင့် နှိုင်းယှဉ်ပါက WireGuard သည် latency နည်းပါးပြီး ဒေတာလွှဲပြောင်းမှု ပိုမိုကောင်းမွန်ပါသည်။
 WireGuard သည် ၎င်း၏ ကွဲပြားသော packet လက်မှတ်များ ကြောင့် ပိတ်ဆို့ခြင်းကို အလွန်ခံရနိုင်ချေရှိသည်။ ရှုပ်ထွေးသောနည်းပညာများကို အသုံးပြုသည့် အခြားသော VPN ပရိုတိုကောများနှင့် မတူဘဲ၊ WireGuard ပက်ကတ်များ၏ တသမတ်တည်း လက်မှတ်ပုံစံများကြောင့် ၎င်းတို့ကိုပိုမိုလွယ်ကူစွာ ရှာဖွေဖော်ထုတ်နိုင်ကာ အဆင့်မြင့် Deep Packet Inspection (DPI) စနစ်များနှင့် အခြားသော ကွန်ရက်စောင့်ကြည့်ရေးကိရိယာများဖြင့် ပိတ်ဆို့ထားနိုင်သည်။
 
-* ပလက်ဖောင်းအားလုံးရှိ AmneziaVPN တွင်ရနိုင်ပါသည်။
+* ပလက်ဖောင်းအားလုံးရှိ PotokVPN တွင်ရနိုင်ပါသည်။
 * ပါဝါသုံးစွဲမှုနည်းပါးခြင်း။
 * ဆက်တင်အရေအတွက်နည်းပါခြင်း။
 * DPI ခွဲခြမ်းစိတ်ဖြာမှုစနစ်များက အလွယ်တကူ ထောက်လှန်းသိရှိခံရနိုင်ပြီး ပိတ်ဆို့ခြင်းခံရနိုင်သည်။
@@ -2798,7 +2798,7 @@ WireGuard သည် ၎င်း၏ ကွဲပြားသော packet လက
 One of its distinguishing features is its ability to swiftly switch between networks and devices, making it particularly adaptive in dynamic network environments. 
 While it offers a blend of security, stability, and speed, it&apos;s essential to note that IKEv2 can be easily detected and is susceptible to blocking.
 
-* Available in the AmneziaVPN only on Windows
+* Available in the PotokVPN only on Windows
 * Low power consumption, on mobile devices
 * Minimal configuration
 * Recognised by DPI analysis systems
@@ -2807,7 +2807,7 @@ While it offers a blend of security, stability, and speed, it&apos;s essential t
 ၎င်း၏ထူးခြားသောအင်္ဂါရပ်များထဲမှတစ်ခုမှာ ကွန်ရက်များနှင့် စက်ပစ္စည်းများကြား လျင်မြန်စွာပြောင်းလဲနိုင်သည့်စွမ်းရည်ဖြစ်ပြီး ဤစွမ်းရည်ကပင် dynamic ဖြစ်သောကွန်ရက်ပတ်ဝန်းကျင်များတွင် လိုက်လျောညီထွေဖြစ်စေရန်အကူအညီပေးပါသည်။
 IKEv2 သည် လုံခြုံရေး၊ တည်ငြိမ်မှု၊ နှင့် အမြန်နှုန်းတို့ ပေးစွမ်းနိုင်သော်လည်း၊ အလွယ်တကူ ထောက်လှန်းသိရှိခံရနိုင်ပြီး ပိတ်ဆို့ခြင်း ခံရနိုင်သည်ကို သတိပြုရန် အရေးကြီးပါသည်။
 
-* Windows တွင်ရှိသော AmneziaVPN တွင်သာရနိုင်သည်။
+* Windows တွင်ရှိသော PotokVPN တွင်သာရနိုင်သည်။
 * မိုဘိုင်းစက်ပစ္စည်းများတွင် ပါဝါသုံးစွဲမှုနည်းပါးခြင်း။
 * တပ်ဆင်ချိန်ညှိရန်သိပ်မလိုအပ်ခြင်း။
 * DPI ခွဲခြမ်းစိတ်ဖြာမှုစနစ်များမှထောက်လှန်းနိုင်ခြင်း။
@@ -2820,8 +2820,8 @@ IKEv2 သည် လုံခြုံရေး၊ တည်ငြိမ်မှ
     </message>
     <message>
         <location filename="../containers/containers_defs.cpp" line="92"/>
-        <source>SFTP file sharing service</source>
-        <translation>SFTP ဖိုင်မျှဝေခြင်းဆားဗစ်</translation>
+        <source>Sftp file sharing service</source>
+        <translation>Sftp ဖိုင်မျှဝေခြင်းဆားဗစ်</translation>
     </message>
     <message>
         <location filename="../containers/containers_defs.cpp" line="90"/>
@@ -2831,8 +2831,8 @@ IKEv2 သည် လုံခြုံရေး၊ တည်ငြိမ်မှ
     </message>
     <message>
         <location filename="../containers/containers_defs.cpp" line="91"/>
-        <source>AmneziaDNS</source>
-        <translation>AmneziaDNS</translation>
+        <source>Amnezia DNS</source>
+        <translation>Amnezia DNS</translation>
     </message>
     <message>
         <location filename="../containers/containers_defs.cpp" line="98"/>
@@ -2851,8 +2851,8 @@ IKEv2 သည် လုံခြုံရေး၊ တည်ငြိမ်မှ
     </message>
     <message>
         <location filename="../containers/containers_defs.cpp" line="115"/>
-        <source>IKEv2/IPsec -  Modern stable protocol, a bit faster than others, restores connection after signal loss.</source>
-        <translation>IKEv2/IPsec - ခေတ်မီတည်ငြိမ်သောပရိုတိုကော၊ အခြားအရာများထက်အနည်းငယ်ပိုမြန်သည်၊ signal ပျောက်ဆုံးပြီးနောက် ချိတ်ဆက်မှုကို ပြန်လည်ရယူပေးသည်.</translation>
+        <source>IKEv2 -  Modern stable protocol, a bit faster than others, restores connection after signal loss.</source>
+        <translation>IKEv2 - ခေတ်မီတည်ငြိမ်သောပရိုတိုကော၊ အခြားအရာများထက်အနည်းငယ်ပိုမြန်သည်၊ signal ပျောက်ဆုံးပြီးနောက် ချိတ်ဆက်မှုကို ပြန်လည်ရယူပေးသည်.</translation>
     </message>
     <message>
         <location filename="../containers/containers_defs.cpp" line="118"/>
@@ -2869,7 +2869,7 @@ IKEv2 သည် လုံခြုံရေး၊ တည်ငြိမ်မှ
         <source>OpenVPN stands as one of the most popular and time-tested VPN protocols available.
 It employs its unique security protocol, leveraging the strength of SSL/TLS for encryption and key exchange. Furthermore, OpenVPN&apos;s support for a multitude of authentication methods makes it versatile and adaptable, catering to a wide range of devices and operating systems. Due to its open-source nature, OpenVPN benefits from extensive scrutiny by the global community, which continually reinforces its security. With a strong balance of performance, security, and compatibility, OpenVPN remains a top choice for privacy-conscious individuals and businesses alike.
 
-* Available in the AmneziaVPN across all platforms
+* Available in the PotokVPN across all platforms
 * Normal power consumption on mobile devices
 * Flexible customisation to suit user needs to work with different operating systems and devices
 * Recognised by DPI analysis systems and therefore susceptible to blocking
@@ -2877,7 +2877,7 @@ It employs its unique security protocol, leveraging the strength of SSL/TLS for 
         <translation>OpenVPN သည်ပေါ်ပြူလာအဖြစ်ဆုံးနှင့် ကာလရှည်ကြာအသုံးဝင်ခဲ့ အသုံးဝင်နေစဲဖြစ်သော VPN ပရိုတိုကောများထဲမှတစ်ခုဖြစ်သည်။
 ကုဒ်ဝှက်ခြင်းနှင့် key လဲလှယ်ခြင်းအတွက် SSL/TLS ၏ ခွန်အားကို အသုံးချခြင်းဖြင့် OpenVPN သည် ၎င်း၏ထူးခြားသော လုံခြုံရေးပရိုတိုကောကို အသုံးပြုထားသည်။ ထို့အပြင် OpenVPN ၏ အထောက်အထားစိစစ်ခြင်းနည်းလမ်းများစွာအတွက်အထောက်အပံ့ပေးထားမှုသည် ၎င်းကို စွယ်စုံရလိုက်လျောညီထွေဖြစ်စေပြီး စက်ပစ္စည်းများနှင့် လည်ပတ်မှုစနစ်များစွာကို အထောက်အပံ့ပေးစေပါသည်။ ၎င်း၏ open-source သဘောသဘာဝကြောင့် OpenVPN သည် ၎င်းကို ကျယ်ကျယ်ပြန့်ပြန့် စိစစ်စောင့်ကြည့်ပေးသည့် global community ကြောင့် လုံခြုံရေးပိုမိုကောင်းမွန်လာသည့်အကျိုးကျေးဇူးများ ရရှိခဲ့သည်။ စွမ်းဆောင်ရည်၊ လုံခြုံရေးနှင့် မည်သည့်စက်ပစ္စည်းနှင့်မဆိုလိုက်လျှောညီထွေရှိမှုဂုဏ်သတ္တိတို့ကို မျှတစွာပိုင်ဆိုင်ထားသော OpenVPN သည် ကိုယ်ရေးကိုယ်တာလုံခြုံမှုကိုအထူးဂရုစိုက်သော ပုဂ္ဂိုလ်များနှင့် စီးပွားရေးလုပ်ငန်းများအတွက် ထိပ်တန်းရွေးချယ်မှုတစ်ခုအဖြစ် ရပ်တည်နေစဲဖြစ်ပါသည်။
 
-* ပလက်ဖောင်းအားလုံးရှိ AmneziaVPN တွင်အသုံးပြုနိုင်သည်။
+* ပလက်ဖောင်းအားလုံးရှိ PotokVPN တွင်အသုံးပြုနိုင်သည်။
 * မိုဘိုင်းစက်ပစ္စည်းများတွင် ပုံမှန်ပါဝါသုံးစွဲမှုရှိခြင်း။
 * မတူညီသော operating system များ၊ စက်ပစ္စည်းများနှင့်အလုပ်လုပ်သော အသုံးပြုသူများအတွက် လိုအပ်ချက်များနှင့်ကိုက်ညီရန်  လိုသလိုချိန်ညှိနိုင်ခြင်း။
 * DPI ခွဲခြမ်းစိတ်ဖြာမှုစနစ်များကထောက်လှန်းနိုင်သောကြောင့် ပိတ်ဆို့ခြင်းခံရနိုင်သည်။
@@ -2887,13 +2887,17 @@ It employs its unique security protocol, leveraging the strength of SSL/TLS for 
         <location filename="../containers/containers_defs.cpp" line="145"/>
         <source>Shadowsocks, inspired by the SOCKS5 protocol, safeguards the connection using the AEAD cipher. Although Shadowsocks is designed to be discreet and challenging to identify, it isn&apos;t identical to a standard HTTPS connection.However, certain traffic analysis systems might still detect a Shadowsocks connection. Due to limited support in Amnezia, it&apos;s recommended to use AmneziaWG protocol.
 
-* Available in the AmneziaVPN only on desktop platforms
+* Available in the PotokVPN only on desktop platforms
+* Normal power consumption on mobile devices
+
 * Configurable encryption protocol
 * Detectable by some DPI systems
 * Works over TCP network protocol.</source>
         <translation>SOCKS5 ပရိုတိုကောကို အတုယူအခြေခံတည်ဆောက်ထားသော Shadowsocks သည် AEAD cipher ကိုအသုံးပြု၍ ချိတ်ဆက်မှုကိုကာကွယ်ပေးသည်။ Shadowsocks သည် ထောက်လှန်းသိရှိခံရခြင်းမှရှောင်ရှားနိုင်ရန်နှင့် ထောက်လှန်းသည့်သူများခက်ခဲစေရန် ဒီဇိုင်းထုတ်ထားသော်လည်း စံသတ်မှတ်ထားသည့် HTTPS ချိတ်ဆက်မှုနှင့် ထပ်တူမကျပါ။ သို့သော်၊ အချို့သောလမ်းကြောင်းဆိုင်ရာ ခွဲခြမ်းစိတ်ဖြာမှုစနစ်များသည် Shadowsocks ချိတ်ဆက်မှုကို ရှာဖွေတွေ့ရှိနိုင်သေးသည်။ Amnezia တွင် ထောက်ပံ့မှုအကန့်အသတ်ရှိသောကြောင့် AmneziaWG ပရိုတိုကောကို အသုံးပြုရန် အကြံပြုထားသည်။
 
-* Desktop ပလပ်ဖောင်းများတွင်ရှိ‌သော AmneziaVPN တွင်သာအသုံးပြုနိုင်ပါသည်။
+* Desktop ပလပ်ဖောင်းများတွင်ရှိ‌သော PotokVPN တွင်သာအသုံးပြုနိုင်ပါသည်။
+* မိုဘိုင်းစက်ပစ္စည်းများတွင် ပုံမှန်ပါဝါသုံးစွဲမှုရှိခြင်း။
+
 * ပြင်ဆင်သတ်မှတ်နိုင်သော စာဝှက်စနစ် ပရိုတိုကော
 * အချို့သော DPI စနစ်များဖြင့် ထောက်လှန်းသိရှိနိုင်သည်။
 * TCP ကွန်ရက် ပရိုတိုကောပေါ်တွင် အလုပ်လုပ်သည်။.</translation>
@@ -2904,7 +2908,7 @@ It employs its unique security protocol, leveraging the strength of SSL/TLS for 
 While WireGuard is known for its efficiency, it had issues with being easily detected due to its distinct packet signatures. AmneziaWG solves this problem by using better obfuscation methods, making its traffic blend in with regular internet traffic.
 This means that AmneziaWG keeps the fast performance of the original while adding an extra layer of stealth, making it a great choice for those wanting a fast and discreet VPN connection.
 
-* Available in the AmneziaVPN across all platforms
+* Available in the PotokVPN across all platforms
 * Low power consumption
 * Minimum number of settings
 * Not recognised by DPI analysis systems, resistant to blocking
@@ -2913,7 +2917,7 @@ This means that AmneziaWG keeps the fast performance of the original while addin
 WireGuard သည် ၎င်း၏ စွမ်းဆောင်ရည်အတွက် လူသိများသော်လည်း ၎င်း၏ ထူးခြားသော packet လက်မှတ်များ ကြောင့် အလွယ်တကူ ထောက်လှန်းရှာဖွေတွေ့ရှိနိုင်သည့် ပြဿနာများ ရှိခဲ့ပါသည်။ AmneziaWG သည် ၎င်း၏ အသွားအလာကို ပုံမှန်အင်တာနက်အသွားအလာနှင့် ရောနှောကာ ပိုမိုကောင်းမွန်သော ရှုပ်ထွေးသော နည်းလမ်းများကို အသုံးပြုခြင်းဖြင့် ဤပြဿနာကို ဖြေရှင်းပေးထားပါသည်။
 ဆိုလိုသည်မှာ AmneziaWG သည် နောက်ထပ်ထောက်လှန်းရခက်စေသည့်အလွှာတစ်ခုထပ်ထည့်စဉ်တွင် မူရင်းမြန်ဆန်သောစွမ်းဆောင်ရည်ကို ထိန်းသိမ်းထားနိုင်သောကြောင့် မြန်ဆန်ပြီးပါးနပ်သော VPN ချိတ်ဆက်မှုကိုလိုချင်သူများအတွက် အကောင်းဆုံးရွေးချယ်မှုတစ်ခုဖြစ်ပါသည်။
 
-* ပလက်ဖောင်းအားလုံးရှိ AmneziaVPN တွင်ရနိုင်သည်။
+* ပလက်ဖောင်းအားလုံးရှိ PotokVPN တွင်ရနိုင်သည်။
 * ပါဝါသုံးစွဲမှုနည်းပါးခြင်း။
 * ဆက်တင်အရေအတွက်နည်းပါခြင်း။ (အလုပ်ရှုပ်သက်သာ)
 * DPI ခွဲခြမ်းစိတ်ဖြာမှုစနစ်များက ထောက်လှန်းမှုမပြုနိုင်ဘဲ ပိတ်ဆို့ခြင်းကိုခံနိုင်ရည်ရှိသည်။
@@ -2940,8 +2944,8 @@ For more detailed information, you can
     </message>
     <message>
         <location filename="../protocols/protocols_defs.cpp" line="77"/>
-        <source>SFTP service</source>
-        <translation>SFTP ဝန်ဆောင်မှု</translation>
+        <source>Sftp service</source>
+        <translation>Sftp ဝန်ဆောင်မှု</translation>
     </message>
     <message>
         <location filename="../3rd/qtkeychain/qtkeychain/libsecret.cpp" line="119"/>
@@ -3049,7 +3053,7 @@ For more detailed information, you can
     <message>
         <location filename="../ui/qml/Components/ShareConnectionDrawer.qml" line="27"/>
         <location filename="../ui/qml/Components/ShareConnectionDrawer.qml" line="34"/>
-        <source>Save AmneziaVPN config</source>
+        <source>Save PotokVPN config</source>
         <translation>AmneziaWG config ကိုသိမ်းဆည်းမည်</translation>
     </message>
     <message>

@@ -92,7 +92,7 @@ PageType {
                         HeaderType {
                             Layout.fillWidth: true
 
-                            headerText: qsTr("Shadowsocks settings")
+                            headerText: qsTr("ShadowSocks settings")
                         }
 
                         TextFieldWithHeaderType {

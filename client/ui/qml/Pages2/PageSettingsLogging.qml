@@ -66,7 +66,7 @@ disabled after 14 days, and all log files will be deleted.")
                 Layout.fillWidth: true
 
                 headerText: qsTr("Logging")
-                descriptionText: qsTr("Enabling this function will save application's logs automatically. " +
+                descriptionText: qsTr("Enabling this function will save application's logs automatically, " +
                                       "By default, logging functionality is disabled. Enable log saving in case of application malfunction.")
             }
 
@@ -137,11 +137,11 @@ disabled after 14 days, and all log files will be deleted.")
                         onClicked: {
                             var fileName = ""
                             if (GC.isMobile()) {
-                                fileName = "AmneziaVPN.log"
+                                fileName = "PotokVPN.log"
                             } else {
                                 fileName = SystemController.getFileName(qsTr("Save"),
                                                                         qsTr("Logs files (*.log)"),
-                                                                        StandardPaths.standardLocations(StandardPaths.DocumentsLocation) + "/AmneziaVPN",
+                                                                        StandardPaths.standardLocations(StandardPaths.DocumentsLocation) + "/PotokVPN",
                                                                         true,
                                                                         ".log")
                             }

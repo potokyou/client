@@ -24,14 +24,14 @@ DrawerType2 {
     property string contentVisible
 
     property string configExtension: ".vpn"
-    property string configCaption: qsTr("Save AmneziaVPN config")
+    property string configCaption: qsTr("Save PotokVPN config")
     property string configFileName: "amnezia_config"
 
     expandedHeight: parent.height * 0.9
 
     onClosed: {
         configExtension = ".vpn"
-        configCaption = qsTr("Save AmneziaVPN config")
+        configCaption = qsTr("Save PotokVPN config")
         configFileName = "amnezia_config"
     }
 

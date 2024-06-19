@@ -19,7 +19,7 @@
 #endif
 
 #ifdef Q_OS_IOS
-    #include <AmneziaVPN-Swift.h>
+    #include <PotokVPN-Swift.h>
 #endif
 
 QFile Logger::m_file;
@@ -114,7 +114,7 @@ QString Logger::getLogFile()
     QString qtLog = file.readAll();
     
 #ifdef Q_OS_IOS
-    return QString().fromStdString(AmneziaVPN::swiftUpdateLogData(qtLog.toStdString()));
+    return QString().fromStdString(PotokVPN::swiftUpdateLogData(qtLog.toStdString()));
 #else
     return qtLog;
 #endif
@@ -159,7 +159,7 @@ void Logger::clearLogs()
     file.close();
     
 #ifdef Q_OS_IOS
-    AmneziaVPN::swiftDeleteLog();
+    PotokVPN::swiftDeleteLog();
 #endif
     
     if (isLogActive) {

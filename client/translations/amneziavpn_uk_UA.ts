@@ -15,8 +15,8 @@
 <context>
     <name>AndroidController</name>
     <message>
-        <source>AmneziaVPN</source>
-        <translation type="vanished">AmneziaVPN</translation>
+        <source>PotokVPN</source>
+        <translation type="vanished">PotokVPN</translation>
     </message>
     <message>
         <source>VPN Connected</source>
@@ -86,8 +86,8 @@
     </message>
     <message>
         <location filename="../ui/controllers/connectionController.cpp" line="161"/>
-        <source>Settings updated successfully, reconnnection...</source>
-        <translation>Налаштування оновлено, підключення...</translation>
+        <source>Settings updated successfully, Reconnnection...</source>
+        <translation>Налаштування оновлено, Підключення...</translation>
     </message>
     <message>
         <location filename="../ui/controllers/connectionController.cpp" line="164"/>
@@ -347,8 +347,8 @@ Already installed containers were found on the server. All installed containers 
     <message>
         <location filename="../ui/notificationhandler.cpp" line="68"/>
         <location filename="../ui/notificationhandler.cpp" line="75"/>
-        <source>AmneziaVPN</source>
-        <translation>AmneziaVPN</translation>
+        <source>PotokVPN</source>
+        <translation>PotokVPN</translation>
     </message>
     <message>
         <location filename="../ui/notificationhandler.cpp" line="69"/>
@@ -362,8 +362,8 @@ Already installed containers were found on the server. All installed containers 
     </message>
     <message>
         <location filename="../ui/notificationhandler.cpp" line="99"/>
-        <source>AmneziaVPN notification</source>
-        <translation>Сповіщення AmneziaVPN</translation>
+        <source>PotokVPN notification</source>
+        <translation>Сповіщення PotokVPN</translation>
     </message>
     <message>
         <location filename="../ui/notificationhandler.cpp" line="100"/>
@@ -771,8 +771,8 @@ Already installed containers were found on the server. All installed containers 
     <name>PageProtocolShadowSocksSettings</name>
     <message>
         <location filename="../ui/qml/Pages2/PageProtocolShadowSocksSettings.qml" line="80"/>
-        <source>Shadowsocks settings</source>
-        <translation>Налаштування Shadowsocks</translation>
+        <source>ShadowSocks settings</source>
+        <translation>Налаштування ShadowSocks</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageProtocolShadowSocksSettings.qml" line="91"/>
@@ -1061,8 +1061,8 @@ Already installed containers were found on the server. All installed containers 
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettings.qml" line="101"/>
-        <source>About AmneziaVPN</source>
-        <translation>Про AmneziaVPN</translation>
+        <source>About PotokVPN</source>
+        <translation>Про PotokVPN</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettings.qml" line="117"/>
@@ -1138,8 +1138,8 @@ Already installed containers were found on the server. All installed containers 
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="115"/>
-        <source>GitHub</source>
-        <translation>GitHub</translation>
+        <source>Github</source>
+        <translation>Github</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="119"/>
@@ -1299,8 +1299,8 @@ Already installed containers were found on the server. All installed containers 
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsApplication.qml" line="167"/>
-        <source>All settings will be reset to default. All installed AmneziaVPN services will still remain on the server.</source>
-        <translation>Всі дані із застосунку будуть видалені, всі встановлені сервіси AmneziaVPN залишаться на сервері.</translation>
+        <source>All settings will be reset to default. All installed PotokVPN services will still remain on the server.</source>
+        <translation>Всі дані із застосунку будуть видалені, всі встановлені сервіси PotokVPN залишаться на сервері.</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsApplication.qml" line="168"/>
@@ -1340,7 +1340,7 @@ Already installed containers were found on the server. All installed containers 
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsBackup.qml" line="74"/>
-        <source>The backup will contain your passwords and private keys for all servers added to AmneziaVPN. Keep this information in a secure place.</source>
+        <source>The backup will contain your passwords and private keys for all servers added to PotokVPN. Keep this information in a secure place.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1413,7 +1413,7 @@ Already installed containers were found on the server. All installed containers 
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsConnection.qml" line="50"/>
         <source>Use AmneziaDNS</source>
-        <translation>Використовувати AmneziaDNS</translation>
+        <translation>Використовувати Amnezia DNS</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsConnection.qml" line="51"/>
@@ -1459,7 +1459,7 @@ Already installed containers were found on the server. All installed containers 
     <name>PageSettingsDns</name>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="39"/>
-        <source>Default server does not support custom DNS</source>
+        <source>Default server does not support custom dns</source>
         <translation type="unfinished">Сервер за замовчуванням не підтримує користувацький DNS</translation>
     </message>
     <message>
@@ -1536,7 +1536,7 @@ Already installed containers were found on the server. All installed containers 
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsLogging.qml" line="60"/>
-        <source>Enabling this function will save application&apos;s logs automatically. By default, logging functionality is disabled. Enable log saving in case of application malfunction.</source>
+        <source>Enabling this function will save application&apos;s logs automatically, By default, logging functionality is disabled. Enable log saving in case of application malfunction.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1714,7 +1714,7 @@ Already installed containers were found on the server. All installed containers 
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsServerData.qml" line="145"/>
-        <source>All installed AmneziaVPN services will still remain on the server.</source>
+        <source>All installed PotokVPN services will still remain on the server.</source>
         <translation>Всі встановлені сервіси та протоколи Amnezia все ще залишаться на сервері.</translation>
     </message>
     <message>
@@ -1975,7 +1975,7 @@ It&apos;s okay as long as it&apos;s from someone you trust.</source>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="89"/>
-        <source>QR code</source>
+        <source>QR-code</source>
         <translation>QR-код</translation>
     </message>
     <message>
@@ -2368,8 +2368,8 @@ and will not be shared or disclosed to the Amnezia or any third parties</source>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageShare.qml" line="81"/>
-        <source>Save Shadowsocks config</source>
-        <translation type="unfinished">Зберегти конфігурацію Shadowsocks</translation>
+        <source>Save ShadowSocks config</source>
+        <translation type="unfinished">Зберегти конфігурацію ShadowSocks</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageShare.qml" line="88"/>
@@ -2383,8 +2383,8 @@ and will not be shared or disclosed to the Amnezia or any third parties</source>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageShare.qml" line="120"/>
-        <source>For the AmneziaVPN app</source>
-        <translation>Для AmneziaVPN</translation>
+        <source>For the PotokVPN app</source>
+        <translation>Для PotokVPN</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageShare.qml" line="135"/>
@@ -2393,8 +2393,8 @@ and will not be shared or disclosed to the Amnezia or any third parties</source>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageShare.qml" line="140"/>
-        <source>Shadowsocks native format</source>
-        <translation type="unfinished">Shadowsocks нативний формат</translation>
+        <source>ShadowSocks native format</source>
+        <translation type="unfinished">ShadowSocks нативний формат</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageShare.qml" line="145"/>
@@ -2820,8 +2820,8 @@ and will not be shared or disclosed to the Amnezia or any third parties</source>
     </message>
     <message>
         <location filename="../core/errorstrings.cpp" line="12"/>
-        <source>Unknown error</source>
-        <translation>Unknown error</translation>
+        <source>Unknown Error</source>
+        <translation>Unknown Error</translation>
     </message>
     <message>
         <location filename="../core/errorstrings.cpp" line="13"/>
@@ -2865,18 +2865,18 @@ and will not be shared or disclosed to the Amnezia or any third parties</source>
     </message>
     <message>
         <location filename="../core/errorstrings.cpp" line="25"/>
-        <source>SSH request was denied</source>
-        <translation>SSH request was denied</translation>
+        <source>Ssh request was denied</source>
+        <translation>Ssh request was denied</translation>
     </message>
     <message>
         <location filename="../core/errorstrings.cpp" line="26"/>
-        <source>SSH request was interrupted</source>
-        <translation>SSH request was interrupted</translation>
+        <source>Ssh request was interrupted</source>
+        <translation>Ssh request was interrupted</translation>
     </message>
     <message>
         <location filename="../core/errorstrings.cpp" line="27"/>
-        <source>SSH internal error</source>
-        <translation>SSH internal error</translation>
+        <source>Ssh internal error</source>
+        <translation>Ssh internal error</translation>
     </message>
     <message>
         <location filename="../core/errorstrings.cpp" line="28"/>
@@ -2895,7 +2895,7 @@ and will not be shared or disclosed to the Amnezia or any third parties</source>
     </message>
     <message>
         <location filename="../core/errorstrings.cpp" line="33"/>
-        <source>SCP error: Generic failure</source>
+        <source>Scp error: Generic failure</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2991,8 +2991,8 @@ and will not be shared or disclosed to the Amnezia or any third parties</source>
     </message>
     <message>
         <location filename="../core/errorstrings.cpp" line="41"/>
-        <source>Shadowsocks (ss-local) executable missing</source>
-        <translation>Shadowsocks (ss-local) executable missing</translation>
+        <source>ShadowSocks (ss-local) executable missing</source>
+        <translation>ShadowSocks (ss-local) executable missing</translation>
     </message>
     <message>
         <location filename="../core/errorstrings.cpp" line="42"/>
@@ -3071,13 +3071,13 @@ and will not be shared or disclosed to the Amnezia or any third parties</source>
     </message>
     <message>
         <location filename="../containers/containers_defs.cpp" line="107"/>
-        <source>Shadowsocks - masks VPN traffic, making it similar to normal web traffic, but it may be recognized by analysis systems in some highly censored regions.</source>
-        <translation type="unfinished">Shadowsocks - маскує VPN-трафік під звичайний веб-трафік, але розпізнається системами аналізу трафіка в деяких регіонах з високим рівнем цензури.</translation>
+        <source>ShadowSocks - masks VPN traffic, making it similar to normal web traffic, but it may be recognized by analysis systems in some highly censored regions.</source>
+        <translation type="unfinished">ShadowSocks - маскує VPN-трафік під звичайний веб-трафік, але розпізнається системами аналізу трафіка в деяких регіонах з високим рівнем цензури.</translation>
     </message>
     <message>
         <location filename="../containers/containers_defs.cpp" line="110"/>
         <source>OpenVPN over Cloak - OpenVPN with VPN masquerading as web traffic and protection against active-probing detection. Ideal for bypassing blocking in regions with the highest levels of censorship.</source>
-        <translation type="unfinished">OpenVPN over Cloak - OpenVPN з маскуванням VPN під HTTPS трафік і захистом від active-probing. Підходить для регіонів з самим високим рівнем цензури.</translation>
+        <translation type="unfinished">OpenVPN over Cloak - OpenVPN з маскуванням VPN під HTTPS трафік і захистом від active-probbing. Підходить для регіонів з самим високим рівнем цензури.</translation>
     </message>
     <message>
         <location filename="../containers/containers_defs.cpp" line="131"/>
@@ -3098,7 +3098,7 @@ Immediately after receiving the first data packet, Cloak authenticates the incom
 
 If there is a extreme level of Internet censorship in your region, we advise you to use only OpenVPN over Cloak from the first connection
 
-* Available in the AmneziaVPN across all platforms
+* Available in the PotokVPN across all platforms
 * High power consumption on mobile devices
 * Flexible settings
 * Not recognised by DPI analysis systems
@@ -3112,7 +3112,7 @@ If there is a extreme level of Internet censorship in your region, we advise you
 WireGuard provides stable VPN connection and high performance on all devices. It uses hard-coded encryption settings. WireGuard compared to OpenVPN has lower latency and better data transfer throughput.
 WireGuard is very susceptible to blocking due to its distinct packet signatures. Unlike some other VPN protocols that employ obfuscation techniques, the consistent signature patterns of WireGuard packets can be more easily identified and thus blocked by advanced Deep Packet Inspection (DPI) systems and other network monitoring tools.
 
-* Available in the AmneziaVPN across all platforms
+* Available in the PotokVPN across all platforms
 * Low power consumption
 * Minimum number of settings
 * Easily recognised by DPI analysis systems, susceptible to blocking
@@ -3133,7 +3133,7 @@ Unlike older protocols such as VMess, VLESS, and the XTLS-Vision transport, REAL
 One of its distinguishing features is its ability to swiftly switch between networks and devices, making it particularly adaptive in dynamic network environments. 
 While it offers a blend of security, stability, and speed, it&apos;s essential to note that IKEv2 can be easily detected and is susceptible to blocking.
 
-* Available in the AmneziaVPN only on Windows
+* Available in the PotokVPN only on Windows
 * Low power consumption, on mobile devices
 * Minimal configuration
 * Recognised by DPI analysis systems
@@ -3142,7 +3142,7 @@ While it offers a blend of security, stability, and speed, it&apos;s essential t
 Він може швидко переключись між мережами та пристроями, що робить його осболиво адаптованим під динамічні мережеві середовища.
 Потрібно зазначити, що незважаючи на стабільність та швидкість, IKEv2 легко розпізнається та вразливий до блокувань. 
 
-* IKEv2/IPsec в AmneziaVPN тільки для Windows.
+* IKEv2 в PotokVPN тільки для Windows.
 * Низьке енергоспоживання, на мобільних пристроях
 * Мінімальна конфігурація
 * Розпізнається системами DPI-анализу
@@ -3155,8 +3155,8 @@ While it offers a blend of security, stability, and speed, it&apos;s essential t
     </message>
     <message>
         <location filename="../containers/containers_defs.cpp" line="98"/>
-        <source>SFTP file sharing service</source>
-        <translation>Сервіс обміну файлами SFTP</translation>
+        <source>Sftp file sharing service</source>
+        <translation>Сервіс обміну файлами Sftp</translation>
     </message>
     <message>
         <location filename="../containers/containers_defs.cpp" line="96"/>
@@ -3166,8 +3166,8 @@ While it offers a blend of security, stability, and speed, it&apos;s essential t
     </message>
     <message>
         <location filename="../containers/containers_defs.cpp" line="97"/>
-        <source>AmneziaDNS</source>
-        <translation>AmneziaDNS</translation>
+        <source>Amnezia DNS</source>
+        <translation>Amnezia DNS</translation>
     </message>
     <message>
         <location filename="../containers/containers_defs.cpp" line="104"/>
@@ -3191,8 +3191,8 @@ While it offers a blend of security, stability, and speed, it&apos;s essential t
     </message>
     <message>
         <location filename="../containers/containers_defs.cpp" line="124"/>
-        <source>IKEv2/IPsec -  Modern stable protocol, a bit faster than others, restores connection after signal loss.</source>
-        <translation>IKEv2/IPsec сучасний стабільний протокол, трішки швидше за інших відновлює підключення.</translation>
+        <source>IKEv2 -  Modern stable protocol, a bit faster than others, restores connection after signal loss.</source>
+        <translation>IKEv2 сучасний стабільний протокол, трішки швидше за інших відновлює підключення.</translation>
     </message>
     <message>
         <location filename="../containers/containers_defs.cpp" line="127"/>
@@ -3202,14 +3202,14 @@ While it offers a blend of security, stability, and speed, it&apos;s essential t
     <message>
         <location filename="../containers/containers_defs.cpp" line="129"/>
         <source>Replace the current DNS server with your own. This will increase your privacy level.</source>
-        <translation>Замініть DNS-сервер на AmneziaDNS. Це підвищить вашу рівень захищеності в інтернеті.</translation>
+        <translation>Замініть DNS-сервер на Amnezia DNS. Це підвищить вашу рівень захищеності в інтернеті.</translation>
     </message>
     <message>
         <location filename="../containers/containers_defs.cpp" line="138"/>
         <source>OpenVPN stands as one of the most popular and time-tested VPN protocols available.
 It employs its unique security protocol, leveraging the strength of SSL/TLS for encryption and key exchange. Furthermore, OpenVPN&apos;s support for a multitude of authentication methods makes it versatile and adaptable, catering to a wide range of devices and operating systems. Due to its open-source nature, OpenVPN benefits from extensive scrutiny by the global community, which continually reinforces its security. With a strong balance of performance, security, and compatibility, OpenVPN remains a top choice for privacy-conscious individuals and businesses alike.
 
-* Available in the AmneziaVPN across all platforms
+* Available in the PotokVPN across all platforms
 * Normal power consumption on mobile devices
 * Flexible customisation to suit user needs to work with different operating systems and devices
 * Recognised by DPI analysis systems and therefore susceptible to blocking
@@ -3217,7 +3217,7 @@ It employs its unique security protocol, leveraging the strength of SSL/TLS for 
         <translation>OpenVPN один із самих популярних і перевірених часом протоколів VPN.
 Він використовує власний протокол, який опирається на протокол SSL/TLS для шифрування та обміну ключами. Крім того, підтримка OpenVPN багатьох методів аутентифікації робить його універсальним і адаптованим до широкого спектру пристроїв і операційних систем. Завдяки відкритому коду, OpenVPN піддається ретельному аналізу зі сторони світової спільноти, що постійно підвищує його безпеку. Завдяки оптимальному співвідношенню продуктивності, безпеки та сумісності OpenVPN залишається найкращим вибором як для приватних осіб, так і для компаній.
 
-* Доступний в AmneziaVPN для всіх платформ
+* Доступний в PotokVPN для всіх платформ
 * Нормальне енергоспоживання на мобільних пристроях
 * Гнучка настройка під користувача для роботи з різними пристроями та оперційними системами
 * Розпізнається системами DPI-анализу і тому вразливий до блокувань
@@ -3227,13 +3227,15 @@ It employs its unique security protocol, leveraging the strength of SSL/TLS for 
         <location filename="../containers/containers_defs.cpp" line="154"/>
         <source>Shadowsocks, inspired by the SOCKS5 protocol, safeguards the connection using the AEAD cipher. Although Shadowsocks is designed to be discreet and challenging to identify, it isn&apos;t identical to a standard HTTPS connection.However, certain traffic analysis systems might still detect a Shadowsocks connection. Due to limited support in Amnezia, it&apos;s recommended to use AmneziaWG protocol.
 
-* Available in the AmneziaVPN only on desktop platforms
+* Available in the PotokVPN only on desktop platforms
+* Normal power consumption on mobile devices
+
 * Configurable encryption protocol
 * Detectable by some DPI systems
 * Works over TCP network protocol.</source>
         <translation>Shadowsocks, створений на основі протоколу SOCKS5, захищає з&apos;єднання AEAD шифруванням. Незважаючи на те, що протокол Shadowsocks розроблений таким чином, щоб бути незаметним і складним для ідентифікації, він не ідентичний стандартному HTTPS-з&apos;єднанню. Однак деякі системи аналізу трафіку все-таки можуть знайти підключення Shadowsocks. У зв’язку з обмеженою підтримкою в Amnezia рекомендується використовувати протокол AmneziaWG або OpenVPN через Cloak.
 
-* Доступний в AmneziaVPN тільки на ПК.
+* Доступний в PotokVPN тільки на ПК.
 * Гнучке налаштування протоколу шифрування
 * Розпізнається деякими DPI-системами
 * Працює по мережевому протоколу TCP.</translation>
@@ -3263,7 +3265,7 @@ Immediately after receiving the first data packet, Cloak authenticates the incom
 
 If there is a extreme level of Internet censorship in your region, we advise you to use only OpenVPN over Cloak from the first connection
 
-* Available in the AmneziaVPN across all platforms
+* Available in the PotokVPN across all platforms
 * High power consumption on mobile devices
 * Flexible settings
 * Not recognised by DPI analysis systems
@@ -3281,7 +3283,7 @@ Cloak може замінити метаданні пакетів. Він пов
 
 Якщо в вашому регіоні екстремальний рівень цензури в Інтернеті, ми рекомендуємо відразу використовувати OpenVPN over Cloak.
 
-* Доступний в AmneziaVPN на всіх платформах
+* Доступний в PotokVPN на всіх платформах
 * Високе енергоспоживання на мобільних пристроях
 * Гнучке налаштування
 * Не розпізнається системами DPI-анализу
@@ -3293,7 +3295,7 @@ Cloak може замінити метаданні пакетів. Він пов
 Provides stable VPN connection, high performance on all devices. Uses hard-coded encryption settings. WireGuard compared to OpenVPN has lower latency and better data transfer throughput.
 WireGuard is very susceptible to blocking due to its distinct packet signatures. Unlike some other VPN protocols that employ obfuscation techniques, the consistent signature patterns of WireGuard packets can be more easily identified and thus blocked by advanced Deep Packet Inspection (DPI) systems and other network monitoring tools.
 
-* Available in the AmneziaVPN across all platforms
+* Available in the PotokVPN across all platforms
 * Low power consumption
 * Minimum number of settings
 * Easily recognised by DPI analysis systems, susceptible to blocking
@@ -3301,7 +3303,7 @@ WireGuard is very susceptible to blocking due to its distinct packet signatures.
         <translation type="vanished">WireGuard - відносно новий та популярний VPN-протокол з простою архітектурою.
 Забезпечує стабільне VPN-з&apos;єднання, високу продуктивність на всіх пристроях. Використовує жорстко закодовані параметри шифрування. WireGuard порівняно з OpenVPN має нижчу затримку та кращу пропускну здатність передачі даних.
 WireGuard дуже вразливий до блокування. На відміну від деяких інших протоколів VPN, які використовують методи обфускації, узгоджені шаблони пакетів WireGuard можна легше ідентифікувати та, таким чином, заблокувати вдосконаленими системами Deep Packet Inspection (DPI) та іншими інструментами моніторингу мережі.
-* Доступний в AmneziaVPN для всіх платформ
+* Доступний в PotokVPN для всіх платформ
 * Низьке енергоспоживання
 * Мінімальна кількість налаштувань
 * Легко розпізнається системами DPI-анализу, вразливий до блокувань
@@ -3313,7 +3315,7 @@ WireGuard дуже вразливий до блокування. На відмі
 While WireGuard is known for its efficiency, it had issues with being easily detected due to its distinct packet signatures. AmneziaWG solves this problem by using better obfuscation methods, making its traffic blend in with regular internet traffic.
 This means that AmneziaWG keeps the fast performance of the original while adding an extra layer of stealth, making it a great choice for those wanting a fast and discreet VPN connection.
 
-* Available in the AmneziaVPN across all platforms
+* Available in the PotokVPN across all platforms
 * Low power consumption
 * Minimum number of settings
 * Not recognised by DPI analysis systems, resistant to blocking
@@ -3322,7 +3324,7 @@ This means that AmneziaWG keeps the fast performance of the original while addin
 Незважаючи на те, що WireGuard відомий своєю ефективністю, він має проблеми з легким виявленням через чіткі підписи пакетів. AmneziaWG вирішує цю проблему, використовуючи кращі методи обфускації, завдяки чому її трафік змішується зі звичайним інтернет-трафіком.
 Це означає, що AmneziaWG зберігає швидку роботу оригінального протоколу WireGuard, додаючи додатковий рівень скритності, що робить його чудовим вибором для тих, хто бажає швидкого та непомітного VPN-з’єднання.
 
-* Доступно в AmneziaVPN на всіх платформах
+* Доступно в PotokVPN на всіх платформах
 * Низьке енергоспоживання
 * Мінімальна кількість налаштувань
 * Не розпізнається системами аналізу DPI, стійкий до блокування
@@ -3338,7 +3340,7 @@ This means that AmneziaWG keeps the fast performance of the original while addin
     </message>
     <message>
         <location filename="../protocols/protocols_defs.cpp" line="78"/>
-        <source>SFTP service</source>
+        <source>Sftp service</source>
         <translation>Сервіс SFTP</translation>
     </message>
     <message>
@@ -3446,8 +3448,8 @@ This means that AmneziaWG keeps the fast performance of the original while addin
     <message>
         <location filename="../ui/qml/Components/ShareConnectionDrawer.qml" line="27"/>
         <location filename="../ui/qml/Components/ShareConnectionDrawer.qml" line="34"/>
-        <source>Save AmneziaVPN config</source>
-        <translation>Зберегти config AmneziaVPN</translation>
+        <source>Save PotokVPN config</source>
+        <translation>Зберегти config PotokVPN</translation>
     </message>
     <message>
         <location filename="../ui/qml/Components/ShareConnectionDrawer.qml" line="85"/>

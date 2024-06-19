@@ -137,7 +137,7 @@ PageType {
                 id: githubButton
                 Layout.fillWidth: true
 
-                text: qsTr("GitHub")
+                text: qsTr("Github")
                 leftImageSource: "qrc:/images/controls/github.svg"
 
                 KeyNavigation.tab: websiteButton

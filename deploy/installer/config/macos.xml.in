@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Installer>
-    <Name>AmneziaVPN</Name>
+    <Name>PotokVPN</Name>
     <Version>@CMAKE_PROJECT_VERSION@</Version>
-    <Title>AmneziaVPN</Title>
-    <Publisher>AmneziaVPN</Publisher>
-    <StartMenuDir>AmneziaVPN</StartMenuDir>
-    <TargetDir>/Applications/AmneziaVPN.app</TargetDir>
+    <Title>PotokVPN</Title>
+    <Publisher>PotokVPN</Publisher>
+    <StartMenuDir>PotokVPN</StartMenuDir>
+    <TargetDir>/Applications/PotokVPN.app</TargetDir>
     <WizardDefaultWidth>600</WizardDefaultWidth>
     <WizardDefaultHeight>380</WizardDefaultHeight>
     <WizardStyle>Mac</WizardStyle>
@@ -21,7 +21,7 @@
         <Repository>
             <Url>https://amneziavpn.org/updates/macos</Url>
             <Enabled>true</Enabled>
-            <DisplayName>AmneziaVPN - repository for macOS</DisplayName>
+            <DisplayName>PotokVPN - repository for macOS</DisplayName>
         </Repository>
     </RemoteRepositories>
 </Installer>

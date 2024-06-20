@@ -50,24 +50,6 @@ DrawerType2 {
         }
 
         LabelWithButtonType {
-            id: ip
-            Layout.fillWidth: true
-            Layout.topMargin: 16
-
-            text: qsTr("For developers")
-            rightImageSource: "qrc:/images/controls/chevron-right.svg"
-
-            clickedFunction: function() {
-                PageController.goToPage(PageEnum.PageSetupWizardCredentials)
-                root.close()
-            }
-
-            KeyNavigation.tab: qrCode.rightButton
-        }
-
-        DividerType {}
-
-        LabelWithButtonType {
             id: qrCode
             Layout.fillWidth: true
 

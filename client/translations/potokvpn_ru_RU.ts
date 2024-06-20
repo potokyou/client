@@ -57,11 +57,6 @@
         <translation>Добавить новое соединение</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Components/ConnectionTypeSelectionDrawer.qml" line="44"/>
-        <source>For developers</source>
-        <translation>Для разработчиков</translation>
-    </message>
-    <message>
         <location filename="../ui/qml/Components/ConnectionTypeSelectionDrawer.qml" line="58"/>
         <source>Open config file, key or QR code</source>
         <translation>Открыть файл конфигурации, ключ или QR код</translation>

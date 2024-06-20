@@ -298,7 +298,7 @@ PageType {
                     DropDownType {
                         id: containersDropDown
 
-                        rootButtonImageColor: "#0e0b23"
+                        rootButtonImageColor: "#141414"
                         rootButtonBackgroundColor: "#D7D8DB"
                         rootButtonBackgroundHoveredColor: Qt.rgba(215, 216, 219, 0.8)
                         rootButtonBackgroundPressedColor: Qt.rgba(215, 216, 219, 0.65)
@@ -308,7 +308,7 @@ PageType {
                         rootButtonTextBottomMargin: 8
 
                         text: ServersModel.defaultServerDefaultContainerName
-                        textColor: "#0e0b23"
+                        textColor: "#141414"
                         headerText: qsTr("VPN protocol")
                         headerBackButtonImage: "qrc:/images/controls/arrow-left.svg"
 

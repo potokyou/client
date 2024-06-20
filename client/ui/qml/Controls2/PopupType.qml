@@ -86,7 +86,7 @@ Popup {
                 pressedColor: "#AEB0B7"
                 disabledColor: "#494B50"
 
-                textColor: "#0e0b23"
+                textColor: "#141414"
                 borderWidth: 0
 
                 text: qsTr("Close")

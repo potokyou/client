@@ -282,7 +282,7 @@ DrawerType2 {
                                     activeFocusOnTab: false
 
                                     color: "#D7D8DB"
-                                    selectionColor:  "#BD5871"
+                                    selectionColor:  "#9E334D"
                                     selectedTextColor: "#D7D8DB"
 
                                     font.pixelSize: 16

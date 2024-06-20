@@ -8,7 +8,7 @@ ProgressBar {
     implicitHeight: 4
 
     background: Rectangle {
-        color: "#BD5871"
+        color: "#9E334D"
     }
 
     contentItem: Item {

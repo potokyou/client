@@ -14,14 +14,14 @@ Switch {
     property string textColor:  "#D7D8DB"
     property string textDisabledColor: "#878B91"
 
-    property string checkedIndicatorColor: "#BD5871"
+    property string checkedIndicatorColor: "#9E334D"
     property string defaultIndicatorColor: "transparent"
     property string checkedDisabledIndicatorColor: "#402102"
 
     property string borderFocusedColor: "#D7D8DB"
     property int borderFocusedWidth: 1
 
-    property string checkedIndicatorBorderColor: "#BD5871"
+    property string checkedIndicatorBorderColor: "#9E334D"
     property string defaultIndicatorBorderColor: "#494B50"
     property string checkedDisabledIndicatorBorderColor: "#402102"
 

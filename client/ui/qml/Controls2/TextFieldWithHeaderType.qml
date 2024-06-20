@@ -92,7 +92,7 @@ Item {
                         placeholderText: root.textFieldPlaceholderText
                         placeholderTextColor: "#494B50"
 
-                        selectionColor:  "#BD5871"
+                        selectionColor:  "#9E334D"
                         selectedTextColor: "#D7D8DB"
 
                         font.pixelSize: 16

@@ -4,7 +4,7 @@ import QtQuick.Controls
 TabButton {
     id: root
 
-    property string hoveredColor: "#BD5871"
+    property string hoveredColor: "#9E334D"
     property string defaultColor: "#D7D8DB"
     property string selectedColor: "#BD5871"
 

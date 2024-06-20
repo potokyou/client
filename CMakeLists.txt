@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.25.0 FATAL_ERROR)
 
 set(PROJECT PotokVPN)
 
-project(${PROJECT} VERSION 4.6.0.0
+project(${PROJECT} VERSION 1.0.0
         DESCRIPTION "PotokVPN"
         HOMEPAGE_URL "https://localhost/"
 )

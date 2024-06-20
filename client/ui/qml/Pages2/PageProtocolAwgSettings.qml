@@ -92,7 +92,7 @@ PageType {
                         HeaderType {
                             Layout.fillWidth: true
 
-                            headerText: qsTr("PotokWG settings")
+                            headerText: qsTr("AmneziaWG settings")
                         }
 
                         TextFieldWithHeaderType {

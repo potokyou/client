@@ -8,7 +8,7 @@ We are not a VPN service, you don't have to connect to our servers and pay us an
 
 Useful links
 
-• https://potok.org - project website
+• https://localhost - project website
 • https://www.reddit.com/r/PotokVPN - Reddit
 • https://t.me/potok_vpn_en - Telegram support channel (English)
 • https://t.me/potok_vpn - Telegram support channel (Russian)

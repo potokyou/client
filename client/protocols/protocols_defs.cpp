@@ -68,7 +68,7 @@ QMap<potok::Proto, QString> ProtocolProps::protocolHumanNames()
              { Proto::ShadowSocks, "ShadowSocks" },
              { Proto::Cloak, "Cloak" },
              { Proto::WireGuard, "WireGuard" },
-             { Proto::Awg, "PotokWG" },
+             { Proto::Awg, "AmneziaWG" },
              { Proto::Ikev2, "IKEv2" },
              { Proto::L2tp, "L2TP" },
              { Proto::Xray, "XRay" },

@@ -162,7 +162,7 @@ PageType {
                 parentFlickable: fl
 
                 clickedFunction: function() {
-                    Qt.openUrlExternally(qsTr("https://potok.org"))
+                    Qt.openUrlExternally(qsTr("https://localhost"))
                 }
 
             }
@@ -192,7 +192,7 @@ PageType {
                 disabledColor: "#878B91"
                 textColor: "#FBB26A"
 
-                text: qsTr("Наш Telegram бот")
+                text: qsTr("Our Telegram bot")
 
                 KeyNavigation.tab: privacyPolicyButton
                 parentFlickable: fl
@@ -221,7 +221,7 @@ PageType {
               parentFlickable: fl
 
               clickedFunc: function() {
-                Qt.openUrlExternally("https://potok.org/en/policy")
+                Qt.openUrlExternally("https://localhost/en/policy")
               }
             }
         }

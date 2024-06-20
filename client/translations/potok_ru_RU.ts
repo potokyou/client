@@ -336,8 +336,8 @@ Already installed containers were found on the server. All installed containers 
     <name>PageProtocolAwgSettings</name>
     <message>
         <location filename="../ui/qml/Pages2/PageProtocolAwgSettings.qml" line="85"/>
-        <source>PotokWG settings</source>
-        <translation>настройки PotokWG</translation>
+        <source>AmneziaWG settings</source>
+        <translation>настройки AmneziaWG</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageProtocolAwgSettings.qml" line="93"/>
@@ -351,13 +351,13 @@ Already installed containers were found on the server. All installed containers 
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageProtocolAwgSettings.qml" line="324"/>
-        <source>Remove PotokWG</source>
-        <translation>Удалить PotokWG</translation>
+        <source>Remove AmneziaWG</source>
+        <translation>Удалить AmneziaWG</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageProtocolAwgSettings.qml" line="327"/>
-        <source>Remove PotokWG from server?</source>
-        <translation>Удалить PotokWG с сервера?</translation>
+        <source>Remove AmneziaWG from server?</source>
+        <translation>Удалить AmneziaWG с сервера?</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageProtocolAwgSettings.qml" line="328"/>
@@ -1021,8 +1021,8 @@ Already installed containers were found on the server. All installed containers 
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="132"/>
-        <source>https://potok.org</source>
-        <translation>https://potok.org</translation>
+        <source>https://localhost</source>
+        <translation>https://localhost</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="144"/>
@@ -1031,7 +1031,7 @@ Already installed containers were found on the server. All installed containers 
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="160"/>
-        <source>Наш Telegram бот</source>
+        <source>Our Telegram bot</source>
         <translation>Наш Telegram бот</translation>
     </message>
     <message>
@@ -2167,8 +2167,8 @@ and will not be shared or disclosed to the Potok or any third parties</source>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageShare.qml" line="72"/>
-        <source>Save PotokWG config</source>
-        <translation>Сохраняем конфигурацию PotokWG</translation>
+        <source>Save AmneziaWG config</source>
+        <translation>Сохраняем конфигурацию AmneziaWG</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageShare.qml" line="79"/>
@@ -2187,8 +2187,8 @@ and will not be shared or disclosed to the Potok or any third parties</source>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageShare.qml" line="126"/>
-        <source>PotokWG native format</source>
-        <translation>PotokWG нативный формат</translation>
+        <source>AmneziaWG native format</source>
+        <translation>AmneziaWG нативный формат</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageShare.qml" line="131"/>
@@ -2987,8 +2987,8 @@ While it offers a blend of security, stability, and speed, it&apos;s essential t
     </message>
     <message>
         <location filename="../containers/containers_defs.cpp" line="111"/>
-        <source>PotokWG - Special protocol from Potok, based on WireGuard. It&apos;s fast like WireGuard, but very resistant to blockages. Recommended for regions with high levels of censorship.</source>
-        <translation>PotokWG - Специальный протокол от Potok, основанный на протоколе WireGuard. Он такой же быстрый, как WireGuard, но очень устойчив к блокировкам. Рекомендуется для регионов с высоким уровнем цензуры.</translation>
+        <source>AmneziaWG - Special protocol based on WireGuard. It&apos;s fast like WireGuard, but very resistant to blockages. Recommended for regions with high levels of censorship.</source>
+        <translation>AmneziaWG - Специальный протокол, основанный на WireGuard. Он такой же быстрый, как WireGuard, но очень устойчив к блокировкам. Рекомендуется для регионов с высоким уровнем цензуры.</translation>
     </message>
     <message>
         <location filename="../containers/containers_defs.cpp" line="115"/>
@@ -3031,7 +3031,7 @@ It employs its unique security protocol, leveraging the strength of SSL/TLS for 
     </message>
     <message>
         <location filename="../containers/containers_defs.cpp" line="145"/>
-        <source>Shadowsocks, inspired by the SOCKS5 protocol, safeguards the connection using the AEAD cipher. Although Shadowsocks is designed to be discreet and challenging to identify, it isn&apos;t identical to a standard HTTPS connection.However, certain traffic analysis systems might still detect a Shadowsocks connection. Due to limited support in Potok, it&apos;s recommended to use PotokWG protocol.
+        <source>Shadowsocks, inspired by the SOCKS5 protocol, safeguards the connection using the AEAD cipher. Although Shadowsocks is designed to be discreet and challenging to identify, it isn&apos;t identical to a standard HTTPS connection.However, certain traffic analysis systems might still detect a Shadowsocks connection. Due to limited support in Potok, it&apos;s recommended to use AmneziaWG protocol.
 
 * Available in the PotokVPN only on desktop platforms
 * Normal power consumption on mobile devices
@@ -3039,7 +3039,7 @@ It employs its unique security protocol, leveraging the strength of SSL/TLS for 
 * Configurable encryption protocol
 * Detectable by some DPI systems
 * Works over TCP network protocol.</source>
-        <translation>Shadowsocks, создан на основе протокола SOCKS5, защищает соединение с помощью шифра AEAD. Несмотря на то, что протокол Shadowsocks разработан таким образом, чтобы быть незаметным и сложным для идентификации, он не идентичен стандартному HTTPS-соединению. Однако некоторые системы анализа трафика все же могут обнаружить соединение Shadowsocks. В связи с ограниченной поддержкой в Potok рекомендуется использовать протокол PotokWG, или OpenVPN over Cloak.
+        <translation>Shadowsocks, создан на основе протокола SOCKS5, защищает соединение с помощью шифра AEAD. Несмотря на то, что протокол Shadowsocks разработан таким образом, чтобы быть незаметным и сложным для идентификации, он не идентичен стандартному HTTPS-соединению. Однако некоторые системы анализа трафика все же могут обнаружить соединение Shadowsocks. В связи с ограниченной поддержкой в Potok рекомендуется использовать протокол AmneziaWG, или OpenVPN over Cloak.
 
 * Доступен в PotokVPN только для ПК и ноутбуков
 * Настраиваемый протокол шифрования
@@ -3136,18 +3136,18 @@ WireGuard очень восприимчив к блокированию из-з�
     </message>
     <message>
         <location filename="../containers/containers_defs.cpp" line="187"/>
-        <source>A modern iteration of the popular VPN protocol, PotokWG builds upon the foundation set by WireGuard, retaining its simplified architecture and high-performance capabilities across devices.
-While WireGuard is known for its efficiency, it had issues with being easily detected due to its distinct packet signatures. PotokWG solves this problem by using better obfuscation methods, making its traffic blend in with regular internet traffic.
-This means that PotokWG keeps the fast performance of the original while adding an extra layer of stealth, making it a great choice for those wanting a fast and discreet VPN connection.
+        <source>A modern iteration of the popular VPN protocol, AmneziaWG builds upon the foundation set by WireGuard, retaining its simplified architecture and high-performance capabilities across devices.
+While WireGuard is known for its efficiency, it had issues with being easily detected due to its distinct packet signatures. AmneziaWG solves this problem by using better obfuscation methods, making its traffic blend in with regular internet traffic.
+This means that AmneziaWG keeps the fast performance of the original while adding an extra layer of stealth, making it a great choice for those wanting a fast and discreet VPN connection.
 
 * Available in the PotokVPN across all platforms
 * Low power consumption
 * Minimum number of settings
 * Not recognised by DPI analysis systems, resistant to blocking
 * Works over UDP network protocol.</source>
-        <translation>PotokWG - усовершенствованная версия популярного VPN-протокола Wireguard. PotokWG опирается на фундамент, заложенный WireGuard, сохраняя упрощенную архитектуру и высокопроизводительные возможности работы на разных устройствах.
-Хотя WireGuard известен своей эффективностью, у него были проблемы с обнаружением из-за характерных сигнатур пакетов. PotokWG решает эту проблему за счет использования более совершенных методов обфускации, благодаря чему его трафик сливается с обычным интернет-трафиком.
-Таким образом, PotokWG сохраняет высокую производительность оригинала, добавляя при этом дополнительный уровень скрытности, что делает его отличным выбором для тех, кому нужно быстрое и незаметное VPN-соединение.
+        <translation>AmneziaWG - усовершенствованная версия популярного VPN-протокола Wireguard. AmneziaWG опирается на фундамент, заложенный WireGuard, сохраняя упрощенную архитектуру и высокопроизводительные возможности работы на разных устройствах.
+Хотя WireGuard известен своей эффективностью, у него были проблемы с обнаружением из-за характерных сигнатур пакетов. AmneziaWG решает эту проблему за счет использования более совершенных методов обфускации, благодаря чему его трафик сливается с обычным интернет-трафиком.
+Таким образом, AmneziaWG сохраняет высокую производительность оригинала, добавляя при этом дополнительный уровень скрытности, что делает его отличным выбором для тех, кому нужно быстрое и незаметное VPN-соединение.
 
 * Доступен в PotokVPN для всех платформ
 * Низкое энергопотребление
@@ -3156,8 +3156,8 @@ This means that PotokWG keeps the fast performance of the original while adding 
 * Работает по сетевому протоколу UDP.</translation>
     </message>
     <message>
-        <source>PotokWG container</source>
-        <translation type="vanished">PotokWG протокол</translation>
+        <source>AmneziaWG container</source>
+        <translation type="vanished">AmneziaWG протокол</translation>
     </message>
     <message>
         <source>Sftp file sharing service - is secure FTP service</source>

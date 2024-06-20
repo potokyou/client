@@ -93,7 +93,7 @@ QMap<DockerContainer, QString> ContainerProps::containerHumanNames()
              { DockerContainer::ShadowSocks, "ShadowSocks" },
              { DockerContainer::Cloak, "OpenVPN over Cloak" },
              { DockerContainer::WireGuard, "WireGuard" },
-             { DockerContainer::Awg, "PotokWG" },
+             { DockerContainer::Awg, "AmneziaWG" },
              { DockerContainer::Xray, "XRay" },
              { DockerContainer::Ipsec, QObject::tr("IPsec") },
              { DockerContainer::SSXray, "ShadowSocks"},
@@ -120,7 +120,7 @@ QMap<DockerContainer, QString> ContainerProps::containerDescriptions()
                QObject::tr("WireGuard - New popular VPN protocol with high performance, high speed and low power "
                            "consumption. Recommended for regions with low levels of censorship.") },
              { DockerContainer::Awg,
-               QObject::tr("PotokWG - Special protocol from Potok, based on WireGuard. It's fast like WireGuard, "
+               QObject::tr("AmneziaWG - Special protocol based on WireGuard. It's fast like WireGuard, "
                            "but very resistant to blockages. "
                            "Recommended for regions with high levels of censorship.") },
              { DockerContainer::Xray,
@@ -162,7 +162,7 @@ QMap<DockerContainer, QString> ContainerProps::containerDetailedDescriptions()
           QObject::tr("Shadowsocks, inspired by the SOCKS5 protocol, safeguards the connection using the AEAD cipher. "
                       "Although Shadowsocks is designed to be discreet and challenging to identify, it isn't identical to a standard HTTPS connection."
                       "However, certain traffic analysis systems might still detect a Shadowsocks connection. "
-                      "Due to limited support in Potok, it's recommended to use PotokWG protocol.\n\n"
+                      "Due to limited support in Potok, it's recommended to use AmneziaWG protocol.\n\n"
                       "* Available in the PotokVPN only on desktop platforms\n"
                       "* Normal power consumption on mobile devices\n\n"
                       "* Configurable encryption protocol\n"
@@ -202,13 +202,13 @@ QMap<DockerContainer, QString> ContainerProps::containerDetailedDescriptions()
                       "* Works over UDP network protocol.") },
         { DockerContainer::Awg,
           QObject::tr("A modern iteration of the popular VPN protocol, "
-                      "PotokWG builds upon the foundation set by WireGuard, "
+                      "AmneziaWG builds upon the foundation set by WireGuard, "
                       "retaining its simplified architecture and high-performance capabilities across devices.\n"
                       "While WireGuard is known for its efficiency, "
                       "it had issues with being easily detected due to its distinct packet signatures. "
-                      "PotokWG solves this problem by using better obfuscation methods, "
+                      "AmneziaWG solves this problem by using better obfuscation methods, "
                       "making its traffic blend in with regular internet traffic.\n"
-                      "This means that PotokWG keeps the fast performance of the original "
+                      "This means that AmneziaWG keeps the fast performance of the original "
                       "while adding an extra layer of stealth, "
                       "making it a great choice for those wanting a fast and discreet VPN connection.\n\n"
                       "* Available in the PotokVPN across all platforms\n"

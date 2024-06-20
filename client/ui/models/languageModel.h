@@ -11,14 +11,7 @@ namespace LanguageSettings
     Q_NAMESPACE
     enum class AvailableLanguageEnum {
         English,
-        Russian,
-        China_cn,
-        Ukrainian,
-        Persian,
-        Arabic,
-        Burmese,
-        Urdu,
-        Hindi
+        Russian
     };
     Q_ENUM_NS(AvailableLanguageEnum)
 

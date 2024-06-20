@@ -21,7 +21,7 @@ enum class VpnProto(
     },
 
     AWG(
-        "PotokWG",
+        "AmneziaWG",
         "org.potok.vpn:potokAwgService",
         AwgService::class.java
     ) {

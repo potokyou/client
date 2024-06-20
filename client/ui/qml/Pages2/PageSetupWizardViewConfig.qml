@@ -96,26 +96,6 @@ PageType {
                 }
             }
 
-            BasicButtonType {
-                id: showContentButton
-                Layout.topMargin: 16
-                Layout.leftMargin: -8
-                implicitHeight: 32
-
-                defaultColor: "transparent"
-                hoveredColor: Qt.rgba(1, 1, 1, 0.08)
-                pressedColor: Qt.rgba(1, 1, 1, 0.12)
-                disabledColor: "#878B91"
-                textColor: "#FBB26A"
-
-                text: showContent ? qsTr("Collapse content") : qsTr("Show content")
-                KeyNavigation.tab: connectButton
-
-                clickedFunc: function() {
-                    showContent = !showContent
-                }
-            }
-
             CheckBoxType {
                 id: cloakingCheckBox
 
@@ -143,7 +123,7 @@ PageType {
                 Layout.topMargin: 16
                 Layout.fillWidth: true
 
-                textString: qsTr("Use connection codes only from sources you trust. Codes from public sources may have been created to intercept your data.")
+                textString: qsTr("Use only the configuration files that you received when paying for a subscription through the Telegram bot.")
 
                 iconPath: "qrc:/images/controls/alert-circle.svg"
             }

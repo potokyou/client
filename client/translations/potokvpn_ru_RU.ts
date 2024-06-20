@@ -1752,11 +1752,6 @@ It&apos;s okay as long as it&apos;s from someone you trust.</source>
         <source>QR-code</source>
         <translation>QR-код</translation>
     </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="108"/>
-        <source>Key as text</source>
-        <translation>Ключ в виде текста</translation>
-    </message>
 </context>
 <context>
     <name>PageSetupWizardCredentials</name>
@@ -2046,19 +2041,9 @@ and will not be shared or disclosed to the Potok or any third parties</source>
         <translation type="vanished">Не используйте код подключения из публичных источников. Его могли создать, чтобы перехватить ваши данные.</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardViewConfig.qml" line="101"/>
-        <source>Collapse content</source>
-        <translation>Свернуть</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardViewConfig.qml" line="101"/>
-        <source>Show content</source>
-        <translation>Показать содержимое ключа</translation>
-    </message>
-    <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardViewConfig.qml" line="112"/>
-        <source>Use connection codes only from sources you trust. Codes from public sources may have been created to intercept your data.</source>
-        <translation>Используйте файлы конфигурации только из тех источников, которым вы доверяете. Файлы из общедоступных источников могли быть созданы с целью перехвата ваших личных данных</translation>
+        <source>Use only the configuration files that you received when paying for a subscription through the Telegram bot.</source>
+        <translation>Используйте только те файлы конфигурации, которые вы получили при оплате подписки через Telegram-бота.</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardViewConfig.qml" line="153"/>

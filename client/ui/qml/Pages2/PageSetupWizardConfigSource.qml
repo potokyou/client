@@ -116,23 +116,7 @@ PageType {
             DividerType {
                 visible: SettingsController.isCameraPresent()
             }
-
-            LabelWithButtonType {
-                id: textButton
-                Layout.fillWidth: true
-
-                text: qsTr("Key as text")
-                rightImageSource: "qrc:/images/controls/chevron-right.svg"
-                leftImageSource: "qrc:/images/controls/text-cursor.svg"
-
-                Keys.onTabPressed: lastItemTabClicked(focusItem)
-
-                clickedFunction: function() {
-                    PageController.goToPage(PageEnum.PageSetupWizardTextKey)
-                }
-            }
-
-            DividerType {}
+            
         }
     }
 }

@@ -299,7 +299,7 @@ PageType {
     Rectangle {
         anchors.fill: addSiteButton
         anchors.bottomMargin: -24
-        color: "#0E0E11"
+        color: "#333d5f"
         opacity: 0.8
     }
 

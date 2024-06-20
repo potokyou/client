@@ -21,7 +21,7 @@ Window  {
     maximumWidth: 600
     maximumHeight: 800
 
-    color: "#0E0E11"
+    color: "#333d5f"
 
     onClosing: function() {
         console.debug("QML onClosing signal")

@@ -4,7 +4,7 @@ Text {
     lineHeight: 16 + LanguageModel.getLineHeightAppend()
     lineHeightMode: Text.FixedHeight
 
-    color: "#0E0E11"
+    color: "#333d5f"
     font.pixelSize: 13
     font.weight: 400
     font.family: "PT Root UI VF"

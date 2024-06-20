@@ -34,7 +34,7 @@ void IOSNetworkWatcher::initialize() {
   });
   nw_path_monitor_start(m_networkMonitor);
 
-  //TODO IMPL FOR AMNEZIA
+  //TODO IMPL FOR POTOK
 }
 
 NetworkWatcherImpl::TransportType IOSNetworkWatcher::toTransportType(nw_path_t path) {
@@ -65,5 +65,5 @@ NetworkWatcherImpl::TransportType IOSNetworkWatcher::toTransportType(nw_path_t p
 }
 
 void IOSNetworkWatcher::controllerStateChanged() {
-  //TODO IMPL FOR AMNEZIA
+  //TODO IMPL FOR POTOK
 }

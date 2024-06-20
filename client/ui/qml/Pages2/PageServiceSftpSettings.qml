@@ -292,7 +292,7 @@ PageType {
                             KeyNavigation.tab: removeButton
 
                             clickedFunc: function() {
-//                                Qt.openUrlExternally("https://github.com/amnezia-vpn/desktop-client/releases/latest")
+//                                Qt.openUrlExternally("https://github.com/potok-vpn/desktop-client/releases/latest")
                             }
                         }
 

@@ -4,7 +4,7 @@
 #include <QFile>
 #include <QObject>
 
-QString amnezia::scriptFolder(amnezia::DockerContainer container)
+QString potok::scriptFolder(potok::DockerContainer container)
 {
     switch (container) {
     case DockerContainer::OpenVpn: return QLatin1String("openvpn");
@@ -23,7 +23,7 @@ QString amnezia::scriptFolder(amnezia::DockerContainer container)
     }
 }
 
-QString amnezia::scriptName(SharedScriptType type)
+QString potok::scriptName(SharedScriptType type)
 {
     switch (type) {
     case SharedScriptType::prepare_host: return QLatin1String("prepare_host.sh");
@@ -39,7 +39,7 @@ QString amnezia::scriptName(SharedScriptType type)
     }
 }
 
-QString amnezia::scriptName(ProtocolScriptType type)
+QString potok::scriptName(ProtocolScriptType type)
 {
     switch (type) {
     case ProtocolScriptType::dockerfile: return QLatin1String("Dockerfile");
@@ -54,9 +54,9 @@ QString amnezia::scriptName(ProtocolScriptType type)
     }
 }
 
-QString amnezia::scriptData(amnezia::SharedScriptType type)
+QString potok::scriptData(potok::SharedScriptType type)
 {
-    QString fileName = QString(":/server_scripts/%1").arg(amnezia::scriptName(type));
+    QString fileName = QString(":/server_scripts/%1").arg(potok::scriptName(type));
     QFile file(fileName);
     if (!file.open(QIODevice::ReadOnly)) {
         qDebug() << "Warning: script missing" << fileName;
@@ -69,9 +69,9 @@ QString amnezia::scriptData(amnezia::SharedScriptType type)
     return ba;
 }
 
-QString amnezia::scriptData(amnezia::ProtocolScriptType type, DockerContainer container)
+QString potok::scriptData(potok::ProtocolScriptType type, DockerContainer container)
 {
-    QString fileName = QString(":/server_scripts/%1/%2").arg(amnezia::scriptFolder(container), amnezia::scriptName(type));
+    QString fileName = QString(":/server_scripts/%1/%2").arg(potok::scriptFolder(container), potok::scriptName(type));
     QFile file(fileName);
     if (!file.open(QIODevice::ReadOnly)) {
         qDebug() << "Warning: script missing" << fileName;

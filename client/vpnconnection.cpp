@@ -12,7 +12,7 @@
 #include <configurators/wireguard_configurator.h>
 #include "core/controllers/serverController.h"
 
-#ifdef AMNEZIA_DESKTOP
+#ifdef POTOK_DESKTOP
     #include "core/ipcclient.h"
     #include "ipc.h"
     #include <protocols/wireguardprotocol.h>
@@ -43,7 +43,7 @@ VpnConnection::VpnConnection(std::shared_ptr<Settings> settings, QObject *parent
 
 VpnConnection::~VpnConnection()
 {
-#if defined AMNEZIA_DESKTOP
+#if defined POTOK_DESKTOP
     disconnectFromVpn();
 #endif
 }
@@ -56,7 +56,7 @@ void VpnConnection::onBytesChanged(quint64 receivedBytes, quint64 sentBytes)
 void VpnConnection::onConnectionStateChanged(Vpn::ConnectionState state)
 {
 
-#ifdef AMNEZIA_DESKTOP
+#ifdef POTOK_DESKTOP
     QString proto = m_settings->defaultContainerName(m_settings->defaultServerIndex());
     
     if (IpcClient::Interface()) {
@@ -118,7 +118,7 @@ const QString &VpnConnection::remoteAddress() const
 
 void VpnConnection::addSitesRoutes(const QString &gw, Settings::RouteMode mode)
 {
-#ifdef AMNEZIA_DESKTOP
+#ifdef POTOK_DESKTOP
     QStringList ips;
     QStringList sites;
     const QVariantMap &m = m_settings->vpnSites(mode);
@@ -167,7 +167,7 @@ QSharedPointer<VpnProtocol> VpnConnection::vpnProtocol() const
 
 void VpnConnection::addRoutes(const QStringList &ips)
 {
-#ifdef AMNEZIA_DESKTOP
+#ifdef POTOK_DESKTOP
     if (connectionState() == Vpn::ConnectionState::Connected && IpcClient::Interface()) {
         if (m_settings->routeMode() == Settings::VpnOnlyForwardSites) {
             IpcClient::Interface()->routeAddList(m_vpnProtocol->vpnGateway(), ips);
@@ -180,7 +180,7 @@ void VpnConnection::addRoutes(const QStringList &ips)
 
 void VpnConnection::deleteRoutes(const QStringList &ips)
 {
-#ifdef AMNEZIA_DESKTOP
+#ifdef POTOK_DESKTOP
     if (connectionState() == Vpn::ConnectionState::Connected && IpcClient::Interface()) {
         if (m_settings->routeMode() == Settings::VpnOnlyForwardSites) {
             IpcClient::Interface()->routeDeleteList(vpnProtocol()->vpnGateway(), ips);
@@ -193,7 +193,7 @@ void VpnConnection::deleteRoutes(const QStringList &ips)
 
 void VpnConnection::flushDns()
 {
-#ifdef AMNEZIA_DESKTOP
+#ifdef POTOK_DESKTOP
     if (IpcClient::Interface())
         IpcClient::Interface()->flushDns();
 #endif
@@ -239,7 +239,7 @@ void VpnConnection::connectToVpn(int serverIndex, const ServerCredentials &crede
 
     m_vpnConfiguration = vpnConfiguration;
 
-#ifdef AMNEZIA_DESKTOP
+#ifdef POTOK_DESKTOP
     if (m_vpnProtocol) {
         disconnect(m_vpnProtocol.data(), &VpnProtocol::protocolError, this, &VpnConnection::vpnProtocolError);
         m_vpnProtocol->stop();
@@ -317,7 +317,7 @@ void VpnConnection::appendSplitTunnelingConfig()
                 sitesJsonArray.append(site);
             }
 
-            // Allow traffic to Amnezia DNS
+            // Allow traffic to Potok DNS
             if (routeMode == Settings::VpnOnlyForwardSites) {
                 sitesJsonArray.append(m_vpnConfiguration.value(config_key::dns1).toString());
                 sitesJsonArray.append(m_vpnConfiguration.value(config_key::dns2).toString());
@@ -377,7 +377,7 @@ QString VpnConnection::bytesPerSecToText(quint64 bytes)
 
 void VpnConnection::disconnectFromVpn()
 {
-#ifdef AMNEZIA_DESKTOP
+#ifdef POTOK_DESKTOP
     QString proto = m_settings->defaultContainerName(m_settings->defaultServerIndex());
     if (IpcClient::Interface()) {
         IpcClient::Interface()->flushDns();

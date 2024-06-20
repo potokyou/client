@@ -78,7 +78,7 @@ ErrorCode ClientManagementModel::updateModel(const DockerContainer container, co
 
     ErrorCode error = ErrorCode::NoError;
 
-    QString clientsTableFile = QString("/opt/amnezia/%1/clientsTable");
+    QString clientsTableFile = QString("/opt/potok/%1/clientsTable");
     if (container == DockerContainer::OpenVpn || container == DockerContainer::ShadowSocks || container == DockerContainer::Cloak) {
         clientsTableFile = clientsTableFile.arg(ContainerProps::containerTypeToString(DockerContainer::OpenVpn));
     } else {
@@ -164,7 +164,7 @@ ErrorCode ClientManagementModel::getOpenVpnClients(const DockerContainer contain
         return ErrorCode::NoError;
     };
 
-    const QString getOpenVpnClientsList = "sudo docker exec -i $CONTAINER_NAME bash -c 'ls /opt/amnezia/openvpn/pki/issued'";
+    const QString getOpenVpnClientsList = "sudo docker exec -i $CONTAINER_NAME bash -c 'ls /opt/potok/openvpn/pki/issued'";
     QString script = serverController->replaceVars(getOpenVpnClientsList, serverController->genVarsForScript(credentials, container));
     error = serverController->runScript(credentials, script, cbReadStdOut);
     if (error != ErrorCode::NoError) {
@@ -174,7 +174,7 @@ ErrorCode ClientManagementModel::getOpenVpnClients(const DockerContainer contain
 
     if (!stdOut.isEmpty()) {
         QStringList certsIds = stdOut.split("\n", Qt::SkipEmptyParts);
-        certsIds.removeAll("AmneziaReq.crt");
+        certsIds.removeAll("PotokReq.crt");
 
         for (auto &openvpnCertId : certsIds) {
             openvpnCertId.replace(".crt", "");
@@ -200,7 +200,7 @@ ErrorCode ClientManagementModel::getWireGuardClients(const DockerContainer conta
 {
     ErrorCode error = ErrorCode::NoError;
 
-    const QString wireGuardConfigFile = QString("opt/amnezia/%1/wg0.conf").arg(container == DockerContainer::WireGuard ? "wireguard" : "awg");
+    const QString wireGuardConfigFile = QString("opt/potok/%1/wg0.conf").arg(container == DockerContainer::WireGuard ? "wireguard" : "awg");
     const QString wireguardConfigString = serverController->getTextFileFromContainer(container, credentials, wireGuardConfigFile, error);
     if (error != ErrorCode::NoError) {
         logger.error() << "Failed to get the wg conf file from the server";
@@ -359,7 +359,7 @@ ErrorCode ClientManagementModel::appendClient(const QString &clientId, const QSt
 
     const QByteArray clientsTableString = QJsonDocument(m_clientsTable).toJson();
 
-    QString clientsTableFile = QString("/opt/amnezia/%1/clientsTable");
+    QString clientsTableFile = QString("/opt/potok/%1/clientsTable");
     if (container == DockerContainer::OpenVpn || container == DockerContainer::ShadowSocks || container == DockerContainer::Cloak) {
         clientsTableFile = clientsTableFile.arg(ContainerProps::containerTypeToString(DockerContainer::OpenVpn));
     } else {
@@ -391,7 +391,7 @@ ErrorCode ClientManagementModel::renameClient(const int row, const QString &clie
 
     const QByteArray clientsTableString = QJsonDocument(m_clientsTable).toJson();
 
-    QString clientsTableFile = QString("/opt/amnezia/%1/clientsTable");
+    QString clientsTableFile = QString("/opt/potok/%1/clientsTable");
     if (container == DockerContainer::OpenVpn || container == DockerContainer::ShadowSocks || container == DockerContainer::Cloak) {
         clientsTableFile = clientsTableFile.arg(ContainerProps::containerTypeToString(DockerContainer::OpenVpn));
     } else {
@@ -493,7 +493,7 @@ ErrorCode ClientManagementModel::revokeOpenVpn(const int row, const DockerContai
     QString clientId = client.value(configKey::clientId).toString();
 
     const QString getOpenVpnCertData = QString("sudo docker exec -i $CONTAINER_NAME bash -c '"
-                                               "cd /opt/amnezia/openvpn ;\\"
+                                               "cd /opt/potok/openvpn ;\\"
                                                "easyrsa revoke %1 ;\\"
                                                "easyrsa gen-crl ;\\"
                                                "chmod 666 pki/crl.pem ;\\"
@@ -513,7 +513,7 @@ ErrorCode ClientManagementModel::revokeOpenVpn(const int row, const DockerContai
 
     const QByteArray clientsTableString = QJsonDocument(m_clientsTable).toJson();
 
-    QString clientsTableFile = QString("/opt/amnezia/%1/clientsTable");
+    QString clientsTableFile = QString("/opt/potok/%1/clientsTable");
     clientsTableFile = clientsTableFile.arg(ContainerProps::containerTypeToString(DockerContainer::OpenVpn));
     error = serverController->uploadTextFileToContainer(container, credentials, clientsTableString, clientsTableFile);
     if (error != ErrorCode::NoError) {
@@ -530,7 +530,7 @@ ErrorCode ClientManagementModel::revokeWireGuard(const int row, const DockerCont
     ErrorCode error = ErrorCode::NoError;
 
     const QString wireGuardConfigFile =
-            QString("/opt/amnezia/%1/wg0.conf").arg(container == DockerContainer::WireGuard ? "wireguard" : "awg");
+            QString("/opt/potok/%1/wg0.conf").arg(container == DockerContainer::WireGuard ? "wireguard" : "awg");
     const QString wireguardConfigString = serverController->getTextFileFromContainer(container, credentials, wireGuardConfigFile, error);
     if (error != ErrorCode::NoError) {
         logger.error() << "Failed to get the wg conf file from the server";
@@ -561,7 +561,7 @@ ErrorCode ClientManagementModel::revokeWireGuard(const int row, const DockerCont
 
     const QByteArray clientsTableString = QJsonDocument(m_clientsTable).toJson();
 
-    QString clientsTableFile = QString("/opt/amnezia/%1/clientsTable");
+    QString clientsTableFile = QString("/opt/potok/%1/clientsTable");
     if (container == DockerContainer::OpenVpn || container == DockerContainer::ShadowSocks || container == DockerContainer::Cloak) {
         clientsTableFile = clientsTableFile.arg(ContainerProps::containerTypeToString(DockerContainer::OpenVpn));
     } else {

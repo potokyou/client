@@ -50,7 +50,7 @@ bool IpcClient::init(IpcClient *instance)
         instance->m_isSocketConnected = false;
     });
 
-    Instance()->m_localSocket->connectToServer(amnezia::getIpcServiceUrl());
+    Instance()->m_localSocket->connectToServer(potok::getIpcServiceUrl());
 
     Instance()->m_localSocket->waitForConnected();
 
@@ -101,7 +101,7 @@ QSharedPointer<PrivilegedProcess> IpcClient::CreatePrivilegedProcess()
         }
 
     });
-    pd->localSocket->connectToServer(amnezia::getIpcProcessUrl(pid));
+    pd->localSocket->connectToServer(potok::getIpcProcessUrl(pid));
     pd->localSocket->waitForConnected();
 
     auto processReplica = QSharedPointer<PrivilegedProcess>(pd->ipcProcess);

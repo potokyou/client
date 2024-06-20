@@ -37,7 +37,7 @@
 
 #define OUTBOUND_TAG_PROXY "PROXY"
 
-namespace amnezia::serialization::trojan
+namespace potok::serialization::trojan
 {
 
 const QString Serialize(const TrojanObject &object, const QString &alias)
@@ -267,5 +267,5 @@ QJsonObject Deserialize(const QString &trojanUri, QString *alias, QString *errMe
     return root;
 }
 
-} // namespace amnezia::serialization::trojan
+} // namespace potok::serialization::trojan
 

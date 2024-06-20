@@ -19,7 +19,7 @@
     <DisableAuthorizationFallback>true</DisableAuthorizationFallback>
     <RemoteRepositories>
         <Repository>
-            <Url>https://amneziavpn.org/updates/linux</Url>
+            <Url>https://potokvpn.org/updates/linux</Url>
             <Enabled>true</Enabled>
             <DisplayName>PotokVPN - repository for Linux</DisplayName>
         </Repository>

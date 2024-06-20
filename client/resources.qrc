@@ -106,8 +106,8 @@
         <file>ui/qml/Controls2/DropDownType.qml</file>
         <file>ui/qml/Pages2/PageSetupWizardStart.qml</file>
         <file>ui/qml/main2.qml</file>
-        <file>images/amneziaBigLogo.png</file>
-        <file>images/amneziaBigLogo.svg</file>
+        <file>images/potokBigLogo.png</file>
+        <file>images/potokBigLogo.svg</file>
         <file>ui/qml/Controls2/FlickableType.qml</file>
         <file>ui/qml/Pages2/PageSetupWizardCredentials.qml</file>
         <file>ui/qml/Controls2/HeaderType.qml</file>
@@ -162,7 +162,7 @@
         <file>ui/qml/Controls2/DividerType.qml</file>
         <file>ui/qml/Controls2/StackViewType.qml</file>
         <file>ui/qml/Pages2/PageSettings.qml</file>
-        <file>images/controls/amnezia.svg</file>
+        <file>images/controls/potok.svg</file>
         <file>images/controls/app.svg</file>
         <file>images/controls/radio.svg</file>
         <file>images/controls/save.svg</file>

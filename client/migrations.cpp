@@ -37,7 +37,7 @@ void Migrations::migrateV3()
 #ifdef Q_OS_ANDROID
     qDebug() << "Migration to V3 on Android...";
 
-    QString packageName = "org.amnezia.vpn";
+    QString packageName = "org.potok.vpn";
 
     QDir dir(".");
     QString currentDir = dir.absolutePath();

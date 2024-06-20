@@ -1,14 +1,14 @@
 @startuml openVpnRevokeClientCertificate
 actor Admin as adm
-participant "Amnezia Client" as cli
-participant "Amnezia Container" as cont
+participant "Potok Client" as cli
+participant "Potok Container" as cont
 participant "OpenVpn Service" as ovpn
 
 adm -> cli: revoke the selected client certificate
 cli -> cli: start busy indicator
 cli -> cont: execute script "revoke openvpn client"
 
-cont -> cont: cd /opt/amnezia/openvpn
+cont -> cont: cd /opt/potok/openvpn
 cont -> cont: easyrsa revoke openvpnCertId
 cont -> cont: easyrsa gen-crl
 cont -> cont: cp pki/crl.pem crl.pem

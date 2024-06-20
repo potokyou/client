@@ -45,7 +45,7 @@
 const inline QString QV2RAY_SSD_DEFAULT_NAME_PATTERN = "%1 - %2 (rate %3)";
 #define OUTBOUND_TAG_PROXY "PROXY"
 
-namespace amnezia::serialization::ssd
+namespace potok::serialization::ssd
 {
     // These below are super strict checking schemes, but necessary.
 #define MUST_EXIST(fieldName)                                                                                                                        \
@@ -240,5 +240,5 @@ QList<std::pair<QString, QJsonObject>> Deserialize(const QString &uri, QString *
 #undef SERVER_SHOULD_BE_OBJECT
 #undef SHOULD_EXIST
 #undef SHOULD_STRING
-} // namespace amnezia::serialization::ssd
+} // namespace potok::serialization::ssd
 

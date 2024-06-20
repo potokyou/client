@@ -1,8 +1,8 @@
-package org.amnezia.vpn.protocol.cloak
+package org.potok.vpn.protocol.cloak
 
 import android.util.Base64
 import net.openvpn.ovpn3.ClientAPI_Config
-import org.amnezia.vpn.protocol.openvpn.OpenVpn
+import org.potok.vpn.protocol.openvpn.OpenVpn
 import org.json.JSONObject
 
 /**

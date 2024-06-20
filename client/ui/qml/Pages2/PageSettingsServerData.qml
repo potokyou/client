@@ -96,7 +96,7 @@ PageType {
                 visible: content.isServerWithWriteAccess
                 Layout.fillWidth: true
 
-                text: qsTr("Check the server for previously installed Amnezia services")
+                text: qsTr("Check the server for previously installed Potok services")
                 descriptionText: qsTr("Add them to the application if they were not displayed")
 
                 KeyNavigation.tab: labelWithButton2
@@ -206,7 +206,7 @@ PageType {
                 visible: content.isServerWithWriteAccess
                 Layout.fillWidth: true
 
-                text: qsTr("Clear server from Amnezia software")
+                text: qsTr("Clear server from Potok software")
                 textColor: "#EB5757"
 
                 Keys.onTabPressed: labelWithButton5.visible ?
@@ -214,14 +214,14 @@ PageType {
                                     root.lastItemTabClickedSignal()
 
                 clickedFunction: function() {
-                    var headerText = qsTr("Do you want to clear server from Amnezia software?")
+                    var headerText = qsTr("Do you want to clear server from Potok software?")
                     var descriptionText = qsTr("All users whom you shared a connection with will no longer be able to connect to it.")
                     var yesButtonText = qsTr("Continue")
                     var noButtonText = qsTr("Cancel")
 
                     var yesButtonFunction = function() {
                         if (ServersModel.isDefaultServerCurrentlyProcessed() && ConnectionController.isConnected) {
-                            PageController.showNotificationMessage(qsTr("Cannot clear server from Amnezia software during active connection"))
+                            PageController.showNotificationMessage(qsTr("Cannot clear server from Potok software during active connection"))
                         } else {
                             PageController.goToPage(PageEnum.PageDeinstalling)
                             InstallController.removeAllContainers()

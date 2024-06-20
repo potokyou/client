@@ -6,11 +6,11 @@ ARG XRAY_RELEASE="v1.8.6"
 RUN apk add --no-cache curl unzip bash openssl netcat-openbsd dumb-init rng-tools xz
 RUN apk --update upgrade --no-cache
 
-RUN mkdir -p /opt/amnezia
-RUN echo -e "#!/bin/bash\ntail -f /dev/null" > /opt/amnezia/start.sh
-RUN chmod a+x /opt/amnezia/start.sh
+RUN mkdir -p /opt/potok
+RUN echo -e "#!/bin/bash\ntail -f /dev/null" > /opt/potok/start.sh
+RUN chmod a+x /opt/potok/start.sh
 
-RUN mkdir -p /opt/amnezia/xray
+RUN mkdir -p /opt/potok/xray
 
 RUN curl -L https://github.com/XTLS/Xray-core/releases/download/${XRAY_RELEASE}/Xray-linux-64.zip > /root/xray.zip;\
   unzip /root/xray.zip -d /usr/bin/;\
@@ -49,5 +49,5 @@ RUN echo -e " \n\
 
 ENV TZ=Asia/Shanghai
 
-ENTRYPOINT [ "dumb-init", "/opt/amnezia/start.sh" ]
+ENTRYPOINT [ "dumb-init", "/opt/potok/start.sh" ]
 

@@ -90,7 +90,7 @@ bool ContainersModel::isSupportedByCurrentPlatform(const int containerIndex)
 
 bool ContainersModel::isServiceContainer(const int containerIndex)
 {
-    return qvariant_cast<amnezia::ServiceType>(data(index(containerIndex), ServiceTypeRole) == ServiceType::Other);
+    return qvariant_cast<potok::ServiceType>(data(index(containerIndex), ServiceTypeRole) == ServiceType::Other);
 }
 
 QHash<int, QByteArray> ContainersModel::roleNames() const

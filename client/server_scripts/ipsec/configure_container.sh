@@ -16,7 +16,7 @@ NET_IFACE=$(route 2>/dev/null | grep -m 1 '^default' | grep -o '[^ ]*$')
 
 
 mkdir -p /opt/src
-mkdir -p /opt/amnezia/ikev2/clients
+mkdir -p /opt/potok/ikev2/clients
 
 
 # Create IPsec config

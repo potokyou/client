@@ -16,18 +16,18 @@ XrayConfigurator::XrayConfigurator(std::shared_ptr<Settings> settings, const QSh
 QString XrayConfigurator::createConfig(const ServerCredentials &credentials, DockerContainer container, const QJsonObject &containerConfig,
                                        ErrorCode &errorCode)
 {
-    QString config = m_serverController->replaceVars(amnezia::scriptData(ProtocolScriptType::xray_template, container),
+    QString config = m_serverController->replaceVars(potok::scriptData(ProtocolScriptType::xray_template, container),
                                                      m_serverController->genVarsForScript(credentials, container, containerConfig));
 
     QString xrayPublicKey =
-            m_serverController->getTextFileFromContainer(container, credentials, amnezia::protocols::xray::PublicKeyPath, errorCode);
+            m_serverController->getTextFileFromContainer(container, credentials, potok::protocols::xray::PublicKeyPath, errorCode);
     xrayPublicKey.replace("\n", "");
 
-    QString xrayUuid = m_serverController->getTextFileFromContainer(container, credentials, amnezia::protocols::xray::uuidPath, errorCode);
+    QString xrayUuid = m_serverController->getTextFileFromContainer(container, credentials, potok::protocols::xray::uuidPath, errorCode);
     xrayUuid.replace("\n", "");
 
     QString xrayShortId =
-            m_serverController->getTextFileFromContainer(container, credentials, amnezia::protocols::xray::shortidPath, errorCode);
+            m_serverController->getTextFileFromContainer(container, credentials, potok::protocols::xray::shortidPath, errorCode);
     xrayShortId.replace("\n", "");
 
     if (errorCode != ErrorCode::NoError) {

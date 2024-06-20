@@ -5,7 +5,7 @@
 
 ServersModel::ServersModel(std::shared_ptr<Settings> settings, QObject *parent) : m_settings(settings), QAbstractListModel(parent)
 {
-    m_isAmneziaDnsEnabled = m_settings->useAmneziaDns();
+    m_isPotokDnsEnabled = m_settings->usePotokDns();
 
     connect(this, &ServersModel::defaultServerIndexChanged, this, &ServersModel::defaultServerNameChanged);
 
@@ -88,9 +88,9 @@ QVariant ServersModel::data(const QModelIndex &index, int role) const
         auto credentials = serverCredentials(index.row());
         return (!credentials.userName.isEmpty() && !credentials.secretData.isEmpty());
     }
-    case ContainsAmneziaDnsRole: {
+    case ContainsPotokDnsRole: {
         QString primaryDns = server.value(config_key::dns1).toString();
-        return primaryDns == protocols::dns::amneziaDnsIp;
+        return primaryDns == protocols::dns::potokDnsIp;
     }
     case DefaultContainerRole: {
         return ContainerProps::containerFromString(server.value(config_key::defaultContainer).toString());
@@ -101,9 +101,9 @@ QVariant ServersModel::data(const QModelIndex &index, int role) const
     case IsServerFromApiRole: {
         return server.value(config_key::configVersion).toInt();
     }
-    case HasAmneziaDns: {
+    case HasPotokDns: {
         QString primaryDns = server.value(config_key::dns1).toString();
-        return primaryDns == protocols::dns::amneziaDnsIp;
+        return primaryDns == protocols::dns::potokDnsIp;
     }
     }
 
@@ -152,12 +152,12 @@ QString ServersModel::getServerDescription(const QJsonObject &server, const int 
     if (configVersion) {
         return server.value(config_key::description).toString();
     } else if (data(index, HasWriteAccessRole).toBool()) {
-        if (m_isAmneziaDnsEnabled && isAmneziaDnsContainerInstalled(index)) {
-            description += "Amnezia DNS | ";
+        if (m_isPotokDnsEnabled && isPotokDnsContainerInstalled(index)) {
+            description += "Potok DNS | ";
         }
     } else {
-        if (data(index, HasAmneziaDns).toBool()) {
-            description += "Amnezia DNS | ";
+        if (data(index, HasPotokDns).toBool()) {
+            description += "Potok DNS | ";
         }
     }
     return description;
@@ -310,7 +310,7 @@ QHash<int, QByteArray> ServersModel::roleNames() const
 
     roles[HasWriteAccessRole] = "hasWriteAccess";
 
-    roles[ContainsAmneziaDnsRole] = "containsAmneziaDns";
+    roles[ContainsPotokDnsRole] = "containsPotokDns";
 
     roles[DefaultContainerRole] = "defaultContainer";
     roles[HasInstalledContainers] = "hasInstalledContainers";
@@ -492,7 +492,7 @@ void ServersModel::clearCachedProfile(const DockerContainer container)
     updateContainersModel();
 }
 
-bool ServersModel::isAmneziaDnsContainerInstalled(const int serverIndex) const
+bool ServersModel::isPotokDnsContainerInstalled(const int serverIndex) const
 {
     QJsonObject server = m_servers.at(serverIndex).toObject();
     auto containers = server.value(config_key::containers).toArray();
@@ -521,8 +521,8 @@ QPair<QString, QString> ServersModel::getDnsPair(int serverIndex)
     dns.second = server.value(config_key::dns2).toString();
 
     if (dns.first.isEmpty() || !NetworkUtilities::checkIPv4Format(dns.first)) {
-        if (m_isAmneziaDnsEnabled && isDnsContainerInstalled) {
-            dns.first = protocols::dns::amneziaDnsIp;
+        if (m_isPotokDnsEnabled && isDnsContainerInstalled) {
+            dns.first = protocols::dns::potokDnsIp;
         } else
             dns.first = m_settings->primaryDns();
     }
@@ -557,9 +557,9 @@ QStringList ServersModel::getAllInstalledServicesName(const int serverIndex)
     return servicesName;
 }
 
-void ServersModel::toggleAmneziaDns(bool enabled)
+void ServersModel::togglePotokDns(bool enabled)
 {
-    m_isAmneziaDnsEnabled = enabled;
+    m_isPotokDnsEnabled = enabled;
     emit defaultServerDescriptionChanged();
 }
 

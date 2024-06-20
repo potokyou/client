@@ -6,9 +6,9 @@ LABEL maintainer="PotokVPN"
 RUN apk add --no-cache curl wireguard-tools dumb-init
 RUN apk --update upgrade --no-cache
 
-RUN mkdir -p /opt/amnezia
-RUN echo -e "#!/bin/bash\ntail -f /dev/null" > /opt/amnezia/start.sh
-RUN chmod a+x /opt/amnezia/start.sh
+RUN mkdir -p /opt/potok
+RUN echo -e "#!/bin/bash\ntail -f /dev/null" > /opt/potok/start.sh
+RUN chmod a+x /opt/potok/start.sh
 
 # Tune network  
 RUN echo -e " \n\
@@ -42,5 +42,5 @@ RUN echo -e " \n\
   * hard nofile 51200 \n\
   " | sed -e 's/^\s\+//g' | tee -a /etc/security/limits.conf  
 
-ENTRYPOINT [ "dumb-init", "/opt/amnezia/start.sh" ]
+ENTRYPOINT [ "dumb-init", "/opt/potok/start.sh" ]
 CMD [ "" ]

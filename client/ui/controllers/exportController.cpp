@@ -70,7 +70,7 @@ void ExportController::generateFullAccessConfigAndroid()
     QJniObject activity = AndroidUtils::getActivity();
     auto appContext = activity.callObjectMethod("getApplicationContext", "()Landroid/content/Context;");
     if (appContext.isValid()) {
-        auto intent = QJniObject::callStaticObjectMethod("org/amnezia/vpn/AuthHelper", "getAuthIntent",
+        auto intent = QJniObject::callStaticObjectMethod("org/potok/vpn/AuthHelper", "getAuthIntent",
                                                          "(Landroid/content/Context;)Landroid/content/Intent;", appContext.object());
         if (intent.isValid()) {
             if (intent.object<jobject>() != nullptr) {
@@ -351,7 +351,7 @@ QList<QString> ExportController::generateQrCodeImageSeries(const QByteArray &dat
     for (int i = 0; i < data.size(); i = i + k) {
         QByteArray chunk;
         QDataStream s(&chunk, QIODevice::WriteOnly);
-        s << amnezia::qrMagicCode << chunksCount << (quint8)std::round(i / k) << data.mid(i, k);
+        s << potok::qrMagicCode << chunksCount << (quint8)std::round(i / k) << data.mid(i, k);
 
         QByteArray ba = chunk.toBase64(QByteArray::Base64UrlEncoding | QByteArray::OmitTrailingEquals);
 

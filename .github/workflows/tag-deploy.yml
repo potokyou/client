@@ -96,7 +96,7 @@ jobs:
     - name: 'Getting keystore'
       uses: actions/checkout@v3  
       with:
-        repository: amnezia-vpn/amnezia-android-certificates
+        repository: potok-vpn/potok-android-certificates
         ssh-key: ${{ secrets.ANDROID_CERTS_SSH_PRIVATE_KEY }}
         path: keystore
 

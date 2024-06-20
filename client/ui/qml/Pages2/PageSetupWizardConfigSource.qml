@@ -57,7 +57,7 @@ PageType {
                 Layout.leftMargin: 16
 
                 headerText: qsTr("Server connection")
-                descriptionText: qsTr("Do not use connection codes from untrusted sources, as they may be created to intercept your data.")
+                descriptionText: qsTr("The configuration file is given to you after paying for the subscription through our Telegram bot.")
             }
 
             Header2TextType {

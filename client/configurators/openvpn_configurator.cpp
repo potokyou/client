@@ -41,7 +41,7 @@ OpenVpnConfigurator::ConnectionData OpenVpnConfigurator::prepareOpenVpnConfig(co
         return connData;
     }
 
-    QString reqFileName = QString("%1/%2.req").arg(amnezia::protocols::openvpn::clientsDirPath).arg(connData.clientId);
+    QString reqFileName = QString("%1/%2.req").arg(potok::protocols::openvpn::clientsDirPath).arg(connData.clientId);
 
     errorCode = m_serverController->uploadTextFileToContainer(container, credentials, connData.request, reqFileName);
     if (errorCode != ErrorCode::NoError) {
@@ -54,15 +54,15 @@ OpenVpnConfigurator::ConnectionData OpenVpnConfigurator::prepareOpenVpnConfig(co
     }
 
     connData.caCert =
-            m_serverController->getTextFileFromContainer(container, credentials, amnezia::protocols::openvpn::caCertPath, errorCode);
+            m_serverController->getTextFileFromContainer(container, credentials, potok::protocols::openvpn::caCertPath, errorCode);
     connData.clientCert = m_serverController->getTextFileFromContainer(
-            container, credentials, QString("%1/%2.crt").arg(amnezia::protocols::openvpn::clientCertPath).arg(connData.clientId), errorCode);
+            container, credentials, QString("%1/%2.crt").arg(potok::protocols::openvpn::clientCertPath).arg(connData.clientId), errorCode);
 
     if (errorCode != ErrorCode::NoError) {
         return connData;
     }
 
-    connData.taKey = m_serverController->getTextFileFromContainer(container, credentials, amnezia::protocols::openvpn::taKeyPath, errorCode);
+    connData.taKey = m_serverController->getTextFileFromContainer(container, credentials, potok::protocols::openvpn::taKeyPath, errorCode);
 
     if (connData.caCert.isEmpty() || connData.clientCert.isEmpty() || connData.taKey.isEmpty()) {
         errorCode = ErrorCode::SshScpFailureError;
@@ -74,7 +74,7 @@ OpenVpnConfigurator::ConnectionData OpenVpnConfigurator::prepareOpenVpnConfig(co
 QString OpenVpnConfigurator::createConfig(const ServerCredentials &credentials, DockerContainer container,
                                           const QJsonObject &containerConfig, ErrorCode &errorCode)
 {
-    QString config = m_serverController->replaceVars(amnezia::scriptData(ProtocolScriptType::openvpn_template, container),
+    QString config = m_serverController->replaceVars(potok::scriptData(ProtocolScriptType::openvpn_template, container),
                                                      m_serverController->genVarsForScript(credentials, container, containerConfig));
 
     ConnectionData connData = prepareOpenVpnConfig(credentials, container, errorCode);
@@ -178,13 +178,13 @@ QString OpenVpnConfigurator::processConfigWithExportSettings(const QPair<QString
 
 ErrorCode OpenVpnConfigurator::signCert(DockerContainer container, const ServerCredentials &credentials, QString clientId)
 {
-    QString script_import = QString("sudo docker exec -i %1 bash -c \"cd /opt/amnezia/openvpn && "
+    QString script_import = QString("sudo docker exec -i %1 bash -c \"cd /opt/potok/openvpn && "
                                     "easyrsa import-req %2/%3.req %3\"")
                                     .arg(ContainerProps::containerToString(container))
-                                    .arg(amnezia::protocols::openvpn::clientsDirPath)
+                                    .arg(potok::protocols::openvpn::clientsDirPath)
                                     .arg(clientId);
 
-    QString script_sign = QString("sudo docker exec -i %1 bash -c \"export EASYRSA_BATCH=1; cd /opt/amnezia/openvpn && "
+    QString script_sign = QString("sudo docker exec -i %1 bash -c \"export EASYRSA_BATCH=1; cd /opt/potok/openvpn && "
                                   "easyrsa sign-req client %2\"")
                                   .arg(ContainerProps::containerToString(container))
                                   .arg(clientId);

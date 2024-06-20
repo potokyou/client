@@ -38,7 +38,7 @@
 #define OUTBOUND_TAG_PROXY "PROXY"
 #define JADD(...) FOR_EACH(JADDEx, __VA_ARGS__)
 
-namespace amnezia::serialization::ss
+namespace potok::serialization::ss
 {
 QJsonObject Deserialize(const QString &ssUri, QString *alias, QString *errMessage)
 {
@@ -138,5 +138,5 @@ const QString Serialize(const ShadowSocksServerObject &server, const QString &al
     url.setFragment(alias);
     return url.toString(QUrl::ComponentFormattingOption::FullyEncoded);
 }
-} // namespace amnezia::serialization::ss
+} // namespace potok::serialization::ss
 

@@ -424,11 +424,11 @@ PageType {
                 clickedFunction: function() {
                     var fileName = ""
                     if (GC.isMobile()) {
-                        fileName = "amnezia_sites.json"
+                        fileName = "potok_sites.json"
                     } else {
                         fileName = SystemController.getFileName(qsTr("Save sites"),
                                                                 qsTr("Sites files (*.json)"),
-                                                                StandardPaths.standardLocations(StandardPaths.DocumentsLocation) + "/amnezia_sites",
+                                                                StandardPaths.standardLocations(StandardPaths.DocumentsLocation) + "/potok_sites",
                                                                 true,
                                                                 ".json")
                     }

@@ -54,7 +54,7 @@ DrawerType2 {
             Layout.fillWidth: true
             Layout.topMargin: 16
 
-            text: qsTr("Configure your server")
+            text: qsTr("For developers")
             rightImageSource: "qrc:/images/controls/chevron-right.svg"
 
             clickedFunction: function() {

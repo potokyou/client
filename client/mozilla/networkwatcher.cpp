@@ -77,7 +77,7 @@ void NetworkWatcher::initialize() {
   m_impl->initialize();
 
 
-// TODO: IMPL FOR AMNEZIA
+// TODO: IMPL FOR POTOK
 #if 0
   SettingsHolder* settingsHolder = SettingsHolder::instance();
   Q_ASSERT(settingsHolder);
@@ -98,7 +98,7 @@ void NetworkWatcher::initialize() {
 }
 
 void NetworkWatcher::settingsChanged() {
-// TODO: IMPL FOR AMNEZIA
+// TODO: IMPL FOR POTOK
 #if 0
   SettingsHolder* settingsHolder = SettingsHolder::instance();
   m_active = settingsHolder->unsecuredNetworkAlert() ||
@@ -127,7 +127,7 @@ void NetworkWatcher::unsecuredNetwork(const QString& networkName,
     logger.debug() << "Disabled. Ignoring unsecured network";
     return;
   }
-// TODO: IMPL FOR AMNEZIA
+// TODO: IMPL FOR POTOK
 #if 0
   MozillaVPN* vpn = MozillaVPN::instance();
 

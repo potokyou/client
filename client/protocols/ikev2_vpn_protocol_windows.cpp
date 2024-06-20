@@ -189,15 +189,15 @@ ErrorCode Ikev2Protocol::start()
         auto certInstallProcess = IpcClient::CreatePrivilegedProcess();
 
         if (!certInstallProcess) {
-            setLastError(ErrorCode::AmneziaServiceConnectionFailed);
-            return ErrorCode::AmneziaServiceConnectionFailed;
+            setLastError(ErrorCode::PotokServiceConnectionFailed);
+            return ErrorCode::PotokServiceConnectionFailed;
         }
 
         certInstallProcess->waitForSource(1000);
         if (!certInstallProcess->isInitialized()) {
             qWarning() << "IpcProcess replica is not connected!";
-            setLastError(ErrorCode::AmneziaServiceConnectionFailed);
-            return ErrorCode::AmneziaServiceConnectionFailed;
+            setLastError(ErrorCode::PotokServiceConnectionFailed);
+            return ErrorCode::PotokServiceConnectionFailed;
         }
         certInstallProcess->setProgram(PermittedProcess::CertUtil);
         QStringList arguments({"-f" , "-importpfx",

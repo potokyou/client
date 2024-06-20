@@ -96,7 +96,7 @@ public slots:
     int getDrawerDepth();
 
   private slots:
-    void onShowErrorMessage(amnezia::ErrorCode errorCode);
+    void onShowErrorMessage(potok::ErrorCode errorCode);
 
 signals:
     void goToPage(PageLoader::PageEnum page, bool slide = true);
@@ -112,7 +112,7 @@ signals:
     void restorePageHomeState(bool isContainerInstalled = false);
     void replaceStartPage();
 
-    void showErrorMessage(amnezia::ErrorCode);
+    void showErrorMessage(potok::ErrorCode);
     void showErrorMessage(const QString &errorMessage);
     void showNotificationMessage(const QString &message);
 

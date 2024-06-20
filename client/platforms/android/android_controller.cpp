@@ -14,9 +14,9 @@ namespace
 {
     AndroidController *s_instance = nullptr;
 
-    constexpr auto QT_ANDROID_CONTROLLER_CLASS = "org/amnezia/vpn/qt/QtAndroidController";
-    constexpr auto ANDROID_LOG_CLASS = "org/amnezia/vpn/util/Log";
-    constexpr auto TAG = "AmneziaQt";
+    constexpr auto QT_ANDROID_CONTROLLER_CLASS = "org/potok/vpn/qt/QtAndroidController";
+    constexpr auto ANDROID_LOG_CLASS = "org/potok/vpn/util/Log";
+    constexpr auto TAG = "PotokQt";
 } // namespace
 
 AndroidController::AndroidController() : QObject()

@@ -1,15 +1,15 @@
 #!/bin/bash
 
-# This scripts copied from Amnezia client to Docker container to /opt/amnezia and launched every time container starts
+# This scripts copied from Potok client to Docker container to /opt/potok and launched every time container starts
 
 echo "Container startup"
 #ifconfig eth0:0 $SERVER_IP_ADDRESS netmask 255.255.255.255 up
 
 # kill daemons in case of restart
-wg-quick down /opt/amnezia/wireguard/wg0.conf
+wg-quick down /opt/potok/wireguard/wg0.conf
 
 # start daemons if configured
-if [ -f /opt/amnezia/wireguard/wg0.conf ]; then (wg-quick up /opt/amnezia/wireguard/wg0.conf); fi
+if [ -f /opt/potok/wireguard/wg0.conf ]; then (wg-quick up /opt/potok/wireguard/wg0.conf); fi
 
 # Allow traffic on the TUN interface.
 iptables -A INPUT -i wg0 -j ACCEPT

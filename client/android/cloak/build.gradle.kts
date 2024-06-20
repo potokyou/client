@@ -8,7 +8,7 @@ kotlin {
 }
 
 android {
-    namespace = "org.amnezia.vpn.protocol.cloak"
+    namespace = "org.potok.vpn.protocol.cloak"
 }
 
 dependencies {

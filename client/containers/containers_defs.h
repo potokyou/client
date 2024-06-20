@@ -6,9 +6,9 @@
 
 #include "../protocols/protocols_defs.h"
 
-using namespace amnezia;
+using namespace potok;
 
-namespace amnezia
+namespace potok
 {
 
     namespace ContainerEnumNS
@@ -42,36 +42,36 @@ namespace amnezia
         Q_OBJECT
 
     public:
-        Q_INVOKABLE static amnezia::DockerContainer containerFromString(const QString &container);
-        Q_INVOKABLE static QString containerToString(amnezia::DockerContainer container);
-        Q_INVOKABLE static QString containerTypeToString(amnezia::DockerContainer c);
+        Q_INVOKABLE static potok::DockerContainer containerFromString(const QString &container);
+        Q_INVOKABLE static QString containerToString(potok::DockerContainer container);
+        Q_INVOKABLE static QString containerTypeToString(potok::DockerContainer c);
 
-        Q_INVOKABLE static QList<amnezia::DockerContainer> allContainers();
+        Q_INVOKABLE static QList<potok::DockerContainer> allContainers();
 
-        Q_INVOKABLE static QMap<amnezia::DockerContainer, QString> containerHumanNames();
-        Q_INVOKABLE static QMap<amnezia::DockerContainer, QString> containerDescriptions();
-        Q_INVOKABLE static QMap<amnezia::DockerContainer, QString> containerDetailedDescriptions();
+        Q_INVOKABLE static QMap<potok::DockerContainer, QString> containerHumanNames();
+        Q_INVOKABLE static QMap<potok::DockerContainer, QString> containerDescriptions();
+        Q_INVOKABLE static QMap<potok::DockerContainer, QString> containerDetailedDescriptions();
 
         // these protocols will be displayed in container settings
-        Q_INVOKABLE static QVector<amnezia::Proto> protocolsForContainer(amnezia::DockerContainer container);
+        Q_INVOKABLE static QVector<potok::Proto> protocolsForContainer(potok::DockerContainer container);
 
-        Q_INVOKABLE static amnezia::ServiceType containerService(amnezia::DockerContainer c);
+        Q_INVOKABLE static potok::ServiceType containerService(potok::DockerContainer c);
 
         // binding between Docker container and main protocol of given container
         // it may be changed fot future containers :)
-        Q_INVOKABLE static amnezia::Proto defaultProtocol(amnezia::DockerContainer c);
+        Q_INVOKABLE static potok::Proto defaultProtocol(potok::DockerContainer c);
 
-        Q_INVOKABLE static bool isSupportedByCurrentPlatform(amnezia::DockerContainer c);
-        Q_INVOKABLE static QStringList fixedPortsForContainer(amnezia::DockerContainer c);
+        Q_INVOKABLE static bool isSupportedByCurrentPlatform(potok::DockerContainer c);
+        Q_INVOKABLE static QStringList fixedPortsForContainer(potok::DockerContainer c);
 
-        static bool isEasySetupContainer(amnezia::DockerContainer container);
-        static QString easySetupHeader(amnezia::DockerContainer container);
-        static QString easySetupDescription(amnezia::DockerContainer container);
-        static int easySetupOrder(amnezia::DockerContainer container);
+        static bool isEasySetupContainer(potok::DockerContainer container);
+        static QString easySetupHeader(potok::DockerContainer container);
+        static QString easySetupDescription(potok::DockerContainer container);
+        static int easySetupOrder(potok::DockerContainer container);
 
-        static bool isShareable(amnezia::DockerContainer container);
+        static bool isShareable(potok::DockerContainer container);
 
-        static QJsonObject getProtocolConfigFromContainer(const amnezia::Proto protocol, const QJsonObject &containerConfig);
+        static QJsonObject getProtocolConfigFromContainer(const potok::Proto protocol, const QJsonObject &containerConfig);
     };
 
     static void declareQmlContainerEnum()
@@ -80,8 +80,8 @@ namespace amnezia
                                          "Error: only enums");
     }
 
-} // namespace amnezia
+} // namespace potok
 
-QDebug operator<<(QDebug debug, const amnezia::DockerContainer &c);
+QDebug operator<<(QDebug debug, const potok::DockerContainer &c);
 
 #endif // CONTAINERS_DEFS_H

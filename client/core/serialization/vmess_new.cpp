@@ -39,7 +39,7 @@
 
 #define OUTBOUND_TAG_PROXY "PROXY"
 
-namespace amnezia::serialization::vmess_new
+namespace potok::serialization::vmess_new
 {
 const static QStringList NetworkType{ "tcp", "http", "ws", "kcp", "quic", "grpc" };
 const static QStringList QuicSecurityTypes{ "none", "aes-128-gcm", "chacha20-poly1305" };
@@ -169,4 +169,4 @@ QJsonObject Deserialize(const QString &vmessStr, QString *alias, QString *errMes
     return root;
 }
 
-} // namespace amnezia::serialization::vmess_new
+} // namespace potok::serialization::vmess_new

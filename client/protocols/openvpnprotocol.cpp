@@ -64,7 +64,7 @@ void OpenVpnProtocol::stop()
 ErrorCode OpenVpnProtocol::prepare()
 {
     if (!IpcClient::Interface()) {
-        return ErrorCode::AmneziaServiceConnectionFailed;
+        return ErrorCode::PotokServiceConnectionFailed;
     }
 
     QRemoteObjectPendingReply<QStringList> resultCheck = IpcClient::Interface()->getTapList();
@@ -207,15 +207,15 @@ ErrorCode OpenVpnProtocol::start()
     m_openVpnProcess = IpcClient::CreatePrivilegedProcess();
 
     if (!m_openVpnProcess) {
-        setLastError(ErrorCode::AmneziaServiceConnectionFailed);
-        return ErrorCode::AmneziaServiceConnectionFailed;
+        setLastError(ErrorCode::PotokServiceConnectionFailed);
+        return ErrorCode::PotokServiceConnectionFailed;
     }
 
     m_openVpnProcess->waitForSource(5000);
     if (!m_openVpnProcess->isInitialized()) {
         qWarning() << "IpcProcess replica is not connected!";
-        setLastError(ErrorCode::AmneziaServiceConnectionFailed);
-        return ErrorCode::AmneziaServiceConnectionFailed;
+        setLastError(ErrorCode::PotokServiceConnectionFailed);
+        return ErrorCode::PotokServiceConnectionFailed;
     }
     m_openVpnProcess->setProgram(PermittedProcess::OpenVPN);
     QStringList arguments({
@@ -343,7 +343,7 @@ void OpenVpnProtocol::updateVpnGateway(const QString &line)
                             }
                             m_configData.insert("vpnAdapterIndex", netInterfaces.at(i).index());
                             m_configData.insert("vpnGateway", m_vpnGateway);
-                            m_configData.insert("vpnServer", m_configData.value(amnezia::config_key::hostName).toString());
+                            m_configData.insert("vpnServer", m_configData.value(potok::config_key::hostName).toString());
                             IpcClient::Interface()->enablePeerTraffic(m_configData);
                         }
                     }

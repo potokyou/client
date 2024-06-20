@@ -5,7 +5,7 @@
 #include "core/defs.h"
 #include "containers/containers_defs.h"
 
-namespace amnezia {
+namespace potok {
 
 enum SharedScriptType {
     // General scripts

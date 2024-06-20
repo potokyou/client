@@ -5,7 +5,7 @@
 
 #include "defs.h"
 
-using namespace amnezia;
+using namespace potok;
 
 QString errorString(ErrorCode code);
 

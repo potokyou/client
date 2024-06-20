@@ -14,7 +14,7 @@
 #include "version.h"
 #include "utilities.h"
 
-#ifdef AMNEZIA_DESKTOP
+#ifdef POTOK_DESKTOP
 #include <core/ipcclient.h>
 #endif
 
@@ -169,7 +169,7 @@ void Logger::clearLogs()
 
 void Logger::clearServiceLogs()
 {
-#ifdef AMNEZIA_DESKTOP
+#ifdef POTOK_DESKTOP
     IpcClient *m_IpcClient = new IpcClient;
 
     if (!m_IpcClient->isSocketConnected()) {
@@ -202,7 +202,7 @@ Logger::Log::Log(Logger* logger, LogLevel logLevel)
     : m_logger(logger), m_logLevel(logLevel), m_data(new Data()) {}
 
 Logger::Log::~Log() {
-    qDebug() << "Amnezia" << m_logger->className() << m_data->m_buffer.trimmed();
+    qDebug() << "Potok" << m_logger->className() << m_data->m_buffer.trimmed();
     delete m_data;
 }
 

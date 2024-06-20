@@ -25,14 +25,14 @@ public:
 
         HasWriteAccessRole,
 
-        ContainsAmneziaDnsRole,
+        ContainsPotokDnsRole,
 
         DefaultContainerRole,
 
         HasInstalledContainers,
         IsServerFromApiRole,
 
-        HasAmneziaDns
+        HasPotokDns
     };
 
     ServersModel(std::shared_ptr<Settings> settings, QObject *parent = nullptr);
@@ -97,7 +97,7 @@ public slots:
 
     QStringList getAllInstalledServicesName(const int serverIndex);
 
-    void toggleAmneziaDns(bool enabled);
+    void togglePotokDns(bool enabled);
     QPair<QString, QString> getDnsPair(const int serverIndex);
 
     bool isServerFromApiAlreadyExists(const quint16 crc);
@@ -129,7 +129,7 @@ private:
 
     QString getServerDescription(const QJsonObject &server, const int index) const;
 
-    bool isAmneziaDnsContainerInstalled(const int serverIndex) const;
+    bool isPotokDnsContainerInstalled(const int serverIndex) const;
 
     bool serverHasInstalledContainers(const int serverIndex) const;
 
@@ -140,7 +140,7 @@ private:
     int m_defaultServerIndex;
     int m_processedServerIndex;
 
-    bool m_isAmneziaDnsEnabled = m_settings->useAmneziaDns();
+    bool m_isPotokDnsEnabled = m_settings->usePotokDns();
 };
 
 #endif // SERVERSMODEL_H

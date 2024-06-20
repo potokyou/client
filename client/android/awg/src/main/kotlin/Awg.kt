@@ -1,6 +1,6 @@
-package org.amnezia.vpn.protocol.awg
+package org.potok.vpn.protocol.awg
 
-import org.amnezia.vpn.protocol.wireguard.Wireguard
+import org.potok.vpn.protocol.wireguard.Wireguard
 import org.json.JSONObject
 
 /**

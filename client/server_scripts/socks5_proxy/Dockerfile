@@ -2,9 +2,9 @@ FROM 3proxy/3proxy:latest
 
 LABEL maintainer="PotokVPN" 
 
-RUN mkdir -p /opt/amnezia
-RUN echo -e "#!/bin/bash\ntail -f /dev/null" > /opt/amnezia/start.sh
-RUN chmod a+x /opt/amnezia/start.sh
+RUN mkdir -p /opt/potok
+RUN echo -e "#!/bin/bash\ntail -f /dev/null" > /opt/potok/start.sh
+RUN chmod a+x /opt/potok/start.sh
 
-ENTRYPOINT [ "/bin/sh", "/opt/amnezia/start.sh" ]
+ENTRYPOINT [ "/bin/sh", "/opt/potok/start.sh" ]
 CMD [ "" ]

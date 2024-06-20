@@ -7,9 +7,9 @@
 #include <QDebug>
 #include <QQmlEngine>
 
-namespace amnezia {
+namespace potok {
 
-using namespace amnezia::ProtocolEnumNS;
+using namespace potok::ProtocolEnumNS;
 
 void declareQmlProtocolEnum() {
     qmlRegisterUncreatableMetaObject(
@@ -37,8 +37,8 @@ void declareQmlProtocolEnum() {
         );
 }
 
-} // namespace amnezia
+} // namespace potok
 
-QDebug operator<<(QDebug debug, const amnezia::Proto &p);
+QDebug operator<<(QDebug debug, const potok::Proto &p);
 
 #endif // QML_REGISTER_PROTOCOLS_H

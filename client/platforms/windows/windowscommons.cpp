@@ -57,7 +57,7 @@ QString WindowsCommons::tunnelConfigFile() {
 
     QDir vpnDir(dir.filePath(VPN_NAME));
     if (!vpnDir.exists() && !dir.mkdir(VPN_NAME)) {
-      logger.debug() << "Failed to create path Amnezia under" << path;
+      logger.debug() << "Failed to create path Potok under" << path;
       continue;
     }
 

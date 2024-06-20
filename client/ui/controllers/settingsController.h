@@ -26,8 +26,8 @@ public:
     Q_PROPERTY(bool isNotificationPermissionGranted READ isNotificationPermissionGranted NOTIFY onNotificationStateChanged)
 
 public slots:
-    void toggleAmneziaDns(bool enable);
-    bool isAmneziaDnsEnabled();
+    void togglePotokDns(bool enable);
+    bool isPotokDnsEnabled();
 
     QString getPrimaryDns();
     void setPrimaryDns(const QString &dns);
@@ -83,7 +83,7 @@ signals:
 
     void importBackupFromOutside(QString filePath);
 
-    void amneziaDnsToggled(bool enable);
+    void potokDnsToggled(bool enable);
 
     void loggingDisableByWatcher();
 

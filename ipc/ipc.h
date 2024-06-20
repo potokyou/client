@@ -8,7 +8,7 @@
 
 #define IPC_SERVICE_URL "local:PotokVpnIpcInterface"
 
-namespace amnezia {
+namespace potok {
 
 enum PermittedProcess {
     OpenVPN,
@@ -49,6 +49,6 @@ inline QString getIpcProcessUrl(int pid) {
 }
 
 
-} // namespace amnezia
+} // namespace potok
 
 #endif // IPC_H

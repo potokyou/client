@@ -69,7 +69,7 @@ void IpcServerProcess::setProcessChannelMode(QProcess::ProcessChannelMode mode)
 
 void IpcServerProcess::setProgram(int programId)
 {
-    m_process->setProgram(amnezia::permittedProcessPath(static_cast<amnezia::PermittedProcess>(programId)));
+    m_process->setProgram(potok::permittedProcessPath(static_cast<potok::PermittedProcess>(programId)));
 }
 
 void IpcServerProcess::setWorkingDirectory(const QString &dir)

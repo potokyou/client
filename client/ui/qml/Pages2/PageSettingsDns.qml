@@ -66,7 +66,7 @@ PageType {
 
             ParagraphTextType {
                 Layout.fillWidth: true
-                text: qsTr("If AmneziaDNS is not used or installed")
+                text: qsTr("If PotokDNS is not used or installed")
             }
 
             TextFieldWithHeaderType {

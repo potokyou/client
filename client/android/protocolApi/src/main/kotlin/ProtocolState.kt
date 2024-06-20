@@ -1,4 +1,4 @@
-package org.amnezia.vpn.protocol
+package org.potok.vpn.protocol
 
 // keep synchronized with client/platforms/android/android_controller.h ConnectionState
 enum class ProtocolState {

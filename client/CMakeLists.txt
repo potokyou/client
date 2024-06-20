@@ -62,16 +62,16 @@ qt6_add_resources(QRC ${QRC} ${CMAKE_CURRENT_LIST_DIR}/resources.qrc)
 # -- i18n begin
 set(CMAKE_AUTORCC ON)
 
-set(AMNEZIAVPN_TS_FILES
-    ${CMAKE_CURRENT_LIST_DIR}/translations/amneziavpn_ru_RU.ts
+set(POTOKVPN_TS_FILES
+    ${CMAKE_CURRENT_LIST_DIR}/translations/potokvpn_ru_RU.ts
 )
 
-file(GLOB_RECURSE AMNEZIAVPN_TS_SOURCES *.qrc *.cpp *.h *.ui)
+file(GLOB_RECURSE POTOKVPN_TS_SOURCES *.qrc *.cpp *.h *.ui)
 
-qt_create_translation(AMNEZIAVPN_QM_FILES ${AMNEZIAVPN_TS_SOURCES} ${AMNEZIAVPN_TS_FILES})
+qt_create_translation(POTOKVPN_QM_FILES ${POTOKVPN_TS_SOURCES} ${POTOKVPN_TS_FILES})
 
 set(QM_FILE_LIST "")
-foreach(FILE ${AMNEZIAVPN_QM_FILES})
+foreach(FILE ${POTOKVPN_QM_FILES})
     get_filename_component(QM_FILE_NAME ${FILE} NAME)
     list(APPEND QM_FILE_LIST "<file>${QM_FILE_NAME}</file>")
 endforeach()
@@ -109,7 +109,7 @@ configure_file(${CMAKE_CURRENT_LIST_DIR}/../version.h.in ${CMAKE_CURRENT_BINARY_
 set(HEADERS ${HEADERS}
     ${CMAKE_CURRENT_LIST_DIR}/migrations.h
     ${CMAKE_CURRENT_LIST_DIR}/../ipc/ipc.h
-    ${CMAKE_CURRENT_LIST_DIR}/amnezia_application.h
+    ${CMAKE_CURRENT_LIST_DIR}/potok_application.h
     ${CMAKE_CURRENT_LIST_DIR}/containers/containers_defs.h
     ${CMAKE_CURRENT_LIST_DIR}/core/defs.h
     ${CMAKE_CURRENT_LIST_DIR}/core/errorstrings.h
@@ -158,7 +158,7 @@ endif()
 
 set(SOURCES ${SOURCES}
     ${CMAKE_CURRENT_LIST_DIR}/migrations.cpp
-    ${CMAKE_CURRENT_LIST_DIR}/amnezia_application.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/potok_application.cpp
     ${CMAKE_CURRENT_LIST_DIR}/containers/containers_defs.cpp
     ${CMAKE_CURRENT_LIST_DIR}/core/errorstrings.cpp
     ${CMAKE_CURRENT_LIST_DIR}/core/scripts_registry.cpp
@@ -245,8 +245,8 @@ set(SOURCES ${SOURCES}
 
 if(WIN32)
     configure_file(
-        ${CMAKE_CURRENT_LIST_DIR}/platforms/windows/amneziavpn.rc.in 
-        ${CMAKE_CURRENT_BINARY_DIR}/amneziavpn.rc
+        ${CMAKE_CURRENT_LIST_DIR}/platforms/windows/potokvpn.rc.in 
+        ${CMAKE_CURRENT_BINARY_DIR}/potokvpn.rc
     )
 
     set(HEADERS ${HEADERS}
@@ -258,7 +258,7 @@ if(WIN32)
     )
 
     set(RESOURCES ${RESOURCES}
-        ${CMAKE_CURRENT_BINARY_DIR}/amneziavpn.rc
+        ${CMAKE_CURRENT_BINARY_DIR}/potokvpn.rc
     )
 
     set(LIBS ${LIBS}
@@ -278,16 +278,16 @@ if(APPLE)
     cmake_policy(SET CMP0114 NEW)
 
     if(NOT BUILD_OSX_APP_IDENTIFIER)
-        set(BUILD_OSX_APP_IDENTIFIER org.amnezia.PotokVPN CACHE STRING "OSX Application identifier")
+        set(BUILD_OSX_APP_IDENTIFIER org.potok.PotokVPN CACHE STRING "OSX Application identifier")
     endif()
     if(NOT BUILD_IOS_APP_IDENTIFIER)
-        set(BUILD_IOS_APP_IDENTIFIER org.amnezia.PotokVPN CACHE STRING "iOS Application identifier")
+        set(BUILD_IOS_APP_IDENTIFIER org.potok.PotokVPN CACHE STRING "iOS Application identifier")
     endif()
     if(NOT BUILD_IOS_GROUP_IDENTIFIER)
-        set(BUILD_IOS_GROUP_IDENTIFIER group.org.amnezia.PotokVPN CACHE STRING "iOS Group identifier")
+        set(BUILD_IOS_GROUP_IDENTIFIER group.org.potok.PotokVPN CACHE STRING "iOS Group identifier")
     endif()
     if(NOT BUILD_VPN_DEVELOPMENT_TEAM)
-        set(BUILD_VPN_DEVELOPMENT_TEAM X7UJ388FXK CACHE STRING "Amnezia VPN Development Team")
+        set(BUILD_VPN_DEVELOPMENT_TEAM X7UJ388FXK CACHE STRING "Potok VPN Development Team")
     endif()
 
     set(CMAKE_XCODE_GENERATE_SCHEME FALSE)
@@ -303,7 +303,7 @@ endif()
 
 if(WIN32 OR (APPLE AND NOT IOS) OR (LINUX AND NOT ANDROID))
     message("Client desktop build")
-    add_compile_definitions(AMNEZIA_DESKTOP)
+    add_compile_definitions(POTOK_DESKTOP)
 
     set(HEADERS ${HEADERS}
         ${CMAKE_CURRENT_LIST_DIR}/core/ipcclient.h

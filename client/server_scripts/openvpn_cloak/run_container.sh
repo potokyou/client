@@ -7,7 +7,7 @@ sudo docker run -d \
 -p $CLOAK_SERVER_PORT:443/tcp \
 --name $CONTAINER_NAME $CONTAINER_NAME
 
-sudo docker network connect amnezia-dns-net $CONTAINER_NAME
+sudo docker network connect potok-dns-net $CONTAINER_NAME
 
 # Create tun device if not exist
 sudo docker exec -i $CONTAINER_NAME bash -c 'mkdir -p /dev/net; if [ ! -c /dev/net/tun ]; then mknod /dev/net/tun c 10 200; fi'
@@ -16,12 +16,12 @@ sudo docker exec -i $CONTAINER_NAME bash -c 'mkdir -p /dev/net; if [ ! -c /dev/n
 sudo docker exec -i $CONTAINER_NAME sh -c "ifconfig eth0:0 $SERVER_IP_ADDRESS netmask 255.255.255.255 up"
 
 # OpenVPN config
-sudo docker exec -i $CONTAINER_NAME bash -c 'mkdir -p /opt/amnezia/openvpn/clients; \
-cd /opt/amnezia/openvpn && easyrsa init-pki; \
-cd /opt/amnezia/openvpn && easyrsa gen-dh; \
-cd /opt/amnezia/openvpn && cp pki/dh.pem /opt/amnezia/openvpn && easyrsa build-ca nopass << EOF yes EOF && easyrsa gen-req AmneziaReq nopass << EOF2 yes EOF2;\
-cd /opt/amnezia/openvpn && easyrsa sign-req server AmneziaReq << EOF3 yes EOF3;\
-cd /opt/amnezia/openvpn && openvpn --genkey --secret ta.key << EOF4;\
-cd /opt/amnezia/openvpn && cp pki/ca.crt pki/issued/AmneziaReq.crt pki/private/AmneziaReq.key /opt/amnezia/openvpn;\
-cd /opt/amnezia/openvpn && easyrsa gen-crl;\
-cd /opt/amnezia/openvpn && cp pki/crl.pem /opt/amnezia/openvpn/crl.pem'
+sudo docker exec -i $CONTAINER_NAME bash -c 'mkdir -p /opt/potok/openvpn/clients; \
+cd /opt/potok/openvpn && easyrsa init-pki; \
+cd /opt/potok/openvpn && easyrsa gen-dh; \
+cd /opt/potok/openvpn && cp pki/dh.pem /opt/potok/openvpn && easyrsa build-ca nopass << EOF yes EOF && easyrsa gen-req PotokReq nopass << EOF2 yes EOF2;\
+cd /opt/potok/openvpn && easyrsa sign-req server PotokReq << EOF3 yes EOF3;\
+cd /opt/potok/openvpn && openvpn --genkey --secret ta.key << EOF4;\
+cd /opt/potok/openvpn && cp pki/ca.crt pki/issued/PotokReq.crt pki/private/PotokReq.key /opt/potok/openvpn;\
+cd /opt/potok/openvpn && easyrsa gen-crl;\
+cd /opt/potok/openvpn && cp pki/crl.pem /opt/potok/openvpn/crl.pem'

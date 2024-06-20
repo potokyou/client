@@ -5,7 +5,7 @@
 #include <QNetworkReply>
 #include <QtConcurrent>
 
-#include "amnezia_application.h"
+#include "potok_application.h"
 #include "configurators/wireguard_configurator.h"
 #include "version.h"
 

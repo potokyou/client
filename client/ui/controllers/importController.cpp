@@ -34,19 +34,19 @@ namespace
         const QString xrayConfigPatternInbound = "inbounds";
         const QString xrayConfigPatternOutbound = "outbounds";
 
-        const QString amneziaConfigPattern = "containers";
-        const QString amneziaConfigPatternHostName = "hostName";
-        const QString amneziaConfigPatternUserName = "userName";
-        const QString amneziaConfigPatternPassword = "password";
-        const QString amneziaFreeConfigPattern = "api_key";
+        const QString potokConfigPattern = "containers";
+        const QString potokConfigPatternHostName = "hostName";
+        const QString potokConfigPatternUserName = "userName";
+        const QString potokConfigPatternPassword = "password";
+        const QString potokFreeConfigPattern = "api_key";
         const QString backupPattern = "Servers/serversList";
 
         if (config.contains(backupPattern)) {
             return ConfigTypes::Backup;
-        } else if (config.contains(amneziaConfigPattern) || config.contains(amneziaFreeConfigPattern)
-                   || (config.contains(amneziaConfigPatternHostName) && config.contains(amneziaConfigPatternUserName)
-                       && config.contains(amneziaConfigPatternPassword))) {
-            return ConfigTypes::Amnezia;
+        } else if (config.contains(potokConfigPattern) || config.contains(potokFreeConfigPattern)
+                   || (config.contains(potokConfigPatternHostName) && config.contains(potokConfigPatternUserName)
+                       && config.contains(potokConfigPatternPassword))) {
+            return ConfigTypes::Potok;
         } else if (config.contains(openVpnConfigPatternCli)
                    && (config.contains(openVpnConfigPatternProto1) || config.contains(openVpnConfigPatternProto2))
                    && (config.contains(openVpnConfigPatternDriver1) || config.contains(openVpnConfigPatternDriver2))) {
@@ -171,7 +171,7 @@ bool ImportController::extractConfigFromData(QString data)
         m_config = extractXrayConfig(config);
         return m_config.empty() ? false : true;
     }
-    case ConfigTypes::Amnezia: {
+    case ConfigTypes::Potok: {
         m_config = QJsonDocument::fromJson(config.toUtf8()).object();
         if (!m_config.empty()) {
             checkForMaliciousStrings(m_config);
@@ -302,7 +302,7 @@ QJsonObject ImportController::extractOpenVpnConfig(const QString &data)
     lastConfig[config_key::isThirdPartyConfig] = true;
 
     QJsonObject containers;
-    containers.insert(config_key::container, QJsonValue("amnezia-openvpn"));
+    containers.insert(config_key::container, QJsonValue("potok-openvpn"));
     containers.insert(config_key::openvpn, QJsonValue(lastConfig));
 
     QJsonArray arr;
@@ -317,7 +317,7 @@ QJsonObject ImportController::extractOpenVpnConfig(const QString &data)
 
     QJsonObject config;
     config[config_key::containers] = arr;
-    config[config_key::defaultContainer] = "amnezia-openvpn";
+    config[config_key::defaultContainer] = "potok-openvpn";
     config[config_key::description] = m_settings->nextAvailableServerName();
 
     const static QRegularExpression dnsRegExp("dhcp-option DNS (\\b\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\b)");
@@ -426,7 +426,7 @@ QJsonObject ImportController::extractWireGuardConfig(const QString &data)
     wireguardConfig[config_key::transport_proto] = "udp";
 
     QJsonObject containers;
-    containers.insert(config_key::container, QJsonValue("amnezia-" + protocolName));
+    containers.insert(config_key::container, QJsonValue("potok-" + protocolName));
     containers.insert(protocolName, QJsonValue(wireguardConfig));
 
     QJsonArray arr;
@@ -434,7 +434,7 @@ QJsonObject ImportController::extractWireGuardConfig(const QString &data)
 
     QJsonObject config;
     config[config_key::containers] = arr;
-    config[config_key::defaultContainer] = "amnezia-" + protocolName;
+    config[config_key::defaultContainer] = "potok-" + protocolName;
     config[config_key::description] = m_settings->nextAvailableServerName();
 
     const static QRegularExpression dnsRegExp(
@@ -465,9 +465,9 @@ QJsonObject ImportController::extractXrayConfig(const QString &data, const QStri
     QJsonObject containers;
     if (m_configType == ConfigTypes::ShadowSocks) {
         containers.insert(config_key::ssxray, QJsonValue(lastConfig));
-        containers.insert(config_key::container, QJsonValue("amnezia-ssxray"));
+        containers.insert(config_key::container, QJsonValue("potok-ssxray"));
     } else {
-        containers.insert(config_key::container, QJsonValue("amnezia-xray"));
+        containers.insert(config_key::container, QJsonValue("potok-xray"));
         containers.insert(config_key::xray, QJsonValue(lastConfig));
     }
 
@@ -486,9 +486,9 @@ QJsonObject ImportController::extractXrayConfig(const QString &data, const QStri
     config[config_key::containers] = arr;
 
     if (m_configType == ConfigTypes::ShadowSocks) {
-        config[config_key::defaultContainer] = "amnezia-ssxray";
+        config[config_key::defaultContainer] = "potok-ssxray";
     } else {
-       config[config_key::defaultContainer] = "amnezia-xray";
+       config[config_key::defaultContainer] = "potok-xray";
     }
     if (description.isEmpty()) {
         config[config_key::description] = m_settings->nextAvailableServerName();
@@ -550,7 +550,7 @@ bool ImportController::parseQrCodeChunk(const QString &code)
     qint16 magic;
     s >> magic;
 
-    if (magic == amnezia::qrMagicCode) {
+    if (magic == potok::qrMagicCode) {
         quint8 chunksCount;
         s >> chunksCount;
         if (m_totalQrCodeChunksCount != chunksCount) {

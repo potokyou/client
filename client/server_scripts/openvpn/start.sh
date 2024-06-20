@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# This scripts copied from Amnezia client to Docker container to /opt/amnezia and launched every time container starts
+# This scripts copied from Potok client to Docker container to /opt/potok and launched every time container starts
 
 echo "Container startup"
 ifconfig eth0:0 $SERVER_IP_ADDRESS netmask 255.255.255.255 up
@@ -25,6 +25,6 @@ iptables -t nat -A POSTROUTING -s $OPENVPN_SUBNET_IP/$OPENVPN_SUBNET_CIDR -o eth
 killall -KILL openvpn
 
 # start daemons if configured
-if [ -f /opt/amnezia/openvpn/ca.crt ]; then (openvpn --config /opt/amnezia/openvpn/server.conf --daemon); fi
+if [ -f /opt/potok/openvpn/ca.crt ]; then (openvpn --config /opt/potok/openvpn/server.conf --daemon); fi
 
 tail -f /dev/null

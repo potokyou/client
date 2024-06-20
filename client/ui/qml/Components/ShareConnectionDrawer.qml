@@ -25,14 +25,14 @@ DrawerType2 {
 
     property string configExtension: ".vpn"
     property string configCaption: qsTr("Save PotokVPN config")
-    property string configFileName: "amnezia_config"
+    property string configFileName: "potok_config"
 
     expandedHeight: parent.height * 0.9
 
     onClosed: {
         configExtension = ".vpn"
         configCaption = qsTr("Save PotokVPN config")
-        configFileName = "amnezia_config"
+        configFileName = "potok_config"
     }
 
     expandedContent: Item {
@@ -349,7 +349,7 @@ DrawerType2 {
                     visible: ExportController.qrCodesCount > 0
 
                     horizontalAlignment: Text.AlignHCenter
-                    text: qsTr("To read the QR code in the Amnezia app, select \"Add server\" → \"I have data to connect\" → \"QR code, key or settings file\"")
+                    text: qsTr("To read the QR code in the Potok app, select \"Add server\" → \"I have data to connect\" → \"QR code, key or settings file\"")
                 }
             }
         }

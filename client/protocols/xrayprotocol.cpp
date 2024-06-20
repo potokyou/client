@@ -15,8 +15,8 @@ XrayProtocol::XrayProtocol(const QJsonObject &configuration, QObject *parent):
 {
     readXrayConfiguration(configuration);
     m_routeGateway = NetworkUtilities::getGatewayAndIface();
-    m_vpnGateway = amnezia::protocols::xray::defaultLocalAddr;
-    m_vpnLocalAddress = amnezia::protocols::xray::defaultLocalAddr;
+    m_vpnGateway = potok::protocols::xray::defaultLocalAddr;
+    m_vpnLocalAddress = potok::protocols::xray::defaultLocalAddr;
 }
 
 XrayProtocol::~XrayProtocol()
@@ -66,11 +66,11 @@ ErrorCode XrayProtocol::start()
         qDebug().noquote() << "XrayProtocol finished, exitCode, exiStatus" << exitCode << exitStatus;
         setConnectionState(Vpn::ConnectionState::Disconnected);
         if (exitStatus != QProcess::NormalExit) {
-            emit protocolError(amnezia::ErrorCode::XrayExecutableCrashed);
+            emit protocolError(potok::ErrorCode::XrayExecutableCrashed);
             stop();
         }
         if (exitCode != 0) {
-            emit protocolError(amnezia::ErrorCode::InternalError);
+            emit protocolError(potok::ErrorCode::InternalError);
             stop();
         }
     });
@@ -97,15 +97,15 @@ ErrorCode XrayProtocol::startTun2Sock()
     m_t2sProcess = IpcClient::CreatePrivilegedProcess();
 
     if (!m_t2sProcess) {
-        setLastError(ErrorCode::AmneziaServiceConnectionFailed);
-        return ErrorCode::AmneziaServiceConnectionFailed;
+        setLastError(ErrorCode::PotokServiceConnectionFailed);
+        return ErrorCode::PotokServiceConnectionFailed;
     }
 
     m_t2sProcess->waitForSource(1000);
     if (!m_t2sProcess->isInitialized()) {
         qWarning() << "IpcProcess replica is not connected!";
-        setLastError(ErrorCode::AmneziaServiceConnectionFailed);
-        return ErrorCode::AmneziaServiceConnectionFailed;
+        setLastError(ErrorCode::PotokServiceConnectionFailed);
+        return ErrorCode::PotokServiceConnectionFailed;
     }
 
     QString XrayConStr = "socks5://127.0.0.1:" + QString::number(m_localPort);
@@ -114,7 +114,7 @@ ErrorCode XrayProtocol::startTun2Sock()
 #ifdef Q_OS_WIN
     m_configData.insert("inetAdapterIndex", NetworkUtilities::AdapterIndexTo(QHostAddress(m_remoteAddress)));
     QStringList arguments({"-device", "tun://tun2", "-proxy", XrayConStr, "-tun-post-up",
-                           QString("cmd /c netsh interface ip set address name=\"tun2\" static %1 255.255.255.255").arg(amnezia::protocols::xray::defaultLocalAddr)});
+                           QString("cmd /c netsh interface ip set address name=\"tun2\" static %1 255.255.255.255").arg(potok::protocols::xray::defaultLocalAddr)});
 #endif
 #ifdef Q_OS_LINUX
     QStringList arguments({"-device", "tun://tun2", "-proxy", XrayConStr});
@@ -140,7 +140,7 @@ ErrorCode XrayProtocol::startTun2Sock()
 
 #ifdef Q_OS_MACOS
             QThread::msleep(5000);
-            IpcClient::Interface()->createTun("utun22", amnezia::protocols::xray::defaultLocalAddr);
+            IpcClient::Interface()->createTun("utun22", potok::protocols::xray::defaultLocalAddr);
             IpcClient::Interface()->updateResolvers("utun22", dnsAddr);
 #endif
 #ifdef Q_OS_WINDOWS
@@ -148,7 +148,7 @@ ErrorCode XrayProtocol::startTun2Sock()
 #endif
 #ifdef Q_OS_LINUX
             QThread::msleep(1000);
-            IpcClient::Interface()->createTun("tun2", amnezia::protocols::xray::defaultLocalAddr);
+            IpcClient::Interface()->createTun("tun2", potok::protocols::xray::defaultLocalAddr);
             IpcClient::Interface()->updateResolvers("tun2", dnsAddr);
 #endif
 #if defined(Q_OS_LINUX) || defined(Q_OS_MACOS)
@@ -237,9 +237,9 @@ void XrayProtocol::readXrayConfiguration(const QJsonObject &configuration)
         xrayConfiguration = configuration.value(ProtocolProps::key_proto_config_data(Proto::SSXray)).toObject();
     }
     m_xrayConfig = xrayConfiguration;
-    m_localPort = QString(amnezia::protocols::xray::defaultLocalProxyPort).toInt();
-    m_remoteAddress = configuration.value(amnezia::config_key::hostName).toString();
-    m_routeMode = configuration.value(amnezia::config_key::splitTunnelType).toInt();
-    m_primaryDNS = configuration.value(amnezia::config_key::dns1).toString();
-    m_secondaryDNS = configuration.value(amnezia::config_key::dns2).toString();
+    m_localPort = QString(potok::protocols::xray::defaultLocalProxyPort).toInt();
+    m_remoteAddress = configuration.value(potok::config_key::hostName).toString();
+    m_routeMode = configuration.value(potok::config_key::splitTunnelType).toInt();
+    m_primaryDNS = configuration.value(potok::config_key::dns1).toString();
+    m_secondaryDNS = configuration.value(potok::config_key::dns2).toString();
 }

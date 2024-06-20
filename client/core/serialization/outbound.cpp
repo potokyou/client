@@ -37,7 +37,7 @@
 #include "transfer.h"
 #include "serialization.h"
 
-namespace amnezia::serialization::outbounds
+namespace potok::serialization::outbounds
 {
 QJsonObject GenerateFreedomOUT(const QString &domainStrategy, const QString &redirect)
 {
@@ -118,5 +118,5 @@ QJsonObject GenerateTrojanServerOUT(const QString &address, int port, const QStr
     return root;
 }
 
-} // namespace amnezia::serialization::outbounds
+} // namespace potok::serialization::outbounds
 

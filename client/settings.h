@@ -13,7 +13,7 @@
 #include "core/defs.h"
 #include "secure_qsettings.h"
 
-using namespace amnezia;
+using namespace potok;
 
 class QSettings;
 
@@ -136,13 +136,13 @@ public:
     void removeVpnSites(RouteMode mode, const QStringList &sites);
     void removeAllVpnSites(RouteMode mode);
 
-    bool useAmneziaDns() const
+    bool usePotokDns() const
     {
-        return value("Conf/useAmneziaDns", true).toBool();
+        return value("Conf/usePotokDns", true).toBool();
     }
-    void setUseAmneziaDns(bool enabled)
+    void setUsePotokDns(bool enabled)
     {
-        setValue("Conf/useAmneziaDns", enabled);
+        setValue("Conf/usePotokDns", enabled);
     }
 
     QString primaryDns() const;

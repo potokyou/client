@@ -23,9 +23,9 @@ WireguardConfigurator::WireguardConfigurator(std::shared_ptr<Settings> settings,
                                              bool isAwg, QObject *parent)
     : ConfiguratorBase(settings, serverController, parent), m_isAwg(isAwg)
 {
-    m_serverConfigPath = m_isAwg ? amnezia::protocols::awg::serverConfigPath : amnezia::protocols::wireguard::serverConfigPath;
-    m_serverPublicKeyPath = m_isAwg ? amnezia::protocols::awg::serverPublicKeyPath : amnezia::protocols::wireguard::serverPublicKeyPath;
-    m_serverPskKeyPath = m_isAwg ? amnezia::protocols::awg::serverPskKeyPath : amnezia::protocols::wireguard::serverPskKeyPath;
+    m_serverConfigPath = m_isAwg ? potok::protocols::awg::serverConfigPath : potok::protocols::wireguard::serverConfigPath;
+    m_serverPublicKeyPath = m_isAwg ? potok::protocols::awg::serverPublicKeyPath : potok::protocols::wireguard::serverPublicKeyPath;
+    m_serverPskKeyPath = m_isAwg ? potok::protocols::awg::serverPskKeyPath : potok::protocols::wireguard::serverPskKeyPath;
     m_configTemplate = m_isAwg ? ProtocolScriptType::awg_template : ProtocolScriptType::wireguard_template;
 
     m_protocolName = m_isAwg ? config_key::awg : config_key::wireguard;
@@ -160,7 +160,7 @@ WireguardConfigurator::ConnectionData WireguardConfigurator::prepareWireguardCon
 QString WireguardConfigurator::createConfig(const ServerCredentials &credentials, DockerContainer container,
                                             const QJsonObject &containerConfig, ErrorCode &errorCode)
 {
-    QString scriptData = amnezia::scriptData(m_configTemplate, container);
+    QString scriptData = potok::scriptData(m_configTemplate, container);
     QString config =
             m_serverController->replaceVars(scriptData, m_serverController->genVarsForScript(credentials, container, containerConfig));
 

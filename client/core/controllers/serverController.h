@@ -11,7 +11,7 @@
 class Settings;
 class VpnConfigurator;
 
-using namespace amnezia;
+using namespace potok;
 
 class ServerController : public QObject
 {

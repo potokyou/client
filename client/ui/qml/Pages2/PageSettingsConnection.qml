@@ -28,7 +28,7 @@ PageType {
         anchors.right: parent.right
         anchors.topMargin: 20
 
-        KeyNavigation.tab: amneziaDnsSwitch
+        KeyNavigation.tab: potokDnsSwitch
     }
 
     FlickableType {
@@ -53,17 +53,17 @@ PageType {
             }
 
             SwitcherType {
-                id: amneziaDnsSwitch
+                id: potokDnsSwitch
                 Layout.fillWidth: true
                 Layout.margins: 16
 
-                text: qsTr("Use AmneziaDNS")
-                descriptionText: qsTr("If AmneziaDNS is installed on the server")
+                text: qsTr("Use PotokDNS")
+                descriptionText: qsTr("If PotokDNS is installed on the server")
 
-                checked: SettingsController.isAmneziaDnsEnabled()
+                checked: SettingsController.isPotokDnsEnabled()
                 onCheckedChanged: {
-                    if (checked !== SettingsController.isAmneziaDnsEnabled()) {
-                        SettingsController.toggleAmneziaDns(checked)
+                    if (checked !== SettingsController.isPotokDnsEnabled()) {
+                        SettingsController.togglePotokDns(checked)
                     }
                 }
 
@@ -77,7 +77,7 @@ PageType {
                 Layout.fillWidth: true
 
                 text: qsTr("DNS servers")
-                descriptionText: qsTr("When AmneziaDNS is not used or installed")
+                descriptionText: qsTr("When PotokDNS is not used or installed")
                 rightImageSource: "qrc:/images/controls/chevron-right.svg"
 
                 clickedFunction: function() {

@@ -20,7 +20,7 @@ PageType {
     defaultActiveFocusItem: clientNameTextField.textField
 
     enum ConfigType {
-        AmneziaConnection,
+        PotokConnection,
         OpenVpn,
         WireGuard,
         Awg,
@@ -51,7 +51,7 @@ PageType {
             PageController.showBusyIndicator(true)
 
             switch (type) {
-            case PageShare.ConfigType.AmneziaConnection: {
+            case PageShare.ConfigType.PotokConnection: {
                 ExportController.generateConnectionConfig(clientNameTextField.textFieldText);
                 break;
             }
@@ -59,42 +59,42 @@ PageType {
                 ExportController.generateOpenVpnConfig(clientNameTextField.textFieldText)
                 shareConnectionDrawer.configCaption = qsTr("Save OpenVPN config")
                 shareConnectionDrawer.configExtension = ".ovpn"
-                shareConnectionDrawer.configFileName = "amnezia_for_openvpn"
+                shareConnectionDrawer.configFileName = "potok_for_openvpn"
                 break
             }
             case PageShare.ConfigType.WireGuard: {
                 ExportController.generateWireGuardConfig(clientNameTextField.textFieldText)
                 shareConnectionDrawer.configCaption = qsTr("Save WireGuard config")
                 shareConnectionDrawer.configExtension = ".conf"
-                shareConnectionDrawer.configFileName = "amnezia_for_wireguard"
+                shareConnectionDrawer.configFileName = "potok_for_wireguard"
                 break
             }
             case PageShare.ConfigType.Awg: {
                 ExportController.generateAwgConfig(clientNameTextField.textFieldText)
-                shareConnectionDrawer.configCaption = qsTr("Save AmneziaWG config")
+                shareConnectionDrawer.configCaption = qsTr("Save PotokWG config")
                 shareConnectionDrawer.configExtension = ".conf"
-                shareConnectionDrawer.configFileName = "amnezia_for_awg"
+                shareConnectionDrawer.configFileName = "potok_for_awg"
                 break
             }
             case PageShare.ConfigType.ShadowSocks: {
                 ExportController.generateShadowSocksConfig()
                 shareConnectionDrawer.configCaption = qsTr("Save ShadowSocks config")
                 shareConnectionDrawer.configExtension = ".json"
-                shareConnectionDrawer.configFileName = "amnezia_for_shadowsocks"
+                shareConnectionDrawer.configFileName = "potok_for_shadowsocks"
                 break
             }
             case PageShare.ConfigType.Cloak: {
                 ExportController.generateCloakConfig()
                 shareConnectionDrawer.configCaption = qsTr("Save Cloak config")
                 shareConnectionDrawer.configExtension = ".json"
-                shareConnectionDrawer.configFileName = "amnezia_for_cloak"
+                shareConnectionDrawer.configFileName = "potok_for_cloak"
                 break
             }
             case PageShare.ConfigType.Xray: {
                 ExportController.generateXrayConfig()
                 shareConnectionDrawer.configCaption = qsTr("Save XRay config")
                 shareConnectionDrawer.configExtension = ".json"
-                shareConnectionDrawer.configFileName = "amnezia_for_xray"
+                shareConnectionDrawer.configFileName = "potok_for_xray"
                 break
             }
             }
@@ -113,13 +113,13 @@ PageType {
     property bool showContent: false
     property bool shareButtonEnabled: true
     property list<QtObject> connectionTypesModel: [
-        amneziaConnectionFormat
+        potokConnectionFormat
     ]
 
     QtObject {
-        id: amneziaConnectionFormat
+        id: potokConnectionFormat
         property string name: qsTr("For the PotokVPN app")
-        property var type: PageShare.ConfigType.AmneziaConnection
+        property var type: PageShare.ConfigType.PotokConnection
     }
     QtObject {
         id: openVpnConnectionFormat
@@ -133,7 +133,7 @@ PageType {
     }
     QtObject {
         id: awgConnectionFormat
-        property string name: qsTr("AmneziaWG native format")
+        property string name: qsTr("PotokWG native format")
         property var type: PageShare.ConfigType.Awg
     }
     QtObject {
@@ -480,24 +480,24 @@ PageType {
                     }
 
                     function fillConnectionTypeModel() {
-                        root.connectionTypesModel = [amneziaConnectionFormat]
+                        root.connectionTypesModel = [potokConnectionFormat]
 
                         var index = proxyContainersModel.mapToSource(currentIndex)
 
-                        if (index === ContainerProps.containerFromString("amnezia-openvpn")) {
+                        if (index === ContainerProps.containerFromString("potok-openvpn")) {
                             root.connectionTypesModel.push(openVpnConnectionFormat)
-                        } else if (index === ContainerProps.containerFromString("amnezia-wireguard")) {
+                        } else if (index === ContainerProps.containerFromString("potok-wireguard")) {
                             root.connectionTypesModel.push(wireGuardConnectionFormat)
-                        } else if (index === ContainerProps.containerFromString("amnezia-awg")) {
+                        } else if (index === ContainerProps.containerFromString("potok-awg")) {
                             root.connectionTypesModel.push(awgConnectionFormat)
-                        } else if (index === ContainerProps.containerFromString("amnezia-shadowsocks")) {
+                        } else if (index === ContainerProps.containerFromString("potok-shadowsocks")) {
                             root.connectionTypesModel.push(openVpnConnectionFormat)
                             root.connectionTypesModel.push(shadowSocksConnectionFormat)
-                        } else if (index === ContainerProps.containerFromString("amnezia-openvpn-cloak")) {
+                        } else if (index === ContainerProps.containerFromString("potok-openvpn-cloak")) {
                             root.connectionTypesModel.push(openVpnConnectionFormat)
                             root.connectionTypesModel.push(shadowSocksConnectionFormat)
                             root.connectionTypesModel.push(cloakConnectionFormat)
-                        } else if (index === ContainerProps.containerFromString("amnezia-xray")) {
+                        } else if (index === ContainerProps.containerFromString("potok-xray")) {
                             root.connectionTypesModel.push(xrayConnectionFormat)
                         }
                     }

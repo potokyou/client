@@ -1,7 +1,7 @@
 #include <QDebug>
 #include <QTimer>
 
-#include "amnezia_application.h"
+#include "potok_application.h"
 #include "migrations.h"
 #include "version.h"
 
@@ -33,9 +33,9 @@ int main(int argc, char *argv[])
 #endif
 
 #if defined(Q_OS_ANDROID) || defined(Q_OS_IOS)
-    AmneziaApplication app(argc, argv);
+    PotokApplication app(argc, argv);
 #else
-    AmneziaApplication app(argc, argv, true,
+    PotokApplication app(argc, argv, true,
                            SingleApplication::Mode::User | SingleApplication::Mode::SecondaryNotification);
 
     if (!app.isPrimary()) {

@@ -10,7 +10,7 @@
 
 #include "defs.h"
 
-using namespace amnezia;
+using namespace potok;
 
 namespace libssh {
     enum ScpOverwriteMode {

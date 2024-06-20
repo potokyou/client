@@ -35,7 +35,7 @@
 #include <QUrlQuery>
 #include "serialization.h"
 
-namespace amnezia::serialization::vless
+namespace potok::serialization::vless
 {
 QJsonObject Deserialize(const QString &str, QString *alias, QString *errMessage)
 {
@@ -252,5 +252,5 @@ QJsonObject Deserialize(const QString &str, QString *alias, QString *errMessage)
     root["inbounds"] = QJsonArray { inbound };
     return root;
 }
-} // namespace amnezia::serialization::vless
+} // namespace potok::serialization::vless
 

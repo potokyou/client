@@ -44,7 +44,7 @@ int IpcServer::createPrivilegedProcess()
 
     pd.localServer->setSocketOptions(QLocalServer::WorldAccessOption);
 
-    if (!pd.localServer->listen(amnezia::getIpcProcessUrl(m_localpid))) {
+    if (!pd.localServer->listen(potok::getIpcProcessUrl(m_localpid))) {
         qDebug() << QString("Unable to start the server: %1.").arg(pd.localServer->errorString());
         return -1;
     }
@@ -220,7 +220,7 @@ bool IpcServer::enableKillSwitch(const QJsonObject &configStr, int vpnAdapterInd
     {
         blockAll = true;
         allowNets = true;
-        allownets.append(configStr.value(amnezia::config_key::hostName).toString());
+        allownets.append(configStr.value(potok::config_key::hostName).toString());
     } else if (splitTunnelType == 1)
     {
         blockNets = true;
@@ -230,7 +230,7 @@ bool IpcServer::enableKillSwitch(const QJsonObject &configStr, int vpnAdapterInd
     } else if (splitTunnelType == 2) {
         blockAll = true;
         allowNets = true;
-        allownets.append(configStr.value(amnezia::config_key::hostName).toString());
+        allownets.append(configStr.value(potok::config_key::hostName).toString());
         for (auto v : splitTunnelSites) {
             allownets.append(v.toString());
         }
@@ -251,8 +251,8 @@ bool IpcServer::enableKillSwitch(const QJsonObject &configStr, int vpnAdapterInd
     LinuxFirewall::setAnchorEnabled(LinuxFirewall::Both, QStringLiteral("300.allowLAN"), true);
     LinuxFirewall::setAnchorEnabled(LinuxFirewall::IPv4, QStringLiteral("310.blockDNS"), true);
     QStringList dnsServers;
-    dnsServers.append(configStr.value(amnezia::config_key::dns1).toString());
-    dnsServers.append(configStr.value(amnezia::config_key::dns2).toString());
+    dnsServers.append(configStr.value(potok::config_key::dns1).toString());
+    dnsServers.append(configStr.value(potok::config_key::dns2).toString());
     dnsServers.append("127.0.0.1");
     dnsServers.append("127.0.0.53");
     LinuxFirewall::updateDNSServers(dnsServers);
@@ -282,8 +282,8 @@ bool IpcServer::enableKillSwitch(const QJsonObject &configStr, int vpnAdapterInd
     MacOSFirewall::setAnchorEnabled(QStringLiteral("300.allowLAN"), true);
 
     QStringList dnsServers;
-    dnsServers.append(configStr.value(amnezia::config_key::dns1).toString());
-    dnsServers.append(configStr.value(amnezia::config_key::dns2).toString());
+    dnsServers.append(configStr.value(potok::config_key::dns1).toString());
+    dnsServers.append(configStr.value(potok::config_key::dns2).toString());
     MacOSFirewall::setAnchorEnabled(QStringLiteral("310.blockDNS"), true);
     MacOSFirewall::setAnchorTable(QStringLiteral("310.blockDNS"), true, QStringLiteral("dnsaddr"), dnsServers);
 #endif
@@ -312,7 +312,7 @@ bool IpcServer::enablePeerTraffic(const QJsonObject &configStr)
 {
 #ifdef Q_OS_WIN
     InterfaceConfig config;
-    config.m_dnsServer = configStr.value(amnezia::config_key::dns1).toString();
+    config.m_dnsServer = configStr.value(potok::config_key::dns1).toString();
     config.m_serverPublicKey = "openvpn";
     config.m_serverIpv4Gateway = configStr.value("vpnGateway").toString();
     config.m_serverIpv4AddrIn = configStr.value("vpnServer").toString();
@@ -345,7 +345,7 @@ bool IpcServer::enablePeerTraffic(const QJsonObject &configStr)
         }
     }
 
-    config.m_excludedAddresses.append(configStr.value(amnezia::config_key::hostName).toString());
+    config.m_excludedAddresses.append(configStr.value(potok::config_key::hostName).toString());
     if (splitTunnelType == 2) {
         for (auto v : splitTunnelSites) {
             QString ipRange = v.toString();
@@ -353,7 +353,7 @@ bool IpcServer::enablePeerTraffic(const QJsonObject &configStr)
         }
     }
 
-    for (const QJsonValue& i : configStr.value(amnezia::config_key::splitTunnelApps).toArray()) {
+    for (const QJsonValue& i : configStr.value(potok::config_key::splitTunnelApps).toArray()) {
         if (!i.isString()) {
             break;
         }
@@ -361,7 +361,7 @@ bool IpcServer::enablePeerTraffic(const QJsonObject &configStr)
     }
 
     // killSwitch toggle
-    if (QVariant(configStr.value(amnezia::config_key::killSwitchOption).toString()).toBool()) {
+    if (QVariant(configStr.value(potok::config_key::killSwitchOption).toString()).toBool()) {
         WindowsFirewall::instance()->enablePeerTraffic(config);
     }
 

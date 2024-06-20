@@ -8,7 +8,7 @@
 #include "core/defs.h"
 #include "containers/containers_defs.h"
 
-using namespace amnezia;
+using namespace potok;
 
 class QTimer;
 
@@ -64,13 +64,13 @@ public:
     QString routeGateway() const;
     QString vpnGateway() const;
 
-    static VpnProtocol* factory(amnezia::DockerContainer container, const QJsonObject &configuration);
+    static VpnProtocol* factory(potok::DockerContainer container, const QJsonObject &configuration);
 
 signals:
     void bytesChanged(quint64 receivedBytes, quint64 sentBytes);
     void connectionStateChanged(Vpn::ConnectionState state);
     void timeoutTimerEvent();
-    void protocolError(amnezia::ErrorCode e);
+    void protocolError(potok::ErrorCode e);
 
 public slots:
     virtual void onTimeout(); // todo: remove?

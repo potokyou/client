@@ -365,7 +365,7 @@ ErrorCode InstallController::getAlreadyInstalledContainers(const ServerCredentia
         if (containerInfo.isEmpty()) {
             continue;
         }
-        const static QRegularExpression containerAndPortRegExp("(amnezia[-a-z0-9]*).*?:([0-9]*)->[0-9]*/(udp|tcp).*");
+        const static QRegularExpression containerAndPortRegExp("(potok[-a-z0-9]*).*?:([0-9]*)->[0-9]*/(udp|tcp).*");
         QRegularExpressionMatch containerAndPortMatch = containerAndPortRegExp.match(containerInfo);
         if (containerAndPortMatch.hasMatch()) {
             QString name = containerAndPortMatch.captured(1);
@@ -452,7 +452,7 @@ ErrorCode InstallController::getAlreadyInstalledContainers(const ServerCredentia
             }
             installedContainers.insert(container, config);
         }
-        const static QRegularExpression torOrDnsRegExp("(amnezia-(?:torwebsite|dns)).*?([0-9]*)/(udp|tcp).*");
+        const static QRegularExpression torOrDnsRegExp("(potok-(?:torwebsite|dns)).*?([0-9]*)/(udp|tcp).*");
         QRegularExpressionMatch torOrDnsRegMatch = torOrDnsRegExp.match(containerInfo);
         if (torOrDnsRegMatch.hasMatch()) {
             QString name = torOrDnsRegMatch.captured(1);
@@ -678,7 +678,7 @@ void InstallController::mountSftpDrive(const QString &port, const QString &passw
     //            .arg(labelTftpPasswordText());
 
     cmd = "C:\\Program Files\\SSHFS-Win\\bin\\sshfs.exe";
-#elif defined AMNEZIA_DESKTOP
+#elif defined POTOK_DESKTOP
     mountPath = QString("%1/sftp:%2:%3").arg(QStandardPaths::writableLocation(QStandardPaths::HomeLocation), hostname, port);
     QDir dir(mountPath);
     if (!dir.exists()) {
@@ -688,7 +688,7 @@ void InstallController::mountSftpDrive(const QString &port, const QString &passw
     cmd = "/usr/local/bin/sshfs";
 #endif
 
-#ifdef AMNEZIA_DESKTOP
+#ifdef POTOK_DESKTOP
     QSharedPointer<QProcess> process;
     process.reset(new QProcess());
     m_sftpMountProcesses.append(process);

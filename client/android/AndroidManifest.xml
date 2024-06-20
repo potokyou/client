@@ -3,7 +3,7 @@
 <manifest
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="org.amnezia.vpn"
+    package="org.potok.vpn"
     android:versionName="-- %%INSERT_VERSION_NAME%% --"
     android:versionCode="-- %%INSERT_VERSION_CODE%% --"
     android:installLocation="auto">
@@ -27,7 +27,7 @@
     <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES" tools:ignore="QueryAllPackagesPermission" />
 
     <application
-        android:name=".AmneziaApplication"
+        android:name=".PotokApplication"
         android:label="-- %%INSERT_APP_NAME%% --"
         android:icon="@mipmap/icon"
         android:roundIcon="@mipmap/icon_round"
@@ -37,7 +37,7 @@
         tools:targetApi="s">
 
         <activity
-            android:name=".AmneziaActivity"
+            android:name=".PotokActivity"
             android:configChanges="uiMode|screenSize|smallestScreenSize|screenLayout|orientation|density
                 |fontScale|layoutDirection|locale|keyboard|keyboardHidden|navigation|mcc|mnc"
             android:launchMode="singleInstance"
@@ -50,7 +50,7 @@
             </intent-filter>
 
             <intent-filter>
-                <action android:name="org.amnezia.vpn.IMPORT_CONFIG" />
+                <action android:name="org.potok.vpn.IMPORT_CONFIG" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
 
@@ -137,7 +137,7 @@
 
         <service
             android:name=".AwgService"
-            android:process=":amneziaAwgService"
+            android:process=":potokAwgService"
             android:permission="android.permission.BIND_VPN_SERVICE"
             android:foregroundServiceType="systemExempted"
             android:exported="false"
@@ -150,7 +150,7 @@
 
         <service
             android:name=".OpenVpnService"
-            android:process=":amneziaOpenVpnService"
+            android:process=":potokOpenVpnService"
             android:permission="android.permission.BIND_VPN_SERVICE"
             android:foregroundServiceType="systemExempted"
             android:exported="false"
@@ -163,7 +163,7 @@
 
         <service
             android:name=".XrayService"
-            android:process=":amneziaXrayService"
+            android:process=":potokXrayService"
             android:permission="android.permission.BIND_VPN_SERVICE"
             android:foregroundServiceType="systemExempted"
             android:exported="false"
@@ -175,9 +175,9 @@
         </service>
 
         <service
-            android:name=".AmneziaTileService"
-            android:process=":amneziaTileService"
-            android:icon="@drawable/ic_amnezia_round"
+            android:name=".PotokTileService"
+            android:process=":potokTileService"
+            android:icon="@drawable/ic_potok_round"
             android:permission="android.permission.BIND_QUICK_SETTINGS_TILE"
             android:exported="true">
 
@@ -192,7 +192,7 @@
 
         <provider
             android:name="androidx.core.content.FileProvider"
-            android:authorities="org.amnezia.vpn.qtprovider"
+            android:authorities="org.potok.vpn.qtprovider"
             android:exported="false"
             android:grantUriPermissions="true">
             <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/qtprovider_paths" />

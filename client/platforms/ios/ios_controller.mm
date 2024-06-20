@@ -120,7 +120,7 @@ bool IosController::initialize()
     return ok;
 }
 
-bool IosController::connectVpn(amnezia::Proto proto, const QJsonObject& configuration)
+bool IosController::connectVpn(potok::Proto proto, const QJsonObject& configuration)
 {
     m_proto = proto;
     m_rawConfig = configuration;
@@ -204,16 +204,16 @@ bool IosController::connectVpn(amnezia::Proto proto, const QJsonObject& configur
             object:m_currentTunnel.connection];
 
 
-    if (proto == amnezia::Proto::OpenVpn) {
+    if (proto == potok::Proto::OpenVpn) {
         return setupOpenVPN();
     }
-    if (proto == amnezia::Proto::Cloak) {
+    if (proto == potok::Proto::Cloak) {
         return setupCloak();
     }
-    if (proto == amnezia::Proto::WireGuard) {
+    if (proto == potok::Proto::WireGuard) {
         return setupWireGuard();
     }
-    if (proto == amnezia::Proto::Awg) {
+    if (proto == potok::Proto::Awg) {
         return setupAwg();
     }
 
@@ -365,7 +365,7 @@ void IosController::vpnConfigurationDidChange(void *pNotification)
 
 bool IosController::setupOpenVPN()
 {
-    QJsonObject ovpn = m_rawConfig[ProtocolProps::key_proto_config_data(amnezia::Proto::OpenVpn)].toObject();
+    QJsonObject ovpn = m_rawConfig[ProtocolProps::key_proto_config_data(potok::Proto::OpenVpn)].toObject();
     QString ovpnConfig = ovpn[config_key::config].toString();
 
     QJsonObject openVPNConfig {};
@@ -396,10 +396,10 @@ bool IosController::setupOpenVPN()
 bool IosController::setupCloak()
 {
     m_serverAddress = @"127.0.0.1";
-    QJsonObject ovpn = m_rawConfig[ProtocolProps::key_proto_config_data(amnezia::Proto::OpenVpn)].toObject();
+    QJsonObject ovpn = m_rawConfig[ProtocolProps::key_proto_config_data(potok::Proto::OpenVpn)].toObject();
     QString ovpnConfig = ovpn[config_key::config].toString();
 
-    QJsonObject cloak = m_rawConfig[ProtocolProps::key_proto_config_data(amnezia::Proto::Cloak)].toObject();
+    QJsonObject cloak = m_rawConfig[ProtocolProps::key_proto_config_data(potok::Proto::Cloak)].toObject();
 
     cloak["NumConn"] = 1;
     if (cloak.contains("remote")) {
@@ -454,7 +454,7 @@ bool IosController::setupCloak()
 
 bool IosController::setupWireGuard()
 {
-    QJsonObject config = m_rawConfig[ProtocolProps::key_proto_config_data(amnezia::Proto::WireGuard)].toObject();
+    QJsonObject config = m_rawConfig[ProtocolProps::key_proto_config_data(potok::Proto::WireGuard)].toObject();
 
     QJsonObject wgConfig {};
     wgConfig.insert(config_key::dns1, m_rawConfig[config_key::dns1]);
@@ -503,7 +503,7 @@ bool IosController::setupWireGuard()
 
 bool IosController::setupAwg()
 {
-    QJsonObject config = m_rawConfig[ProtocolProps::key_proto_config_data(amnezia::Proto::Awg)].toObject();
+    QJsonObject config = m_rawConfig[ProtocolProps::key_proto_config_data(potok::Proto::Awg)].toObject();
 
     QJsonObject wgConfig {};
     wgConfig.insert(config_key::dns1, m_rawConfig[config_key::dns1]);

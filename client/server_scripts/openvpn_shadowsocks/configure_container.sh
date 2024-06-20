@@ -1,11 +1,11 @@
-cat > /opt/amnezia/openvpn/server.conf <<EOF
+cat > /opt/potok/openvpn/server.conf <<EOF
 port $OPENVPN_PORT
 proto tcp
 dev tun
-ca /opt/amnezia/openvpn/ca.crt
-cert /opt/amnezia/openvpn/AmneziaReq.crt
-key /opt/amnezia/openvpn/AmneziaReq.key
-dh /opt/amnezia/openvpn/dh.pem
+ca /opt/potok/openvpn/ca.crt
+cert /opt/potok/openvpn/PotokReq.crt
+key /opt/potok/openvpn/PotokReq.key
+dh /opt/potok/openvpn/dh.pem
 server $OPENVPN_SUBNET_IP $OPENVPN_SUBNET_MASK
 ifconfig-pool-persist ipp.txt
 duplicate-cn
@@ -18,7 +18,7 @@ user nobody
 group nobody
 persist-key
 persist-tun
-crl-verify /opt/amnezia/openvpn/crl.pem
+crl-verify /opt/potok/openvpn/crl.pem
 status openvpn-status.log
 verb 1
 tls-server
@@ -28,12 +28,12 @@ $OPENVPN_ADDITIONAL_SERVER_CONFIG
 EOF
 
 # ShadowSocks config
-mkdir -p /opt/amnezia/shadowsocks
-cd /opt/amnezia/shadowsocks
+mkdir -p /opt/potok/shadowsocks
+cd /opt/potok/shadowsocks
 SHADOWSOCKS_PASSWORD=$(openssl rand -base64 32 | tr "=" "A" | tr "+" "A" | tr "/" "A")
-echo $SHADOWSOCKS_PASSWORD > /opt/amnezia/shadowsocks/shadowsocks.key
+echo $SHADOWSOCKS_PASSWORD > /opt/potok/shadowsocks/shadowsocks.key
 
-cat > /opt/amnezia/shadowsocks/ss-config.json <<EOF
+cat > /opt/potok/shadowsocks/ss-config.json <<EOF
 {
     "local_port": 8585,
     "method": "$SHADOWSOCKS_CIPHER",

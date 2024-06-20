@@ -50,7 +50,7 @@ PageType {
             HeaderType {
                 Layout.fillWidth: true
 
-                headerText: qsTr("Configure your server")
+                headerText: qsTr("For developers")
             }
 
             TextFieldWithHeaderType {
@@ -140,7 +140,7 @@ PageType {
                 Layout.fillWidth: true
                 Layout.topMargin: 12
 
-                text: qsTr("All data you enter will remain strictly confidential and will not be shared or disclosed to the Amnezia or any third parties")
+                text: qsTr("All data you enter will remain strictly confidential and will not be shared or disclosed to the Potok or any third parties")
             }
         }
     }

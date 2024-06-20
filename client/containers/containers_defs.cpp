@@ -3,7 +3,7 @@
 #include "QJsonObject"
 #include "QJsonDocument"
 
-QDebug operator<<(QDebug debug, const amnezia::DockerContainer &c)
+QDebug operator<<(QDebug debug, const potok::DockerContainer &c)
 {
     QDebugStateSaver saver(debug);
     debug.nospace() << ContainerProps::containerToString(c);
@@ -11,7 +11,7 @@ QDebug operator<<(QDebug debug, const amnezia::DockerContainer &c)
     return debug;
 }
 
-amnezia::DockerContainer ContainerProps::containerFromString(const QString &container)
+potok::DockerContainer ContainerProps::containerFromString(const QString &container)
 {
     QMetaEnum metaEnum = QMetaEnum::fromType<DockerContainer>();
     for (int i = 0; i < metaEnum.keyCount(); ++i) {
@@ -22,20 +22,20 @@ amnezia::DockerContainer ContainerProps::containerFromString(const QString &cont
     return DockerContainer::None;
 }
 
-QString ContainerProps::containerToString(amnezia::DockerContainer c)
+QString ContainerProps::containerToString(potok::DockerContainer c)
 {
     if (c == DockerContainer::None)
         return "none";
     if (c == DockerContainer::Cloak)
-        return "amnezia-openvpn-cloak";
+        return "potok-openvpn-cloak";
 
     QMetaEnum metaEnum = QMetaEnum::fromType<DockerContainer>();
     QString containerKey = metaEnum.valueToKey(static_cast<int>(c));
 
-    return "amnezia-" + containerKey.toLower();
+    return "potok-" + containerKey.toLower();
 }
 
-QString ContainerProps::containerTypeToString(amnezia::DockerContainer c)
+QString ContainerProps::containerTypeToString(potok::DockerContainer c)
 {
     if (c == DockerContainer::None)
         return "none";
@@ -48,7 +48,7 @@ QString ContainerProps::containerTypeToString(amnezia::DockerContainer c)
     return containerKey.toLower();
 }
 
-QVector<amnezia::Proto> ContainerProps::protocolsForContainer(amnezia::DockerContainer container)
+QVector<potok::Proto> ContainerProps::protocolsForContainer(potok::DockerContainer container)
 {
     switch (container) {
     case DockerContainer::None: return {};
@@ -93,13 +93,13 @@ QMap<DockerContainer, QString> ContainerProps::containerHumanNames()
              { DockerContainer::ShadowSocks, "ShadowSocks" },
              { DockerContainer::Cloak, "OpenVPN over Cloak" },
              { DockerContainer::WireGuard, "WireGuard" },
-             { DockerContainer::Awg, "AmneziaWG" },
+             { DockerContainer::Awg, "PotokWG" },
              { DockerContainer::Xray, "XRay" },
              { DockerContainer::Ipsec, QObject::tr("IPsec") },
              { DockerContainer::SSXray, "ShadowSocks"},
 
              { DockerContainer::TorWebSite, QObject::tr("Website in Tor network") },
-             { DockerContainer::Dns, QObject::tr("Amnezia DNS") },
+             { DockerContainer::Dns, QObject::tr("Potok DNS") },
              { DockerContainer::Sftp, QObject::tr("Sftp file sharing service") },
              { DockerContainer::Socks5Proxy, QObject::tr("SOCKS5 proxy server") } };
 }
@@ -120,7 +120,7 @@ QMap<DockerContainer, QString> ContainerProps::containerDescriptions()
                QObject::tr("WireGuard - New popular VPN protocol with high performance, high speed and low power "
                            "consumption. Recommended for regions with low levels of censorship.") },
              { DockerContainer::Awg,
-               QObject::tr("AmneziaWG - Special protocol from Amnezia, based on WireGuard. It's fast like WireGuard, "
+               QObject::tr("PotokWG - Special protocol from Potok, based on WireGuard. It's fast like WireGuard, "
                            "but very resistant to blockages. "
                            "Recommended for regions with high levels of censorship.") },
              { DockerContainer::Xray,
@@ -162,7 +162,7 @@ QMap<DockerContainer, QString> ContainerProps::containerDetailedDescriptions()
           QObject::tr("Shadowsocks, inspired by the SOCKS5 protocol, safeguards the connection using the AEAD cipher. "
                       "Although Shadowsocks is designed to be discreet and challenging to identify, it isn't identical to a standard HTTPS connection."
                       "However, certain traffic analysis systems might still detect a Shadowsocks connection. "
-                      "Due to limited support in Amnezia, it's recommended to use AmneziaWG protocol.\n\n"
+                      "Due to limited support in Potok, it's recommended to use PotokWG protocol.\n\n"
                       "* Available in the PotokVPN only on desktop platforms\n"
                       "* Normal power consumption on mobile devices\n\n"
                       "* Configurable encryption protocol\n"
@@ -202,13 +202,13 @@ QMap<DockerContainer, QString> ContainerProps::containerDetailedDescriptions()
                       "* Works over UDP network protocol.") },
         { DockerContainer::Awg,
           QObject::tr("A modern iteration of the popular VPN protocol, "
-                      "AmneziaWG builds upon the foundation set by WireGuard, "
+                      "PotokWG builds upon the foundation set by WireGuard, "
                       "retaining its simplified architecture and high-performance capabilities across devices.\n"
                       "While WireGuard is known for its efficiency, "
                       "it had issues with being easily detected due to its distinct packet signatures. "
-                      "AmneziaWG solves this problem by using better obfuscation methods, "
+                      "PotokWG solves this problem by using better obfuscation methods, "
                       "making its traffic blend in with regular internet traffic.\n"
-                      "This means that AmneziaWG keeps the fast performance of the original "
+                      "This means that PotokWG keeps the fast performance of the original "
                       "while adding an extra layer of stealth, "
                       "making it a great choice for those wanting a fast and discreet VPN connection.\n\n"
                       "* Available in the PotokVPN across all platforms\n"
@@ -242,7 +242,7 @@ QMap<DockerContainer, QString> ContainerProps::containerDetailedDescriptions()
         { DockerContainer::TorWebSite, QObject::tr("Website in Tor network") },
         { DockerContainer::Dns, QObject::tr("DNS Service") },
         { DockerContainer::Sftp,
-          QObject::tr("After installation, Amnezia will create a\n\n file storage on your server. "
+          QObject::tr("After installation, Potok will create a\n\n file storage on your server. "
                       "You will be able to access it using\n FileZilla or other SFTP clients, "
                       "as well as mount the disk on your device to access\n it directly from your device.\n\n"
                       "For more detailed information, you can\n find it in the support section under \"Create SFTP file storage.\" ") },
@@ -250,7 +250,7 @@ QMap<DockerContainer, QString> ContainerProps::containerDetailedDescriptions()
     };
 }
 
-amnezia::ServiceType ContainerProps::containerService(DockerContainer c)
+potok::ServiceType ContainerProps::containerService(DockerContainer c)
 {
     return ProtocolProps::protocolService(defaultProtocol(c));
 }

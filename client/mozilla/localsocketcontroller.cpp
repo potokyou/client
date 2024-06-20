@@ -92,11 +92,11 @@ void LocalSocketController::initializeInternal() {
   m_daemonState = eInitializing;
 
 #ifdef MZ_WINDOWS
-  QString path = "\\\\.\\pipe\\amneziavpn";
+  QString path = "\\\\.\\pipe\\potokvpn";
 #else
-  QString path = "/var/run/amneziavpn/daemon.socket";
+  QString path = "/var/run/potokvpn/daemon.socket";
   if (!QFileInfo::exists(path)) {
-    path = "/tmp/amneziavpn.socket";
+    path = "/tmp/potokvpn.socket";
   }
 #endif
 
@@ -117,16 +117,16 @@ void LocalSocketController::activate(const QJsonObject &rawConfig) {
   int splitTunnelType = rawConfig.value("splitTunnelType").toInt();
   QJsonArray splitTunnelSites = rawConfig.value("splitTunnelSites").toArray();
 
-  int appSplitTunnelType = rawConfig.value(amnezia::config_key::appSplitTunnelType).toInt();
-  QJsonArray splitTunnelApps = rawConfig.value(amnezia::config_key::splitTunnelApps).toArray();
+  int appSplitTunnelType = rawConfig.value(potok::config_key::appSplitTunnelType).toInt();
+  QJsonArray splitTunnelApps = rawConfig.value(potok::config_key::splitTunnelApps).toArray();
 
   QJsonObject wgConfig = rawConfig.value(protocolName + "_config_data").toObject();
 
   QJsonObject json;
   json.insert("type", "activate");
   //  json.insert("hopindex", QJsonValue((double)hop.m_hopindex));
-  json.insert("privateKey", wgConfig.value(amnezia::config_key::client_priv_key));
-  json.insert("deviceIpv4Address", wgConfig.value(amnezia::config_key::client_ip));
+  json.insert("privateKey", wgConfig.value(potok::config_key::client_priv_key));
+  json.insert("deviceIpv4Address", wgConfig.value(potok::config_key::client_ip));
 
   // set up IPv6 unique-local-address, ULA, with "fd00::/8" prefix, not globally routable.
   // this will be default IPv6 gateway, OS recognizes that IPv6 link is local and switches to IPv4.
@@ -135,20 +135,20 @@ void LocalSocketController::activate(const QJsonObject &rawConfig) {
   // https://man7.org/linux/man-pages/man5/gai.conf.5.html
   json.insert("deviceIpv6Address", "fd58:baa6:dead::1"); // simply "dead::1" is globally-routable, don't use it
 
-  json.insert("serverPublicKey", wgConfig.value(amnezia::config_key::server_pub_key));
-  json.insert("serverPskKey", wgConfig.value(amnezia::config_key::psk_key));
-  json.insert("serverIpv4AddrIn", wgConfig.value(amnezia::config_key::hostName));
+  json.insert("serverPublicKey", wgConfig.value(potok::config_key::server_pub_key));
+  json.insert("serverPskKey", wgConfig.value(potok::config_key::psk_key));
+  json.insert("serverIpv4AddrIn", wgConfig.value(potok::config_key::hostName));
   //  json.insert("serverIpv6AddrIn", QJsonValue(hop.m_server.ipv6AddrIn()));
-  json.insert("deviceMTU", wgConfig.value(amnezia::config_key::mtu));
+  json.insert("deviceMTU", wgConfig.value(potok::config_key::mtu));
 
-  json.insert("serverPort", wgConfig.value(amnezia::config_key::port).toInt());
-  json.insert("serverIpv4Gateway", wgConfig.value(amnezia::config_key::hostName));
+  json.insert("serverPort", wgConfig.value(potok::config_key::port).toInt());
+  json.insert("serverIpv4Gateway", wgConfig.value(potok::config_key::hostName));
   //  json.insert("serverIpv6Gateway", QJsonValue(hop.m_server.ipv6Gateway()));
-  json.insert("dnsServer", rawConfig.value(amnezia::config_key::dns1));
+  json.insert("dnsServer", rawConfig.value(potok::config_key::dns1));
 
   QJsonArray jsAllowedIPAddesses;
 
-  QJsonArray plainAllowedIP = wgConfig.value(amnezia::config_key::allowed_ips).toArray();
+  QJsonArray plainAllowedIP = wgConfig.value(potok::config_key::allowed_ips).toArray();
   QJsonArray defaultAllowedIP = QJsonArray::fromStringList(QString("0.0.0.0/0, ::/0").split(","));
 
   if (plainAllowedIP != defaultAllowedIP && !plainAllowedIP.isEmpty()) {
@@ -210,7 +210,7 @@ void LocalSocketController::activate(const QJsonObject &rawConfig) {
 
 
   QJsonArray jsExcludedAddresses;
-  jsExcludedAddresses.append(wgConfig.value(amnezia::config_key::hostName));
+  jsExcludedAddresses.append(wgConfig.value(potok::config_key::hostName));
   if (splitTunnelType == 2) {
     for (auto v : splitTunnelSites) {
           QString ipRange = v.toString();
@@ -222,36 +222,36 @@ void LocalSocketController::activate(const QJsonObject &rawConfig) {
 
   json.insert("vpnDisabledApps", splitTunnelApps);
 
-  json.insert(amnezia::config_key::killSwitchOption, rawConfig.value(amnezia::config_key::killSwitchOption));
+  json.insert(potok::config_key::killSwitchOption, rawConfig.value(potok::config_key::killSwitchOption));
 
-  if (protocolName == amnezia::config_key::awg) {
-    json.insert(amnezia::config_key::junkPacketCount, wgConfig.value(amnezia::config_key::junkPacketCount));
-    json.insert(amnezia::config_key::junkPacketMinSize, wgConfig.value(amnezia::config_key::junkPacketMinSize));
-    json.insert(amnezia::config_key::junkPacketMaxSize, wgConfig.value(amnezia::config_key::junkPacketMaxSize));
-    json.insert(amnezia::config_key::initPacketJunkSize, wgConfig.value(amnezia::config_key::initPacketJunkSize));
-    json.insert(amnezia::config_key::responsePacketJunkSize, wgConfig.value(amnezia::config_key::responsePacketJunkSize));
-    json.insert(amnezia::config_key::initPacketMagicHeader, wgConfig.value(amnezia::config_key::initPacketMagicHeader));
-    json.insert(amnezia::config_key::responsePacketMagicHeader, wgConfig.value(amnezia::config_key::responsePacketMagicHeader));
-    json.insert(amnezia::config_key::underloadPacketMagicHeader, wgConfig.value(amnezia::config_key::underloadPacketMagicHeader));
-    json.insert(amnezia::config_key::transportPacketMagicHeader, wgConfig.value(amnezia::config_key::transportPacketMagicHeader));
-  } else if (!wgConfig.value(amnezia::config_key::junkPacketCount).isUndefined()
-             && !wgConfig.value(amnezia::config_key::junkPacketMinSize).isUndefined()
-             && !wgConfig.value(amnezia::config_key::junkPacketMaxSize).isUndefined()
-             && !wgConfig.value(amnezia::config_key::initPacketJunkSize).isUndefined()
-             && !wgConfig.value(amnezia::config_key::responsePacketJunkSize).isUndefined()
-             && !wgConfig.value(amnezia::config_key::initPacketMagicHeader).isUndefined()
-             && !wgConfig.value(amnezia::config_key::responsePacketMagicHeader).isUndefined()
-             && !wgConfig.value(amnezia::config_key::underloadPacketMagicHeader).isUndefined()
-             && !wgConfig.value(amnezia::config_key::transportPacketMagicHeader).isUndefined()) {
-    json.insert(amnezia::config_key::junkPacketCount, wgConfig.value(amnezia::config_key::junkPacketCount));
-    json.insert(amnezia::config_key::junkPacketMinSize, wgConfig.value(amnezia::config_key::junkPacketMinSize));
-    json.insert(amnezia::config_key::junkPacketMaxSize, wgConfig.value(amnezia::config_key::junkPacketMaxSize));
-    json.insert(amnezia::config_key::initPacketJunkSize, wgConfig.value(amnezia::config_key::initPacketJunkSize));
-    json.insert(amnezia::config_key::responsePacketJunkSize, wgConfig.value(amnezia::config_key::responsePacketJunkSize));
-    json.insert(amnezia::config_key::initPacketMagicHeader, wgConfig.value(amnezia::config_key::initPacketMagicHeader));
-    json.insert(amnezia::config_key::responsePacketMagicHeader, wgConfig.value(amnezia::config_key::responsePacketMagicHeader));
-    json.insert(amnezia::config_key::underloadPacketMagicHeader, wgConfig.value(amnezia::config_key::underloadPacketMagicHeader));
-    json.insert(amnezia::config_key::transportPacketMagicHeader, wgConfig.value(amnezia::config_key::transportPacketMagicHeader));
+  if (protocolName == potok::config_key::awg) {
+    json.insert(potok::config_key::junkPacketCount, wgConfig.value(potok::config_key::junkPacketCount));
+    json.insert(potok::config_key::junkPacketMinSize, wgConfig.value(potok::config_key::junkPacketMinSize));
+    json.insert(potok::config_key::junkPacketMaxSize, wgConfig.value(potok::config_key::junkPacketMaxSize));
+    json.insert(potok::config_key::initPacketJunkSize, wgConfig.value(potok::config_key::initPacketJunkSize));
+    json.insert(potok::config_key::responsePacketJunkSize, wgConfig.value(potok::config_key::responsePacketJunkSize));
+    json.insert(potok::config_key::initPacketMagicHeader, wgConfig.value(potok::config_key::initPacketMagicHeader));
+    json.insert(potok::config_key::responsePacketMagicHeader, wgConfig.value(potok::config_key::responsePacketMagicHeader));
+    json.insert(potok::config_key::underloadPacketMagicHeader, wgConfig.value(potok::config_key::underloadPacketMagicHeader));
+    json.insert(potok::config_key::transportPacketMagicHeader, wgConfig.value(potok::config_key::transportPacketMagicHeader));
+  } else if (!wgConfig.value(potok::config_key::junkPacketCount).isUndefined()
+             && !wgConfig.value(potok::config_key::junkPacketMinSize).isUndefined()
+             && !wgConfig.value(potok::config_key::junkPacketMaxSize).isUndefined()
+             && !wgConfig.value(potok::config_key::initPacketJunkSize).isUndefined()
+             && !wgConfig.value(potok::config_key::responsePacketJunkSize).isUndefined()
+             && !wgConfig.value(potok::config_key::initPacketMagicHeader).isUndefined()
+             && !wgConfig.value(potok::config_key::responsePacketMagicHeader).isUndefined()
+             && !wgConfig.value(potok::config_key::underloadPacketMagicHeader).isUndefined()
+             && !wgConfig.value(potok::config_key::transportPacketMagicHeader).isUndefined()) {
+    json.insert(potok::config_key::junkPacketCount, wgConfig.value(potok::config_key::junkPacketCount));
+    json.insert(potok::config_key::junkPacketMinSize, wgConfig.value(potok::config_key::junkPacketMinSize));
+    json.insert(potok::config_key::junkPacketMaxSize, wgConfig.value(potok::config_key::junkPacketMaxSize));
+    json.insert(potok::config_key::initPacketJunkSize, wgConfig.value(potok::config_key::initPacketJunkSize));
+    json.insert(potok::config_key::responsePacketJunkSize, wgConfig.value(potok::config_key::responsePacketJunkSize));
+    json.insert(potok::config_key::initPacketMagicHeader, wgConfig.value(potok::config_key::initPacketMagicHeader));
+    json.insert(potok::config_key::responsePacketMagicHeader, wgConfig.value(potok::config_key::responsePacketMagicHeader));
+    json.insert(potok::config_key::underloadPacketMagicHeader, wgConfig.value(potok::config_key::underloadPacketMagicHeader));
+    json.insert(potok::config_key::transportPacketMagicHeader, wgConfig.value(potok::config_key::transportPacketMagicHeader));
   }
 
   write(json);

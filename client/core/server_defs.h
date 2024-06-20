@@ -4,10 +4,10 @@
 #include <QObject>
 #include "containers/containers_defs.h"
 
-namespace amnezia {
+namespace potok {
 namespace server {
-//QString getContainerName(amnezia::DockerContainer container);
-QString getDockerfileFolder(amnezia::DockerContainer container);
+//QString getContainerName(potok::DockerContainer container);
+QString getDockerfileFolder(potok::DockerContainer container);
 
 }
 }

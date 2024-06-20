@@ -19,7 +19,7 @@
     <DisableAuthorizationFallback>true</DisableAuthorizationFallback>
     <RemoteRepositories>
         <Repository>
-            <Url>https://amneziavpn.org/updates/macos</Url>
+            <Url>https://potokvpn.org/updates/macos</Url>
             <Enabled>true</Enabled>
             <DisplayName>PotokVPN - repository for macOS</DisplayName>
         </Repository>

@@ -4,7 +4,7 @@ set(PROJECT PotokVPN)
 
 project(${PROJECT} VERSION 4.6.0.0
         DESCRIPTION "PotokVPN"
-        HOMEPAGE_URL "https://amnezia.org/"
+        HOMEPAGE_URL "https://localhost/"
 )
 
 string(TIMESTAMP CURRENT_DATE "%Y-%m-%d")

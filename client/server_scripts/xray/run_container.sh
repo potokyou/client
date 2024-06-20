@@ -7,7 +7,7 @@ sudo docker run -d \
 -p 443:443/tcp \
 --name $CONTAINER_NAME $CONTAINER_NAME
 
-sudo docker network connect amnezia-dns-net $CONTAINER_NAME
+sudo docker network connect potok-dns-net $CONTAINER_NAME
 
 # Create tun device if not exist
 sudo docker exec -i $CONTAINER_NAME bash -c 'mkdir -p /dev/net; if [ ! -c /dev/net/tun ]; then mknod /dev/net/tun c 10 200; fi'

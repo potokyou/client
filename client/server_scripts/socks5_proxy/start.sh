@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# This scripts copied from Amnezia client to Docker container to /opt/amnezia and launched every time container starts
+# This scripts copied from Potok client to Docker container to /opt/potok and launched every time container starts
 
 echo "Container startup"
 

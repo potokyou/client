@@ -5,7 +5,7 @@
 #include <QMetaEnum>
 #include <QObject>
 
-namespace amnezia
+namespace potok
 {
     namespace config_key
     {
@@ -107,7 +107,7 @@ namespace amnezia
 
         namespace dns
         {
-            constexpr char amneziaDnsIp[] = "172.29.172.254";
+            constexpr char potokDnsIp[] = "172.29.172.254";
         }
 
         namespace openvpn
@@ -117,11 +117,11 @@ namespace amnezia
             constexpr char defaultSubnetCidr[] = "24";
             constexpr char defaultMtu[] = "1500";
 
-            constexpr char serverConfigPath[] = "/opt/amnezia/openvpn/server.conf";
-            constexpr char caCertPath[] = "/opt/amnezia/openvpn/pki/ca.crt";
-            constexpr char clientCertPath[] = "/opt/amnezia/openvpn/pki/issued";
-            constexpr char taKeyPath[] = "/opt/amnezia/openvpn/ta.key";
-            constexpr char clientsDirPath[] = "/opt/amnezia/openvpn/clients";
+            constexpr char serverConfigPath[] = "/opt/potok/openvpn/server.conf";
+            constexpr char caCertPath[] = "/opt/potok/openvpn/pki/ca.crt";
+            constexpr char clientCertPath[] = "/opt/potok/openvpn/pki/issued";
+            constexpr char taKeyPath[] = "/opt/potok/openvpn/ta.key";
+            constexpr char clientsDirPath[] = "/opt/potok/openvpn/clients";
             constexpr char defaultPort[] = "1194";
             constexpr char defaultTransportProto[] = "udp";
             constexpr char defaultCipher[] = "AES-256-GCM";
@@ -130,7 +130,7 @@ namespace amnezia
             constexpr bool defaultNcpDisable = false;
             constexpr bool defaultTlsAuth = true;
             constexpr char ncpDisableString[] = "ncp-disable";
-            constexpr char tlsAuthString[] = "tls-auth /opt/amnezia/openvpn/ta.key 0";
+            constexpr char tlsAuthString[] = "tls-auth /opt/potok/openvpn/ta.key 0";
 
             constexpr char defaultAdditionalClientConfig[] = "";
             constexpr char defaultAdditionalServerConfig[] = "";
@@ -138,7 +138,7 @@ namespace amnezia
 
         namespace shadowsocks
         {
-            constexpr char ssKeyPath[] = "/opt/amnezia/shadowsocks/shadowsocks.key";
+            constexpr char ssKeyPath[] = "/opt/potok/shadowsocks/shadowsocks.key";
             constexpr char defaultPort[] = "6789";
             constexpr char defaultLocalProxyPort[] = "8585";
             constexpr char defaultCipher[] = "chacha20-ietf-poly1305";
@@ -146,11 +146,11 @@ namespace amnezia
 
         namespace xray
         {
-            constexpr char serverConfigPath[] = "/opt/amnezia/xray/server.json";
-            constexpr char uuidPath[] = "/opt/amnezia/xray/xray_uuid.key";
-            constexpr char PublicKeyPath[] = "/opt/amnezia/xray/xray_public.key";
-            constexpr char PrivateKeyPath[] = "/opt/amnezia/xray/xray_private.key";
-            constexpr char shortidPath[] = "/opt/amnezia/xray/xray_short_id.key";
+            constexpr char serverConfigPath[] = "/opt/potok/xray/server.json";
+            constexpr char uuidPath[] = "/opt/potok/xray/xray_uuid.key";
+            constexpr char PublicKeyPath[] = "/opt/potok/xray/xray_public.key";
+            constexpr char PrivateKeyPath[] = "/opt/potok/xray/xray_private.key";
+            constexpr char shortidPath[] = "/opt/potok/xray/xray_short_id.key";
             constexpr char defaultSite[] = "www.googletagmanager.com";
 
             constexpr char defaultPort[] = "443";
@@ -160,9 +160,9 @@ namespace amnezia
 
         namespace cloak
         {
-            constexpr char ckPublicKeyPath[] = "/opt/amnezia/cloak/cloak_public.key";
-            constexpr char ckBypassUidKeyPath[] = "/opt/amnezia/cloak/cloak_bypass_uid.key";
-            constexpr char ckAdminKeyPath[] = "/opt/amnezia/cloak/cloak_admin_uid.key";
+            constexpr char ckPublicKeyPath[] = "/opt/potok/cloak/cloak_public.key";
+            constexpr char ckBypassUidKeyPath[] = "/opt/potok/cloak/cloak_bypass_uid.key";
+            constexpr char ckAdminKeyPath[] = "/opt/potok/cloak/cloak_admin_uid.key";
             constexpr char defaultPort[] = "443";
             constexpr char defaultRedirSite[] = "tile.openstreetmap.org";
             constexpr char defaultCipher[] = "chacha20-poly1305";
@@ -181,9 +181,9 @@ namespace amnezia
 #else
             constexpr char defaultMtu[] = "1376";
 #endif
-            constexpr char serverConfigPath[] = "/opt/amnezia/wireguard/wg0.conf";
-            constexpr char serverPublicKeyPath[] = "/opt/amnezia/wireguard/wireguard_server_public_key.key";
-            constexpr char serverPskKeyPath[] = "/opt/amnezia/wireguard/wireguard_psk.key";
+            constexpr char serverConfigPath[] = "/opt/potok/wireguard/wg0.conf";
+            constexpr char serverPublicKeyPath[] = "/opt/potok/wireguard/wireguard_server_public_key.key";
+            constexpr char serverPskKeyPath[] = "/opt/potok/wireguard/wireguard_psk.key";
 
         }
 
@@ -202,9 +202,9 @@ namespace amnezia
             constexpr char defaultMtu[] = "1376";
 #endif
 
-            constexpr char serverConfigPath[] = "/opt/amnezia/awg/wg0.conf";
-            constexpr char serverPublicKeyPath[] = "/opt/amnezia/awg/wireguard_server_public_key.key";
-            constexpr char serverPskKeyPath[] = "/opt/amnezia/awg/wireguard_psk.key";
+            constexpr char serverConfigPath[] = "/opt/potok/awg/wg0.conf";
+            constexpr char serverPublicKeyPath[] = "/opt/potok/awg/wireguard_server_public_key.key";
+            constexpr char serverPskKeyPath[] = "/opt/potok/awg/wireguard_psk.key";
 
             constexpr char defaultJunkPacketCount[] = "3";
             constexpr char defaultJunkPacketMinSize[] = "10";
@@ -298,8 +298,8 @@ namespace amnezia
         Q_INVOKABLE static QString key_proto_config_data(Proto p);
         Q_INVOKABLE static QString key_proto_config_path(Proto p);
     };
-} // namespace amnezia
+} // namespace potok
 
-QDebug operator<<(QDebug debug, const amnezia::Proto &p);
+QDebug operator<<(QDebug debug, const potok::Proto &p);
 
 #endif // PROTOCOLS_DEFS_H

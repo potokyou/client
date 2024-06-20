@@ -1,7 +1,7 @@
-package org.amnezia.vpn.protocol.awg
+package org.potok.vpn.protocol.awg
 
-import org.amnezia.vpn.protocol.BadConfigException
-import org.amnezia.vpn.protocol.wireguard.WireguardConfig
+import org.potok.vpn.protocol.BadConfigException
+import org.potok.vpn.protocol.wireguard.WireguardConfig
 
 class AwgConfig private constructor(
     wireguardConfigBuilder: WireguardConfig.Builder,

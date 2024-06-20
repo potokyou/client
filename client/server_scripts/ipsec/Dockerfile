@@ -1,4 +1,4 @@
-FROM amneziavpn/ipsec-server:latest
+FROM potokvpn/ipsec-server:latest
 
-RUN mkdir -p /opt/amnezia
+RUN mkdir -p /opt/potok
 LABEL maintainer="PotokVPN"

@@ -20,7 +20,7 @@ bool OpenVpnConfigModel::setData(const QModelIndex &index, const QVariant &value
 
     switch (role) {
     case Roles::SubnetAddressRole:
-        m_protocolConfig.insert(amnezia::config_key::subnet_address, value.toString());
+        m_protocolConfig.insert(potok::config_key::subnet_address, value.toString());
         break;
     case Roles::TransportProtoRole: m_protocolConfig.insert(config_key::transport_proto, value.toString()); break;
     case Roles::PortRole: m_protocolConfig.insert(config_key::port, value.toString()); break;
@@ -49,8 +49,8 @@ QVariant OpenVpnConfigModel::data(const QModelIndex &index, int role) const
 
     switch (role) {
     case Roles::SubnetAddressRole:
-        return m_protocolConfig.value(amnezia::config_key::subnet_address)
-                .toString(amnezia::protocols::openvpn::defaultSubnetAddress);
+        return m_protocolConfig.value(potok::config_key::subnet_address)
+                .toString(potok::protocols::openvpn::defaultSubnetAddress);
     case Roles::TransportProtoRole:
         return m_protocolConfig.value(config_key::transport_proto).toString(protocols::openvpn::defaultTransportProto);
     case Roles::PortRole: return m_protocolConfig.value(config_key::port).toString(protocols::openvpn::defaultPort);
@@ -85,8 +85,8 @@ void OpenVpnConfigModel::updateModel(const QJsonObject &config)
     QJsonObject protocolConfig = config.value(config_key::openvpn).toObject();
 
     m_protocolConfig.insert(config_key::subnet_address,
-                            protocolConfig.value(amnezia::config_key::subnet_address)
-                                    .toString(amnezia::protocols::openvpn::defaultSubnetAddress));
+                            protocolConfig.value(potok::config_key::subnet_address)
+                                    .toString(potok::protocols::openvpn::defaultSubnetAddress));
 
     QString transportProto;
     if (m_container == DockerContainer::OpenVpn) {

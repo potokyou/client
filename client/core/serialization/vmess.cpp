@@ -40,7 +40,7 @@
 
 #define OUTBOUND_TAG_PROXY "PROXY"
 
-namespace amnezia::serialization::vmess
+namespace potok::serialization::vmess
 {
 // From https://github.com/2dust/v2rayN/wiki/分享链接格式说明(ver-2)
 const QString Serialize(const StreamSettingsObject &transfer, const VMessServerObject &server, const QString &alias)
@@ -340,5 +340,5 @@ QJsonObject Deserialize(const QString &vmessStr, QString *alias, QString *errMes
     return root;
 #undef default
 }
-} // namespace amnezia::serialization::vmess
+} // namespace potok::serialization::vmess
 

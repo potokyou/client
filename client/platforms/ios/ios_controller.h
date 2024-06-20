@@ -8,7 +8,7 @@
 @class NETunnelProviderManager;
 #endif
 
-using namespace amnezia;
+using namespace potok;
 
 struct Action
 {
@@ -42,7 +42,7 @@ public:
     virtual ~IosController() override = default;
 
     bool initialize();
-    bool connectVpn(amnezia::Proto proto, const QJsonObject &configuration);
+    bool connectVpn(potok::Proto proto, const QJsonObject &configuration);
     void disconnectVpn();
 
     void vpnStatusDidChange(void *pNotification);
@@ -87,7 +87,7 @@ private:
     void sendVpnExtensionMessage(NSDictionary *message, std::function<void(NSDictionary *)> callback = nullptr);
 #endif
 
-    amnezia::Proto m_proto;
+    potok::Proto m_proto;
     QJsonObject m_rawConfig;
     QString m_tunnelId;
     uint64_t m_txBytes;

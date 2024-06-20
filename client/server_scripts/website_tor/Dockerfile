@@ -1,3 +1,3 @@
-FROM amneziavpn/torpress:latest
+FROM potokvpn/torpress:latest
 
 LABEL maintainer="PotokVPN"

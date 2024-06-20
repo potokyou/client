@@ -6,4 +6,4 @@ sudo docker run -d \
 -p 4500:4500/udp \
 --name $CONTAINER_NAME $CONTAINER_NAME
 
-sudo docker network connect amnezia-dns-net $CONTAINER_NAME
+sudo docker network connect potok-dns-net $CONTAINER_NAME

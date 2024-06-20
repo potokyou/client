@@ -35,15 +35,15 @@ SettingsController::SettingsController(const QSharedPointer<ServersModel> &serve
 #endif
 }
 
-void SettingsController::toggleAmneziaDns(bool enable)
+void SettingsController::togglePotokDns(bool enable)
 {
-    m_settings->setUseAmneziaDns(enable);
-    emit amneziaDnsToggled(enable);
+    m_settings->setUsePotokDns(enable);
+    emit potokDnsToggled(enable);
 }
 
-bool SettingsController::isAmneziaDnsEnabled()
+bool SettingsController::isPotokDnsEnabled()
 {
-    return m_settings->useAmneziaDns();
+    return m_settings->usePotokDns();
 }
 
 QString SettingsController::getPrimaryDns()

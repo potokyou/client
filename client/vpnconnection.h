@@ -11,7 +11,7 @@
 #include "core/defs.h"
 #include "settings.h"
 
-#ifdef AMNEZIA_DESKTOP
+#ifdef POTOK_DESKTOP
 #include "core/ipcclient.h"
 #endif
 
@@ -19,7 +19,7 @@
 #include "protocols/android_vpnprotocol.h"
 #endif
 
-using namespace amnezia;
+using namespace potok;
 
 class VpnConnection : public QObject
 {
@@ -60,7 +60,7 @@ public slots:
 signals:
     void bytesChanged(quint64 receivedBytes, quint64 sentBytes);
     void connectionStateChanged(Vpn::ConnectionState state);
-    void vpnProtocolError(amnezia::ErrorCode error);
+    void vpnProtocolError(potok::ErrorCode error);
 
     void serviceIsNotReady();
 
@@ -80,7 +80,7 @@ private:
     // Only for iOS for now, check counters
     QTimer m_checkTimer;
 
-#ifdef AMNEZIA_DESKTOP
+#ifdef POTOK_DESKTOP
     IpcClient *m_IpcClient {nullptr};
 #endif
 

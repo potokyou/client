@@ -118,7 +118,7 @@ PageType {
 
             Image {
                 id: image
-                source: "qrc:/images/amneziaBigLogo.png"
+                source: "qrc:/images/potokBigLogo.png"
 
                 Layout.alignment: Qt.AlignCenter
                 Layout.topMargin: 32
@@ -176,7 +176,7 @@ PageType {
                 text: qsTr("I have nothing")
 
                 clickedFunc: function() {
-                    Qt.openUrlExternally(qsTr("https://amnezia.org/instructions/0_starter-guide"))
+                    Qt.openUrlExternally(qsTr("https://potok.org/instructions/0_starter-guide"))
                 }
 
                 Keys.onTabPressed: lastItemTabClicked(focusItem)

@@ -52,7 +52,7 @@ PageType {
 
             Image {
                 id: image
-                source: "qrc:/images/amneziaBigLogo.png"
+                source: "qrc:/images/potokBigLogo.png"
 
                 Layout.alignment: Qt.AlignCenter
                 Layout.topMargin: 16
@@ -68,7 +68,7 @@ PageType {
                 Layout.leftMargin: 16
                 Layout.rightMargin: 16
 
-                text: qsTr("Support Amnezia")
+                text: qsTr("PotokVPN")
                 horizontalAlignment: Text.AlignHCenter
             }
 
@@ -83,7 +83,7 @@ PageType {
                 height: 20
                 font.pixelSize: 14
 
-                text: qsTr("Amnezia is a free and open-source application. You can support the developers if you like it.")
+                text: qsTr("Potok is a premium VPN service aimed at bypassing restrictions.")
                 color: "#CCCAC8"
             }
 
@@ -109,7 +109,7 @@ PageType {
                 parentFlickable: fl
 
                 clickedFunction: function() {
-                    Qt.openUrlExternally(qsTr("https://t.me/amnezia_vpn_en"))
+                    Qt.openUrlExternally(qsTr("https://t.me/potok_vpn_en"))
                 }
             }
 
@@ -144,7 +144,7 @@ PageType {
                 parentFlickable: fl
 
                 clickedFunction: function() {
-                    Qt.openUrlExternally(qsTr("https://github.com/amnezia-vpn/amnezia-client"))
+                    Qt.openUrlExternally(qsTr("https://github.com/potok-vpn/potok-client"))
                 }
 
             }
@@ -156,13 +156,13 @@ PageType {
                 Layout.fillWidth: true
 
                 text: qsTr("Website")
-                leftImageSource: "qrc:/images/controls/amnezia.svg"
+                leftImageSource: "qrc:/images/controls/potok.svg"
 
                 KeyNavigation.tab: checkUpdatesButton
                 parentFlickable: fl
 
                 clickedFunction: function() {
-                    Qt.openUrlExternally(qsTr("https://amnezia.org"))
+                    Qt.openUrlExternally(qsTr("https://potok.org"))
                 }
 
             }
@@ -192,13 +192,13 @@ PageType {
                 disabledColor: "#878B91"
                 textColor: "#FBB26A"
 
-                text: qsTr("Check for updates")
+                text: qsTr("Наш Telegram бот")
 
                 KeyNavigation.tab: privacyPolicyButton
                 parentFlickable: fl
 
                 clickedFunc: function() {
-                    Qt.openUrlExternally("https://github.com/amnezia-vpn/desktop-client/releases/latest")
+                    Qt.openUrlExternally("https://t.me/potokVPN_bot")
                 }
             }
 
@@ -221,7 +221,7 @@ PageType {
               parentFlickable: fl
 
               clickedFunc: function() {
-                Qt.openUrlExternally("https://amnezia.org/en/policy")
+                Qt.openUrlExternally("https://potok.org/en/policy")
               }
             }
         }

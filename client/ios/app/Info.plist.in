@@ -46,11 +46,11 @@
 	<key>UIUserInterfaceStyle</key>
 	<string>Light</string>
 	<key>com.wireguard.ios.app_group_id</key>
-	<string>group.org.amnezia.PotokVPN</string>
+	<string>group.org.potok.PotokVPN</string>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<true/>
 	<key>NSCameraUsageDescription</key>
-	<string>Amnezia VPN needs access to the camera for reading QR-codes.</string>
+	<string>Potok VPN needs access to the camera for reading QR-codes.</string>
 	<key>NSAppTransportSecurity</key>
 	<dict>
 		<key>NSAllowsArbitraryLoads</key>
@@ -70,11 +70,11 @@
 				<string>public.data</string>
 			</array>
 			<key>UTTypeDescription</key>
-			<string>Amnezia VPN config</string>
+			<string>Potok VPN config</string>
 			<key>UTTypeIconFiles</key>
 			<array/>
 			<key>UTTypeIdentifier</key>
-			<string>org.amnezia.PotokVPN.amnezia-config</string>
+			<string>org.potok.PotokVPN.potok-config</string>
 			<key>UTTypeTagSpecification</key>
 			<dict>
 				<key>public.filename-extension</key>
@@ -97,7 +97,7 @@
                         <key>UTTypeIconFiles</key>
                         <array/>
                         <key>UTTypeIdentifier</key>
-                        <string>org.amnezia.PotokVPN.wireguard-config</string>
+                        <string>org.potok.PotokVPN.wireguard-config</string>
                         <key>UTTypeTagSpecification</key>
                         <dict>
                                 <key>public.filename-extension</key>
@@ -121,7 +121,7 @@
                         <key>UTTypeIconFiles</key>
                         <array/>
                         <key>UTTypeIdentifier</key>
-                        <string>org.amnezia.PotokVPN.openvpn-config</string>
+                        <string>org.potok.PotokVPN.openvpn-config</string>
                         <key>UTTypeTagSpecification</key>
                         <dict>
                                 <key>public.filename-extension</key>
@@ -144,7 +144,7 @@
                         <key>UTTypeIconFiles</key>
                         <array/>
                         <key>UTTypeIdentifier</key>
-                        <string>org.amnezia.PotokVPN.backup-config</string>
+                        <string>org.potok.PotokVPN.backup-config</string>
                         <key>UTTypeTagSpecification</key>
                         <dict>
                                 <key>public.filename-extension</key>
@@ -162,15 +162,15 @@
         <array>
                 <dict>
                         <key>CFBundleTypeName</key>
-                        <string>Amnezia VPN config</string>
+                        <string>Potok VPN config</string>
                         <key>LSHandlerRank</key>
                         <string>Alternate</string>
                         <key>LSItemContentTypes</key>
                         <array>
-                                <string>org.amnezia.PotokVPN.amnezia-config</string>
-                                <string>org.amnezia.PotokVPN.wireguard-config</string>
-                                <string>org.amnezia.PotokVPN.openvpn-config</string>
-                                <string>org.amnezia.PotokVPN.backup-config</string>
+                                <string>org.potok.PotokVPN.potok-config</string>
+                                <string>org.potok.PotokVPN.wireguard-config</string>
+                                <string>org.potok.PotokVPN.openvpn-config</string>
+                                <string>org.potok.PotokVPN.backup-config</string>
                         </array>
                 </dict>
         </array>

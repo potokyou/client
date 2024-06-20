@@ -9,7 +9,7 @@
 namespace
 {
     enum class ConfigTypes {
-        Amnezia,
+        Potok,
         OpenVpn,
         WireGuard,
         Awg,

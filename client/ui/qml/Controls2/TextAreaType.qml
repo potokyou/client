@@ -14,7 +14,7 @@ Rectangle {
     property string borderFocusedColor: "#d7d8db"
 
     height: 148
-    color: "#142644"
+    color: "#130a29"
     border.width: 1
     border.color: getBorderColor(borderNormalColor)
     radius: 16
@@ -53,7 +53,7 @@ Rectangle {
                 anchors.bottomMargin: 16
 
                 color: "#D7D8DB"
-                selectionColor:  "#633303"
+                selectionColor:  "#BD5871"
                 selectedTextColor: "#D7D8DB"
                 placeholderTextColor: "#878B91"
 

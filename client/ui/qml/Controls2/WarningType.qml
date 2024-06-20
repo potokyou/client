@@ -9,7 +9,7 @@ Rectangle {
     id: root
 
     property string textColor: "#D7D8DB"
-    property string backGroundColor: "#142644"
+    property string backGroundColor: "#130a29"
     property string imageColor: "#D7D8DB"
     property string textString
     property int textFormat: Text.PlainText

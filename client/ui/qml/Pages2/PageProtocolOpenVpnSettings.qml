@@ -294,7 +294,7 @@ PageType {
                             Layout.fillWidth: true
                             Layout.topMargin: 32
                             Layout.preferredHeight: checkboxLayout.implicitHeight
-                            color: "#142644"
+                            color: "#130a29"
                             radius: 16
 
                             Connections {

@@ -145,7 +145,7 @@ DrawerType2 {
                                 indicator: Rectangle {
                                     width: parent.width - 1
                                     height: parent.height
-                                    color: radioButton.hovered ? "#2C2D30" : "#142644"
+                                    color: radioButton.hovered ? "#2C2D30" : "#130a29"
                                     border.color: radioButton.focus ? "#D7D8DB" : "transparent"
                                     border.width: radioButton.focus ? 1 : 0
 

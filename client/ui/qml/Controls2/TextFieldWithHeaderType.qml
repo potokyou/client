@@ -30,7 +30,7 @@ Item {
     property string borderColor: "#2C2D30"
     property string borderFocusedColor: "#d7d8db"
 
-    property string backgroundColor: "#142644"
+    property string backgroundColor: "#130a29"
     property string backgroundDisabledColor: "transparent"
     property string bgBorderHoveredColor: "#494B50"
 
@@ -92,7 +92,7 @@ Item {
                         placeholderText: root.textFieldPlaceholderText
                         placeholderTextColor: "#494B50"
 
-                        selectionColor:  "#633303"
+                        selectionColor:  "#BD5871"
                         selectedTextColor: "#D7D8DB"
 
                         font.pixelSize: 16

@@ -192,7 +192,7 @@ PageType {
                                             height: 24
 
                                             color: "#D7D8DB"
-                                            selectionColor:  "#633303"
+                                            selectionColor:  "#BD5871"
                                             selectedTextColor: "#D7D8DB"
 
                                             font.pixelSize: 16

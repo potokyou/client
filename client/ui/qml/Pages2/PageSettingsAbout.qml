@@ -101,70 +101,16 @@ PageType {
                 Layout.fillWidth: true
                 Layout.topMargin: 16
 
-                text: qsTr("Telegram group")
-                descriptionText: qsTr("To discuss features")
+                text: qsTr("Telegram канал")
+                descriptionText: qsTr("With news about the project")
                 leftImageSource: "qrc:/images/controls/telegram.svg"
 
                 KeyNavigation.tab: mailButton
                 parentFlickable: fl
 
                 clickedFunction: function() {
-                    Qt.openUrlExternally(qsTr("https://t.me/potok_vpn_en"))
+                    Qt.openUrlExternally(qsTr("https://t.me/potok_you"))
                 }
-            }
-
-            DividerType {}
-
-            LabelWithButtonType {
-                id: mailButton
-                Layout.fillWidth: true
-
-                text: qsTr("Mail")
-                descriptionText: qsTr("For reviews and bug reports")
-                leftImageSource: "qrc:/images/controls/mail.svg"
-
-                KeyNavigation.tab: githubButton
-                parentFlickable: fl
-
-                clickedFunction: function() {
-                }
-
-            }
-
-            DividerType {}
-
-            LabelWithButtonType {
-                id: githubButton
-                Layout.fillWidth: true
-
-                text: qsTr("Github")
-                leftImageSource: "qrc:/images/controls/github.svg"
-
-                KeyNavigation.tab: websiteButton
-                parentFlickable: fl
-
-                clickedFunction: function() {
-                    Qt.openUrlExternally(qsTr("https://github.com/potok-vpn/potok-client"))
-                }
-
-            }
-
-            DividerType {}
-
-            LabelWithButtonType {
-                id: websiteButton
-                Layout.fillWidth: true
-
-                text: qsTr("Website")
-                leftImageSource: "qrc:/images/controls/potok.svg"
-
-                KeyNavigation.tab: checkUpdatesButton
-                parentFlickable: fl
-
-                clickedFunction: function() {
-                    Qt.openUrlExternally(qsTr("https://localhost"))
-                }
-
             }
 
             DividerType {}

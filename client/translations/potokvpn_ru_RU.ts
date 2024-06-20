@@ -981,48 +981,18 @@ Already installed containers were found on the server. All installed containers 
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="88"/>
-        <source>Telegram group</source>
-        <translation>Группа в Telegram</translation>
+        <source>Telegram канал</source>
+        <translation>Telegram канал</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="89"/>
-        <source>To discuss features</source>
-        <translation>Для обсуждений</translation>
+        <source>With news about the project</source>
+        <translation>С новостями о проекте</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="93"/>
-        <source>https://t.me/potok_vpn_en</source>
-        <translation>https://t.me/potok_vpn</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="102"/>
-        <source>Mail</source>
-        <translation>Почта</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="103"/>
-        <source>For reviews and bug reports</source>
-        <translation>Для отзывов и сообщений об ошибках</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="115"/>
-        <source>Github</source>
-        <translation>Github</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="119"/>
-        <source>https://github.com/potok-vpn/potok-client</source>
-        <translation>https://github.com/potok-vpn/potok-client</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="128"/>
-        <source>Website</source>
-        <translation>Веб-сайт</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="132"/>
-        <source>https://localhost</source>
-        <translation>https://localhost</translation>
+        <source>https://t.me/potok_you</source>
+        <translation>https://t.me/potok_you</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="144"/>

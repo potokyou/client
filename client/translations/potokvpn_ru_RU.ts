@@ -996,13 +996,8 @@ Already installed containers were found on the server. All installed containers 
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="160"/>
-        <source>Our Telegram bot</source>
-        <translation>Наш Telegram бот</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="179"/>
-        <source>Privacy Policy</source>
-        <translation>Политика конфиденциальности</translation>
+        <source>Manage subscription</source>
+        <translation>Управление подпиской</translation>
     </message>
 </context>
 <context>
@@ -3325,8 +3320,8 @@ This means that AmneziaWG keeps the fast performance of the original while addin
     <message>
         <location filename="../ui/systemtray_notificationhandler.cpp" line="37"/>
         <location filename="../ui/systemtray_notificationhandler.cpp" line="63"/>
-        <source>Visit Website</source>
-        <translation>Посетить сайт</translation>
+        <source>Manage subscription</source>
+        <translation>Управление подпиской</translation>
     </message>
     <message>
         <location filename="../ui/systemtray_notificationhandler.cpp" line="41"/>

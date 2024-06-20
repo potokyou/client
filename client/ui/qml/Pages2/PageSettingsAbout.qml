@@ -138,7 +138,7 @@ PageType {
                 disabledColor: "#878B91"
                 textColor: "#FBB26A"
 
-                text: qsTr("Our Telegram bot")
+                text: qsTr("Manage subscription")
 
                 KeyNavigation.tab: privacyPolicyButton
                 parentFlickable: fl
@@ -146,29 +146,6 @@ PageType {
                 clickedFunc: function() {
                     Qt.openUrlExternally("https://t.me/potokVPN_bot")
                 }
-            }
-
-            BasicButtonType {
-              id: privacyPolicyButton
-              Layout.alignment: Qt.AlignHCenter
-              Layout.bottomMargin: 16
-              Layout.topMargin: -15
-              implicitHeight: 25
-
-              defaultColor: "transparent"
-              hoveredColor: Qt.rgba(1, 1, 1, 0.08)
-              pressedColor: Qt.rgba(1, 1, 1, 0.12)
-              disabledColor: "#878B91"
-              textColor: "#FBB26A"
-
-              text: qsTr("Privacy Policy")
-
-              Keys.onTabPressed: lastItemTabClicked()
-              parentFlickable: fl
-
-              clickedFunc: function() {
-                Qt.openUrlExternally("https://localhost/en/policy")
-              }
             }
         }
     }

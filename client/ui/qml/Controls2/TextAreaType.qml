@@ -14,7 +14,7 @@ Rectangle {
     property string borderFocusedColor: "#d7d8db"
 
     height: 148
-    color: "#130a29"
+    color: "#2b2b2b"
     border.width: 1
     border.color: getBorderColor(borderNormalColor)
     radius: 16

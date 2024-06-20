@@ -219,7 +219,7 @@ PageType {
 
                 strokeWidth: 1
                 strokeColor: "#2C2D30"
-                fillColor: "#130a29"
+                fillColor: "#2b2b2b"
             }
         }
 

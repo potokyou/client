@@ -24,9 +24,9 @@ Item {
     property var rootButtonClickedFunction
     property string rootButtonImage: "qrc:/images/controls/chevron-down.svg"
     property string rootButtonImageColor: "#D7D8DB"
-    property string rootButtonBackgroundColor: "#130a29"
-    property string rootButtonBackgroundHoveredColor: "#130a29"
-    property string rootButtonBackgroundPressedColor: "#130a29"
+    property string rootButtonBackgroundColor: "#2b2b2b"
+    property string rootButtonBackgroundHoveredColor: "#2b2b2b"
+    property string rootButtonBackgroundPressedColor: "#2b2b2b"
 
     property string borderFocusedColor: "#D7D8DB"
     property int borderFocusedWidth: 1

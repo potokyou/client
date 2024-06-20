@@ -135,7 +135,7 @@ PageType {
                 implicitHeight: configContent.implicitHeight
 
                 radius: 10
-                color: "#130a29"
+                color: "#2b2b2b"
 
                 visible: showContent
 

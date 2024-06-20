@@ -14,7 +14,7 @@ Rectangle {
     implicitWidth: transportProtoButtonGroup.implicitWidth
     implicitHeight: transportProtoButtonGroup.implicitHeight
 
-    color: "#130a29"
+    color: "#2b2b2b"
     radius: 16
 
     onFocusChanged: {

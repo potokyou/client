@@ -2017,13 +2017,13 @@ and will not be shared or disclosed to the Amnezia or any third parties</source>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardStart.qml" line="130"/>
-        <source>Free service for creating a personal VPN on your server.</source>
-        <translation>Простое и бесплатное приложение для запуска self-hosted VPN с высокими требованиями к приватности.</translation>
+        <source>Premium VPN service to bypass restrictions.</source>
+        <translation>Премиальный VPN сервис для обхода блокировок.</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardStart.qml" line="131"/>
-        <source> Helps you access blocked content without revealing your privacy, even to VPN providers.</source>
-        <translation> Помогает получить доступ к заблокированному контенту, не раскрывая вашу конфиденциальность даже провайдерам VPN.</translation>
+        <source> Helps you access blocked content without revealing your privacy.</source>
+        <translation> Помогает получить доступ к заблокированному контенту, не раскрывая вашу конфиденциальность.</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardStart.qml" line="140"/>
@@ -2037,7 +2037,7 @@ and will not be shared or disclosed to the Amnezia or any third parties</source>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardStart.qml" line="163"/>
-        <source>https://amnezia.org/instructions/0_starter-guide</source>
+        <source>https://t.me/potokVPN_bot</source>
         <translation></translation>
     </message>
 </context>

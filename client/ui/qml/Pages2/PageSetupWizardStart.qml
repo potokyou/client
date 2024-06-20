@@ -134,8 +134,8 @@ PageType {
                 Layout.leftMargin: 16
                 Layout.rightMargin: 16
 
-                text: qsTr("Free service for creating a personal VPN on your server.") +
-                      qsTr(" Helps you access blocked content without revealing your privacy, even to VPN providers.")
+                text: qsTr("Premium VPN service to bypass restrictions.") +
+                      qsTr(" Helps you access blocked content without revealing your privacy.")
             }
 
             Item {

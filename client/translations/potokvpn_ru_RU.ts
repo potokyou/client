@@ -967,7 +967,7 @@ Already installed containers were found on the server. All installed containers 
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="71"/>
         <source>Potok is a premium VPN service aimed at bypassing restrictions.</source>
-        <translation>Potok - премимальный VPN сервис, нацеленный на обход блокировок.</translation>
+        <translation>Potok - премиальный VPN сервис, нацеленный на обход блокировок.</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="81"/>

@@ -156,7 +156,7 @@ PageType {
     Rectangle {
         anchors.fill: columnContent
         anchors.bottomMargin: -24
-        color: "#333d5f"
+        color: "#691551"
         opacity: 0.8
     }
 

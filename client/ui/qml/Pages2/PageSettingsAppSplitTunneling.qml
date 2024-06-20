@@ -241,7 +241,7 @@ PageType {
     Rectangle {
         anchors.fill: addAppButton
         anchors.bottomMargin: -24
-        color: "#333d5f"
+        color: "#691551"
         opacity: 0.8
     }
 

@@ -13,7 +13,7 @@ Button {
     property string disabledColor: "#494B50"
     property string pressedColor: "#979799"
 
-    property string textColor: "#333d5f"
+    property string textColor: "#691551"
 
     property string borderColor: "#D7D8DB"
     property string borderFocusedColor: "#D7D8DB"

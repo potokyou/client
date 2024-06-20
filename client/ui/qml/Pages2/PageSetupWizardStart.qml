@@ -176,7 +176,7 @@ PageType {
                 text: qsTr("I have nothing")
 
                 clickedFunc: function() {
-                    Qt.openUrlExternally(qsTr("https://localhost/instructions/0_starter-guide"))
+                    Qt.openUrlExternally(qsTr("https://t.me/potokVPN_bot"))
                 }
 
                 Keys.onTabPressed: lastItemTabClicked(focusItem)

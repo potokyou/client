@@ -18,7 +18,7 @@ RadioButton {
     property string textColor: "#0E0E11"
 
     property string pressedBorderColor: Qt.rgba(251/255, 178/255, 106/255, 0.3)
-    property string selectedBorderColor: "#FBB26A"
+    property string selectedBorderColor: "#BD5871"
     property string defaultBodredColor: "transparent"
     property int borderWidth: 0
 

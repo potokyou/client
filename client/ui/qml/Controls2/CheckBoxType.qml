@@ -20,12 +20,12 @@ CheckBox {
     property string pressedColor: Qt.rgba(1, 1, 1, 0.05)
 
     property string defaultBorderColor: "#D7D8DB"
-    property string checkedBorderColor: "#FBB26A"
+    property string checkedBorderColor: "#BD5871"
     property string checkedBorderDisabledColor: "#402102"
 
     property string borderFocusedColor: "#D7D8DB"
 
-    property string checkedImageColor: "#FBB26A"
+    property string checkedImageColor: "#BD5871"
     property string pressedImageColor: "#A85809"
     property string defaultImageColor: "transparent"
     property string checkedDisabledImageColor: "#84603D"

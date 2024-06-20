@@ -15,7 +15,7 @@ ProgressBar {
         Rectangle {
             width: root.visualPosition * parent.width
             height: parent.height
-            color: "#FBB26A"
+            color: "#BD5871"
         }
     }
 }

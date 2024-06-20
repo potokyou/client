@@ -12,7 +12,7 @@ Button {
 
     property string defaultButtonColor: "#D7D8DB"
     property string progressButtonColor: "#D7D8DB"
-    property string connectedButtonColor: "#FBB26A"
+    property string connectedButtonColor: "#BD5871"
 
     implicitWidth: 190
     implicitHeight: 190
@@ -49,7 +49,7 @@ Button {
                 verticalOffset: 0
                 radius: 10
                 samples: 25
-                color: root.activeFocus ? "#D7D8DB" : "#FBB26A"
+                color: root.activeFocus ? "#D7D8DB" : "#BD5871"
                 source: backgroundCircle
             }
 

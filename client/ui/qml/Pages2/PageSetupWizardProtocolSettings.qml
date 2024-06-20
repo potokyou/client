@@ -97,7 +97,7 @@ PageType {
                             hoveredColor: Qt.rgba(1, 1, 1, 0.08)
                             pressedColor: Qt.rgba(1, 1, 1, 0.12)
                             disabledColor: "#878B91"
-                            textColor: "#FBB26A"
+                            textColor: "#BD5871"
 
                             text: qsTr("More detailed")
                             KeyNavigation.tab: transportProtoSelector

@@ -82,7 +82,7 @@ PageType {
                 }
 
                 descriptionOnTop: true
-                textColor: "#FBB26A"
+                textColor: "#BD5871"
 
                 rightImageSource: "qrc:/images/controls/copy.svg"
                 rightImageColor: "#D7D8DB"
@@ -106,7 +106,7 @@ PageType {
 
                 onLinkActivated: Qt.openUrlExternally(link)
                 textFormat: Text.RichText
-                text: qsTr("Use <a href=\"https://www.torproject.org/download/\" style=\"color: #FBB26A;\">Tor Browser</a> to open this URL.")
+                text: qsTr("Use <a href=\"https://www.torproject.org/download/\" style=\"color: #BD5871;\">Tor Browser</a> to open this URL.")
             }
 
             ParagraphTextType {

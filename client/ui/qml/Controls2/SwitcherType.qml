@@ -25,7 +25,7 @@ Switch {
     property string defaultIndicatorBorderColor: "#494B50"
     property string checkedDisabledIndicatorBorderColor: "#402102"
 
-    property string checkedInnerCircleColor: "#FBB26A"
+    property string checkedInnerCircleColor: "#BD5871"
     property string defaultInnerCircleColor: "#D7D8DB"
     property string checkedDisabledInnerCircleColor: "#84603D"
     property string defaultDisabledInnerCircleColor: "#494B50"

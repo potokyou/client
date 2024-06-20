@@ -19,7 +19,7 @@ Item {
     property Component collapsedContent
     property Component expandedContent
 
-    property string defaultColor: "#1C1D21"
+    property string defaultColor: "#142644"
     property string borderColor: "#2C2D30"
 
     property real expandedHeight

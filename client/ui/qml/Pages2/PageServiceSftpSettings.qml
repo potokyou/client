@@ -240,11 +240,11 @@ PageType {
                             Layout.leftMargin: 16
                             Layout.rightMargin: 16
 
-                            readonly property string windowsFirstLink: "<a href=\"https://github.com/billziss-gh/winfsp/releases/latest\" style=\"color: #FBB26A;\">WinFsp</a>"
-                            readonly property string windowsSecondLink: "<a href=\"https://github.com/billziss-gh/sshfs-win/releases\" style=\"color: #FBB26A;\">SSHFS-Win</a>"
+                            readonly property string windowsFirstLink: "<a href=\"https://github.com/billziss-gh/winfsp/releases/latest\" style=\"color: #BD5871;\">WinFsp</a>"
+                            readonly property string windowsSecondLink: "<a href=\"https://github.com/billziss-gh/sshfs-win/releases\" style=\"color: #BD5871;\">SSHFS-Win</a>"
 
-                            readonly property string macosFirstLink: "<a href=\"https://osxfuse.github.io/\" style=\"color: #FBB26A;\">macFUSE</a>"
-                            readonly property string macosSecondLink: "<a href=\"https://osxfuse.github.io/\" style=\"color: #FBB26A;\">SSHFS</a>"
+                            readonly property string macosFirstLink: "<a href=\"https://osxfuse.github.io/\" style=\"color: #BD5871;\">macFUSE</a>"
+                            readonly property string macosSecondLink: "<a href=\"https://osxfuse.github.io/\" style=\"color: #BD5871;\">SSHFS</a>"
 
                             onLinkActivated: function(link) {
                                 Qt.openUrlExternally(link)
@@ -284,7 +284,7 @@ PageType {
                             hoveredColor: Qt.rgba(1, 1, 1, 0.08)
                             pressedColor: Qt.rgba(1, 1, 1, 0.12)
                             disabledColor: "#878B91"
-                            textColor: "#FBB26A"
+                            textColor: "#BD5871"
 
                             text: qsTr("Detailed instructions")
 

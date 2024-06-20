@@ -16,7 +16,7 @@ RadioButton {
     property string textDisabledColor: "#878B91"
 
     property string pressedBorderColor: "#494B50"
-    property string checkedBorderColor: "#FBB26A"
+    property string checkedBorderColor: "#BD5871"
     property string defaultBodredColor: "transparent"
     property string checkedDisabledBorderColor: "#84603D"
     property string borderFocusedColor: "#D7D8DB"

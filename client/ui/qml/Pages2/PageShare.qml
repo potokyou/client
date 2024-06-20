@@ -267,7 +267,7 @@ PageType {
                 implicitWidth: accessTypeSelectorContent.implicitWidth
                 implicitHeight: accessTypeSelectorContent.implicitHeight
 
-                color: "#1C1D21"
+                color: "#142644"
                 radius: 16
 
                 RowLayout {

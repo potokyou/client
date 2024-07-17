@@ -10,10 +10,10 @@ import org.potok.vpn.protocol.ProtocolState.CONNECTED
 import org.potok.vpn.protocol.ProtocolState.DISCONNECTED
 import org.potok.vpn.protocol.Statistics
 import org.potok.vpn.protocol.VpnStartException
-import org.potok.vpn.protocol.xray.libXray.DialerController
-import org.potok.vpn.protocol.xray.libXray.LibXray
-import org.potok.vpn.protocol.xray.libXray.Logger
-import org.potok.vpn.protocol.xray.libXray.Tun2SocksConfig
+import org.amnezia.vpn.protocol.xray.libXray.DialerController
+import org.amnezia.vpn.protocol.xray.libXray.LibXray
+import org.amnezia.vpn.protocol.xray.libXray.Logger
+import org.amnezia.vpn.protocol.xray.libXray.Tun2SocksConfig
 import org.potok.vpn.util.Log
 import org.potok.vpn.util.net.InetNetwork
 import org.potok.vpn.util.net.parseInetAddress

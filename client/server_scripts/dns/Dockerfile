@@ -1,6 +1,6 @@
 FROM mvance/unbound:latest
 
-LABEL maintainer="PotokVPN" 
+LABEL maintainer="PotokYou" 
 
 RUN echo " \n\
 domain-insecure: \"coin.\"\n\

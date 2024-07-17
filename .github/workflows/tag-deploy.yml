@@ -132,11 +132,11 @@ jobs:
 
         ANDROID_BUILD_TOOLS_VERSION=30.0.3
 
-        ${ANDROID_HOME}/build-tools/${ANDROID_BUILD_TOOLS_VERSION}/zipalign -f -v 4 PotokVPN-release-unsigned.apk PotokVPN-release-aligned.apk
-        ${ANDROID_HOME}/build-tools/${ANDROID_BUILD_TOOLS_VERSION}/apksigner sign --out PotokVPN-release-signed.apk --ks keystore/debug.keystore --ks-key-alias ${{ secrets.DEBUG_ANDROID_KEYSTORE_KEY_ALIAS }} --ks-pass pass:${{secrets.DEBUG_ANDROID_KEYSTOTE_KEY_PASS }} PotokVPN-release-aligned.apk
+        ${ANDROID_HOME}/build-tools/${ANDROID_BUILD_TOOLS_VERSION}/zipalign -f -v 4 PotokYou-release-unsigned.apk PotokYou-release-aligned.apk
+        ${ANDROID_HOME}/build-tools/${ANDROID_BUILD_TOOLS_VERSION}/apksigner sign --out PotokYou-release-signed.apk --ks keystore/debug.keystore --ks-key-alias ${{ secrets.DEBUG_ANDROID_KEYSTORE_KEY_ALIAS }} --ks-pass pass:${{secrets.DEBUG_ANDROID_KEYSTOTE_KEY_PASS }} PotokYou-release-aligned.apk
 
     - name: 'Upload'
       uses: actions/upload-artifact@v3
       with:
         name: Release APK
-        path: ${{ runner.temp }}/main/PotokVPN-release-signed.apk
+        path: ${{ runner.temp }}/main/PotokYou-release-signed.apk

@@ -3,5 +3,5 @@
 @interface QIOSApplicationDelegate
 @end
 
-@interface QIOSApplicationDelegate (PotokVPNDelegate)
+@interface QIOSApplicationDelegate (PotokYouDelegate)
 @end

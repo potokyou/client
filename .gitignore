@@ -1,9 +1,9 @@
 # User settings
 *.user
 macOSPackage/
-PotokVPN.dmg
-PotokVPN.exe
-PotokVPN_*.exe
+PotokYou.dmg
+PotokYou.exe
+PotokYou_*.exe
 deploy/build/*
 deploy/build_32/*
 deploy/build_64/*
@@ -48,7 +48,7 @@ client/ui_*.cpp
 client/Makefile*
 client/fastlane/build/
 client/*build-*
-client/PotokVPN.xcodeproj
+client/PotokYou.xcodeproj
 client/Debug-iphonesimulator/
 client/potokvpn_plugin_import.cpp
 client/potokvpn_qml_plugin_import.cpp
@@ -72,7 +72,7 @@ CMakeLists.txt.user*
 *.7z
 deploy/AppDir
 deploy/Tools
-deploy/PotokVPN*Installer*
+deploy/PotokYou*Installer*
 
 # MACOS files
 .DS_Store

@@ -19,7 +19,7 @@
 #endif
 
 #ifdef Q_OS_IOS
-    #include <PotokVPN-Swift.h>
+    #include <PotokYou-Swift.h>
 #endif
 
 QFile Logger::m_file;
@@ -114,7 +114,7 @@ QString Logger::getLogFile()
     QString qtLog = file.readAll();
     
 #ifdef Q_OS_IOS
-    return QString().fromStdString(PotokVPN::swiftUpdateLogData(qtLog.toStdString()));
+    return QString().fromStdString(PotokYou::swiftUpdateLogData(qtLog.toStdString()));
 #else
     return qtLog;
 #endif
@@ -159,7 +159,7 @@ void Logger::clearLogs()
     file.close();
     
 #ifdef Q_OS_IOS
-    PotokVPN::swiftDeleteLog();
+    PotokYou::swiftDeleteLog();
 #endif
     
     if (isLogActive) {

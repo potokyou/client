@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Installer>
-    <Name>PotokVPN</Name>
+    <Name>PotokYou</Name>
     <Version>@CMAKE_PROJECT_VERSION@</Version>
-    <Title>PotokVPN</Title>
-    <Publisher>PotokVPN</Publisher>
-    <StartMenuDir>PotokVPN</StartMenuDir>
-    <TargetDir>@ApplicationsDir@/PotokVPN</TargetDir>
+    <Title>PotokYou</Title>
+    <Publisher>PotokYou</Publisher>
+    <StartMenuDir>PotokYou</StartMenuDir>
+    <TargetDir>@ApplicationsDir@/PotokYou</TargetDir>
     <WizardDefaultWidth>600</WizardDefaultWidth>
     <WizardDefaultHeight>380</WizardDefaultHeight>
     <WizardStyle>Modern</WizardStyle>
@@ -21,7 +21,7 @@
         <Repository>
             <Url>https://potokvpn.org/updates/linux</Url>
             <Enabled>true</Enabled>
-            <DisplayName>PotokVPN - repository for Linux</DisplayName>
+            <DisplayName>PotokYou - repository for Linux</DisplayName>
         </Repository>
     </RemoteRepositories>
 </Installer>

@@ -12,7 +12,7 @@ mkdir -p $BUILD_DIR
 echo "Project dir: ${PROJECT_DIR}"
 echo "Build dir: ${BUILD_DIR}"
 
-APP_NAME=PotokVPN
+APP_NAME=PotokYou
 APP_FILENAME=$APP_NAME.app
 APP_DOMAIN=org.potokvpn.package
 PLIST_NAME=$APP_NAME.plist
@@ -91,9 +91,9 @@ fi
 xcodebuild \
 "OTHER_CODE_SIGN_FLAGS=--keychain '$KEYCHAIN_FILE'" \
 -configuration Release \
--scheme PotokVPN \
+-scheme PotokYou \
 -destination "generic/platform=iOS,name=Any iOS'" \
--project $BUILD_DIR/PotokVPN.xcodeproj
+-project $BUILD_DIR/PotokYou.xcodeproj
 
 # restore keychain
 security default-keychain -s login.keychain

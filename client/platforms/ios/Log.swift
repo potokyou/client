@@ -14,7 +14,7 @@ struct Log {
     }
   }
 
-  private static let appGroupID = "group.org.potok.PotokVPN"
+  private static let appGroupID = "group.org.potok.PotokYou"
 
   static let appLogURL = {
     let sharedContainerURL = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: appGroupID)!

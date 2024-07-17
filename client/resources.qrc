@@ -21,7 +21,7 @@
         <file>fonts/Lato-Regular.ttf</file>
         <file>fonts/Lato-Thin.ttf</file>
         <file>fonts/Lato-ThinItalic.ttf</file>
-        <file>images/PotokVPN.png</file>
+        <file>images/PotokYou.png</file>
         <file>images/share.png</file>
         <file>server_scripts/remove_container.sh</file>
         <file>server_scripts/setup_host_firewall.sh</file>

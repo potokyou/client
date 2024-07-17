@@ -23,7 +23,7 @@ mkdir -p $CQTDEPLOYER_DIR
 echo "Project dir: ${PROJECT_DIR}" 
 echo "Build dir: ${BUILD_DIR}"
 
-APP_NAME=PotokVPN
+APP_NAME=PotokYou
 APP_FILENAME=$APP_NAME.app
 APP_DOMAIN=org.potokvpn.package
 
@@ -72,8 +72,8 @@ if [ ! -f $CQTDEPLOYER_DIR/cqtdeployer.sh ]; then
 fi
 
 
-$CQTDEPLOYER_DIR/cqtdeployer.sh -bin $BUILD_DIR/client/PotokVPN -qmake $QT_BIN_DIR/qmake -qmlDir $PROJECT_DIR/client/ui/qml/ -targetDir $APP_DIR/client/
-$CQTDEPLOYER_DIR/cqtdeployer.sh -bin $BUILD_DIR/service/server/PotokVPN-service -qmake $QT_BIN_DIR/qmake -targetDir $APP_DIR/service/
+$CQTDEPLOYER_DIR/cqtdeployer.sh -bin $BUILD_DIR/client/PotokYou -qmake $QT_BIN_DIR/qmake -qmlDir $PROJECT_DIR/client/ui/qml/ -targetDir $APP_DIR/client/
+$CQTDEPLOYER_DIR/cqtdeployer.sh -bin $BUILD_DIR/service/server/PotokYou-service -qmake $QT_BIN_DIR/qmake -targetDir $APP_DIR/service/
 
 rm -f $INSTALLER_DATA_DIR/data.7z
 
@@ -83,4 +83,4 @@ ldd $CQTDEPLOYER_DIR/bin/binarycreator
 
 cp -r $PROJECT_DIR/deploy/installer $BUILD_DIR
 
-$CQTDEPLOYER_DIR/binarycreator.sh --offline-only -v -c $BUILD_DIR/installer/config/linux.xml -p $BUILD_DIR/installer/packages -f $PROJECT_DIR/deploy/PotokVPN_Linux_Installer.bin
+$CQTDEPLOYER_DIR/binarycreator.sh --offline-only -v -c $BUILD_DIR/installer/config/linux.xml -p $BUILD_DIR/installer/packages -f $PROJECT_DIR/deploy/PotokYou_Linux_Installer.bin

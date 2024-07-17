@@ -1,18 +1,18 @@
 #!/bin/bash
 
-APP_NAME=PotokVPN
+APP_NAME=PotokYou
 LOG_FOLDER=/var/log/$APP_NAME
 LOG_FILE="$LOG_FOLDER/post-install.log"
 APP_PATH=/opt/$APP_NAME
 
 if ! test -f $LOG_FOLDER; then
         sudo mkdir $LOG_FOLDER
-        echo "PotokVPN log dir created at /var/log/"
+        echo "PotokYou log dir created at /var/log/"
 fi
 
 if ! test -f $LOG_FILE; then
         touch $LOG_FILE
-        echo "PotokVPN log file created at /var/log/PotokVPN/post-install.log"
+        echo "PotokYou log file created at /var/log/PotokYou/post-install.log"
 fi
 
 date > $LOG_FILE

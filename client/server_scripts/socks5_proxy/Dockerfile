@@ -1,6 +1,6 @@
 FROM 3proxy/3proxy:latest
 
-LABEL maintainer="PotokVPN" 
+LABEL maintainer="PotokYou" 
 
 RUN mkdir -p /opt/potok
 RUN echo -e "#!/bin/bash\ntail -f /dev/null" > /opt/potok/start.sh

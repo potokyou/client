@@ -17,8 +17,8 @@ elseif(LINUX)
     )
     
     configure_file(
-        ${CMAKE_CURRENT_LIST_DIR}/config/PotokVPN.desktop.in
-        ${CMAKE_BINARY_DIR}/../AppDir/PotokVPN.desktop
+        ${CMAKE_CURRENT_LIST_DIR}/config/PotokYou.desktop.in
+        ${CMAKE_BINARY_DIR}/../AppDir/PotokYou.desktop
     )
 endif()
 

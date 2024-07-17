@@ -81,7 +81,7 @@ PageType {
                 Layout.fillWidth: true
 
                 textString: qsTr("The backup will contain your passwords and private keys for all servers added " +
-                                            "to PotokVPN. Keep this information in a secure place.")
+                                            "to PotokYou. Keep this information in a secure place.")
 
                 iconPath: "qrc:/images/controls/alert-circle.svg"
             }
@@ -96,11 +96,11 @@ PageType {
                 clickedFunc: function() {
                     var fileName = ""
                     if (GC.isMobile()) {
-                        fileName = "PotokVPN.backup"
+                        fileName = "PotokYou.backup"
                     } else {
                         fileName = SystemController.getFileName(qsTr("Save backup file"),
                                                                 qsTr("Backup files (*.backup)"),
-                                                                StandardPaths.standardLocations(StandardPaths.DocumentsLocation) + "/PotokVPN",
+                                                                StandardPaths.standardLocations(StandardPaths.DocumentsLocation) + "/PotokYou",
                                                                 true,
                                                                 ".backup")
                     }

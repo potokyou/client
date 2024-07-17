@@ -54,7 +54,7 @@ void Migrations::migrateV3()
         return;
     }
 
-    QString location = rootLocation + "/files/.config/PotokVPN.ORG/PotokVPN.conf";
+    QString location = rootLocation + "/files/.config/PotokYou.ORG/PotokYou.conf";
 
     QFile oldConfig(location);
 
@@ -63,7 +63,7 @@ void Migrations::migrateV3()
 
         QDir newConfigDir(newConfigPath);
 
-        newConfigPath += "/PotokVPN.ORG";
+        newConfigPath += "/PotokYou.ORG";
 
         bool mkPathRes = newConfigDir.mkpath(newConfigPath);
 
@@ -71,14 +71,14 @@ void Migrations::migrateV3()
             return;
         }
 
-        QFile newConfigFile(newConfigPath + "/PotokVPN.conf");
+        QFile newConfigFile(newConfigPath + "/PotokYou.conf");
 
         if (!newConfigFile.exists()) {
             bool cpResult = QFile::copy(oldConfig.fileName(), newConfigFile.fileName());
             if (cpResult) {
                 oldConfig.remove();
                 QDir oldConfigDir(rootLocation + "/files/.config");
-                oldConfigDir.rmdir("PotokVPN.ORG");
+                oldConfigDir.rmdir("PotokYou.ORG");
             }
         }
     }

@@ -4,7 +4,7 @@
 #include <QFile>
 
 
-@implementation QIOSApplicationDelegate (PotokVPNDelegate)
+@implementation QIOSApplicationDelegate (PotokYouDelegate)
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {

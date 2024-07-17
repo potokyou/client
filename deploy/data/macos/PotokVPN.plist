@@ -3,10 +3,10 @@
 <plist version="1.0">
 <dict>
     <key>Label</key>
-    <string>PotokVPN-service</string>
+    <string>PotokYou-service</string>
     <key>ProgramArguments</key>
     <array>
-        <string>/Applications/PotokVPN.app/Contents/MacOS/PotokVPN-service</string>
+        <string>/Applications/PotokYou.app/Contents/MacOS/PotokYou-service</string>
     </array>
     <key>KeepAlive</key>
     <true/>

@@ -10,7 +10,7 @@
 
 constexpr const char *settingsKeyTag = "settingsKeyTag";
 constexpr const char *settingsIvTag = "settingsIvTag";
-constexpr const char *keyChainName = "PotokVPN-Keychain";
+constexpr const char *keyChainName = "PotokYou-Keychain";
 
 class SecureQSettings : public QObject
 {

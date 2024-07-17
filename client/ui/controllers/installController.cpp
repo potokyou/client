@@ -16,7 +16,7 @@
 #include "utilities.h"
 
 #ifdef Q_OS_IOS
-    #include <PotokVPN-Swift.h>
+    #include <PotokYou-Swift.h>
 #endif
 
 namespace
@@ -599,7 +599,7 @@ void InstallController::removeApiConfig(const int serverIndex)
         .arg(serverConfig[config_key::hostName].toString())
         .arg(serverConfig[config_key::vpnproto].toString());
 
-    PotokVPN::removeVPNC(vpncName.toStdString());
+    PotokYou::removeVPNC(vpncName.toStdString());
 #endif
 
     serverConfig.remove(config_key::dns1);

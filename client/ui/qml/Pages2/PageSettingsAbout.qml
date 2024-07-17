@@ -68,7 +68,7 @@ PageType {
                 Layout.leftMargin: 16
                 Layout.rightMargin: 16
 
-                text: qsTr("PotokVPN")
+                text: qsTr("PotokYou")
                 horizontalAlignment: Text.AlignHCenter
             }
 

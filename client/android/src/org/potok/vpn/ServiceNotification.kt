@@ -66,7 +66,7 @@ class ServiceNotification(private val context: Context) {
 
         return notificationBuilder
             .setSmallIcon(R.drawable.ic_potok_round)
-            .setContentTitle((serverName ?: "PotokVPN") + (protocol?.let { " $it" } ?: ""))
+            .setContentTitle((serverName ?: "PotokYou") + (protocol?.let { " $it" } ?: ""))
             .setContentText(context.getString(state))
             .setSubText(speedString)
             .setWhen(System.currentTimeMillis())
@@ -160,7 +160,7 @@ class ServiceNotification(private val context: Context) {
                         .setSound(null, null)
                         .setVibrationEnabled(false)
                         .setLightsEnabled(false)
-                        .setName("PotokVPN")
+                        .setName("PotokYou")
                         .setDescription(context.resources.getString(R.string.notificationChannelDescription))
                         .build()
                 )

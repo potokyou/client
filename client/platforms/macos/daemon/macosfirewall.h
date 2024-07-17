@@ -16,8 +16,8 @@
 // along with the Private Internet Access Desktop Client.  If not, see
 // <https://www.gnu.org/licenses/>.
 
-// Copyright (c) 2024 PotokVPN
-// This file has been modified for PotokVPN
+// Copyright (c) 2024 PotokYou
+// This file has been modified for PotokYou
 //
 // This file is based on the work of the Private Internet Access Desktop Client.
 // The original code of the Private Internet Access Desktop Client is copyrighted (c) 2023 Private Internet Access, Inc. and licensed under GPL3.

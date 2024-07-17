@@ -17,7 +17,7 @@
 
 #define TUNNEL_NAMED_PIPE \
   "\\\\."                 \
-  "\\pipe\\ProtectedPrefix\\Administrators\\AmneziaWG\\PotokVPN"
+  "\\pipe\\ProtectedPrefix\\Administrators\\AmneziaWG\\PotokYou"
 
 constexpr uint32_t WINDOWS_TUNNEL_MONITOR_TIMEOUT_MSEC = 2000;
 

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Installer>
-    <Name>PotokVPN</Name>
+    <Name>PotokYou</Name>
     <Version>@CMAKE_PROJECT_VERSION@</Version>
-    <Title>PotokVPN</Title>
-    <Publisher>PotokVPN</Publisher>
-    <StartMenuDir>PotokVPN</StartMenuDir>
-    <TargetDir>/Applications/PotokVPN.app</TargetDir>
+    <Title>PotokYou</Title>
+    <Publisher>PotokYou</Publisher>
+    <StartMenuDir>PotokYou</StartMenuDir>
+    <TargetDir>/Applications/PotokYou.app</TargetDir>
     <WizardDefaultWidth>600</WizardDefaultWidth>
     <WizardDefaultHeight>380</WizardDefaultHeight>
     <WizardStyle>Mac</WizardStyle>
@@ -21,7 +21,7 @@
         <Repository>
             <Url>https://potokvpn.org/updates/macos</Url>
             <Enabled>true</Enabled>
-            <DisplayName>PotokVPN - repository for macOS</DisplayName>
+            <DisplayName>PotokYou - repository for macOS</DisplayName>
         </Repository>
     </RemoteRepositories>
 </Installer>

@@ -25,7 +25,7 @@ class WireguardUtilsWindows final : public WireguardUtils {
   QString interfaceName() override {
     return WireguardUtilsWindows::s_interfaceName();
   }
-  static const QString s_interfaceName() { return "PotokVPN"; }
+  static const QString s_interfaceName() { return "PotokYou"; }
   bool addInterface(const InterfaceConfig& config) override;
   bool deleteInterface() override;
 

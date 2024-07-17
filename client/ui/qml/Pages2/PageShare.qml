@@ -118,7 +118,7 @@ PageType {
 
     QtObject {
         id: potokConnectionFormat
-        property string name: qsTr("For the PotokVPN app")
+        property string name: qsTr("For the PotokYou app")
         property var type: PageShare.ConfigType.PotokConnection
     }
     QtObject {

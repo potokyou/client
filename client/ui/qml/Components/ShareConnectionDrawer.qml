@@ -24,14 +24,14 @@ DrawerType2 {
     property string contentVisible
 
     property string configExtension: ".vpn"
-    property string configCaption: qsTr("Save PotokVPN config")
+    property string configCaption: qsTr("Save PotokYou config")
     property string configFileName: "potok_config"
 
     expandedHeight: parent.height * 0.9
 
     onClosed: {
         configExtension = ".vpn"
-        configCaption = qsTr("Save PotokVPN config")
+        configCaption = qsTr("Save PotokYou config")
         configFileName = "potok_config"
     }
 

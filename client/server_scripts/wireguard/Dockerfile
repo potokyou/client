@@ -1,6 +1,6 @@
 FROM alpine:3.15
 
-LABEL maintainer="PotokVPN"
+LABEL maintainer="PotokYou"
 
 #Install required packages
 RUN apk add --no-cache curl wireguard-tools dumb-init

@@ -966,8 +966,8 @@ Already installed containers were found on the server. All installed containers 
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="71"/>
-        <source>Potok is a premium VPN service aimed at bypassing restrictions.</source>
-        <translation>Potok - премиальный VPN сервис, нацеленный на обход блокировок.</translation>
+        <source>Potok is a premium internet data encryption service.</source>
+        <translation>Potok - премиальный сервис шифрования данных в интернете.</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="81"/>
@@ -1972,23 +1972,23 @@ and will not be shared or disclosed to the Potok or any third parties</source>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardStart.qml" line="130"/>
-        <source>Premium VPN service to bypass restrictions.</source>
-        <translation>Премиальный VPN сервис для обхода блокировок.</translation>
+        <source>Premium internet data encryption service.</source>
+        <translation>Премиальный сервис шифрования данных в интернете.</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardStart.qml" line="131"/>
-        <source> Helps you access blocked content without revealing your privacy.</source>
-        <translation> Помогает получить доступ к заблокированному контенту, не раскрывая вашу конфиденциальность.</translation>
+        <source> Helps you use the internet safely without exposing your privacy.</source>
+        <translation> Помогает безопасно использовать интернет, не раскрывая вашу конфиденциальность.</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardStart.qml" line="140"/>
-        <source>I have the data to connect</source>
-        <translation>У меня есть данные для подключения</translation>
+        <source>Connect</source>
+        <translation>Подключить</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardStart.qml" line="160"/>
-        <source>I have nothing</source>
-        <translation>У меня ничего нет</translation>
+        <source>Register</source>
+        <translation>Регистрация</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardStart.qml" line="163"/>

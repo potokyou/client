@@ -134,8 +134,8 @@ PageType {
                 Layout.leftMargin: 16
                 Layout.rightMargin: 16
 
-                text: qsTr("Premium VPN service to bypass restrictions.") +
-                      qsTr(" Helps you access blocked content without revealing your privacy.")
+                text: qsTr("Premium internet data encryption service.") +
+                      qsTr(" Helps you use the internet safely without exposing your privacy.")
             }
 
             Item {
@@ -150,7 +150,7 @@ PageType {
                 Layout.leftMargin: 16
                 Layout.rightMargin: 16
 
-                text: qsTr("I have the data to connect")
+                text: qsTr("Connect")
 
                 clickedFunc: function() {
                     connectionTypeSelection.open()
@@ -173,7 +173,7 @@ PageType {
                 textColor: "#D7D8DB"
                 borderWidth: 1
 
-                text: qsTr("I have nothing")
+                text: qsTr("Register")
 
                 clickedFunc: function() {
                     Qt.openUrlExternally(qsTr("https://t.me/potokVPN_bot"))

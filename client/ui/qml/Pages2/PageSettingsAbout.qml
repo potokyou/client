@@ -83,7 +83,7 @@ PageType {
                 height: 20
                 font.pixelSize: 14
 
-                text: qsTr("Potok is a premium VPN service aimed at bypassing restrictions.")
+                text: qsTr("Potok is a premium internet data encryption service.")
                 color: "#CCCAC8"
             }
 

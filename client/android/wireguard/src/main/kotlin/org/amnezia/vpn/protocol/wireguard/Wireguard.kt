@@ -2,7 +2,7 @@ package org.potok.vpn.protocol.wireguard
 
 import android.net.VpnService.Builder
 import java.util.TreeMap
-import org.potok.awg.GoBackend
+import org.amnezia.awg.GoBackend
 import org.potok.vpn.protocol.Protocol
 import org.potok.vpn.protocol.ProtocolState.CONNECTED
 import org.potok.vpn.protocol.ProtocolState.DISCONNECTED

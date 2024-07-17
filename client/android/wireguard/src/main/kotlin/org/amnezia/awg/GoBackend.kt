@@ -1,4 +1,4 @@
-package org.potok.awg
+package org.amnezia.awg
 
 object GoBackend {
     external fun awgGetConfig(handle: Int): String?

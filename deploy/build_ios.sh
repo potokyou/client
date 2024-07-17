@@ -59,7 +59,9 @@ if [ "${IOS_SIGNING_CERT_BASE64+x}" ]; then
   security default-keychain
   security list-keychains
 
+  echo "Importing Trust certificate..."
   security import $TRUST_CERT_CER -k $KEYCHAIN -P "" -T /usr/bin/codesign
+  echo "Importing Signing certificate..."
   security import $SIGNING_CERT_P12 -k $KEYCHAIN -P $IOS_SIGNING_CERT_PASSWORD -T /usr/bin/codesign
 
   security set-key-partition-list -S "apple-tool:,apple:,codesign:" -s -k $KEYCHAIN_PASS $KEYCHAIN

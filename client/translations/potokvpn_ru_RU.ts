@@ -1978,7 +1978,7 @@ and will not be shared or disclosed to the Potok or any third parties</source>
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardStart.qml" line="131"/>
         <source> Helps you use the internet safely without exposing your privacy.</source>
-        <translation> Помогает безопасно использовать интернет, не раскрывая вашу конфиденциальность.</translation>
+        <translation> Помогает безопасно использовать сеть в любом месте, не раскрывая вашу конфиденциальность.</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardStart.qml" line="140"/>

@@ -31,8 +31,8 @@ set_target_properties(networkextension PROPERTIES
     XCODE_ATTRIBUTE_CODE_SIGN_IDENTITY[variant=Debug] "Apple Development"
 
     XCODE_ATTRIBUTE_CODE_SIGN_STYLE Manual
-    XCODE_ATTRIBUTE_PROVISIONING_PROFILE_SPECIFIER "match AppStore org.potok.PotokYou.network-extension"
-    XCODE_ATTRIBUTE_PROVISIONING_PROFILE_SPECIFIER[variant=Debug] "match Development org.potok.PotokYou.network-extension"
+    XCODE_ATTRIBUTE_PROVISIONING_PROFILE_SPECIFIER "org.potok.PotokYou.network-extension"
+    XCODE_ATTRIBUTE_PROVISIONING_PROFILE_SPECIFIER[variant=Debug] "org.potok.PotokYou.network-extension"
 )
 
 set_target_properties(networkextension PROPERTIES

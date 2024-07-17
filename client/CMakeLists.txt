@@ -287,7 +287,7 @@ if(APPLE)
         set(BUILD_IOS_GROUP_IDENTIFIER group.org.potok.PotokYou CACHE STRING "iOS Group identifier")
     endif()
     if(NOT BUILD_VPN_DEVELOPMENT_TEAM)
-        set(BUILD_VPN_DEVELOPMENT_TEAM VR34F9FR8V CACHE STRING "Potok VPN Development Team")
+        set(BUILD_VPN_DEVELOPMENT_TEAM 3FLBWA2Q74 CACHE STRING "Potok VPN Development Team")
     endif()
 
     set(CMAKE_XCODE_GENERATE_SCHEME FALSE)

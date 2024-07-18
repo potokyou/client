@@ -2,7 +2,24 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-  <key>method</key>
-  <string>app-store</string>
+	<key>method</key>
+	<string>app-store</string>
+	<key>teamID</key>
+	<string>3FLBWA2Q74</string>
+	<key>compileBitcode</key>
+	<false/>
+	<key>uploadSymbols</key>
+	<true/>
+	<key>signingStyle</key>
+	<string>manual</string>
+	<key>signingCertificate</key>
+	<string>iOS Distribution</string>
+	<key>provisioningProfiles</key>
+	<dict>
+		<key>org.potok.PotokYou.network-extension</key>
+		<string>9ef30fdc-abf7-440b-9d14-e9c6fd85d21b</string>
+		<key>com.client.appname.watchkitapp</key>
+		<string>edbbfac6-fa65-4b79-a106-1d3fa193577c</string>
+	</dict>
 </dict>
 </plist>

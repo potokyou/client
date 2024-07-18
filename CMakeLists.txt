@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.25.0 FATAL_ERROR)
 
 set(PROJECT PotokYou)
 
-project(${PROJECT} VERSION 1.0.0.1
+project(${PROJECT} VERSION 1.0.0.2
         DESCRIPTION "PotokYou"
         HOMEPAGE_URL "https://t.me/potokVPN_bot"
 )

@@ -209,13 +209,12 @@ jobs:
         IOS_APP_PROVISIONING_PROFILE: ${{ secrets.IOS_APP_PROVISIONING_PROFILE }}
         IOS_NE_PROVISIONING_PROFILE: ${{ secrets.IOS_NE_PROVISIONING_PROFILE }}
 
-    - name: 'Upload appstore .ipa and dSYMs to artifacts'
+    - name: 'Upload .app to artifacts'
       uses: actions/upload-artifact@v4
       with:
-        name: app-store ipa & dsyms
+        name: app-store app
         path: |
-          ${{ github.workspace }}/PotokYou-iOS.ipa
-          ${{ github.workspace }}/*.app.dSYM.zip
+          ${{ github.workspace }}/build-ios/client/Release-iphoneos/PotokYou.app
         retention-days: 7
 
 # ------------------------------------------------------

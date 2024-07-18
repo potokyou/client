@@ -209,6 +209,17 @@ jobs:
         IOS_APP_PROVISIONING_PROFILE: ${{ secrets.IOS_APP_PROVISIONING_PROFILE }}
         IOS_NE_PROVISIONING_PROFILE: ${{ secrets.IOS_NE_PROVISIONING_PROFILE }}
 
+    - name: 'DEBUG: List output directory'
+      run: |
+          ls ${{ github.workspace }}/build-ios/output/PotokYou.ipa
+
+    - name: 'Upload ipa file for App Store'
+      uses: actions/upload-artifact@v4
+      with:
+        name: PotokYou_iOS_AppStore
+        path: ${{ github.workspace }}/build-ios/output/PotokYou.ipa
+        retention-days: 7
+
     - name: 'Upload unpacked artifact'
       uses: actions/upload-artifact@v4
       with:

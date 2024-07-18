@@ -97,5 +97,11 @@ xcodebuild \
 -destination "generic/platform=iOS,name=Any iOS'" \
 -project $BUILD_DIR/PotokYou.xcodeproj
 
+# Build app into archive
+xcodebuild "OTHER_CODE_SIGN_FLAGS=--keychain '$KEYCHAIN_FILE'" -project $BUILD_DIR/PotokYou.xcodeproj -scheme PotokYou -archivePath $BUILD_DIR/PotokYou.xcarchive archive
+
+# Export .ipa
+xcodebuild "OTHER_CODE_SIGN_FLAGS=--keychain '$KEYCHAIN_FILE'" -exportArchive -archivePath $BUILD_DIR/PotokYou.xcarchive -exportPath $BUILD_DIR/output -exportOptionsPlist $PROJECT_DIR/deploy/ExportOptions.plist
+
 # restore keychain
 security default-keychain -s login.keychain

@@ -57,7 +57,7 @@ PageType {
                 Layout.leftMargin: 16
 
                 headerText: qsTr("Server connection")
-                descriptionText: qsTr("The configuration file is given to you after paying for the subscription through our Telegram bot.")
+                descriptionText: qsTr("The configuration file must be obtained through our Telegram bot.")
             }
 
             Header2TextType {

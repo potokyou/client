@@ -228,7 +228,7 @@ PageType {
 
                 clickedFunction: function() {
                     var headerText = qsTr("Reset settings and remove all data from the application?")
-                    var descriptionText = qsTr("All settings will be reset to default. All installed PotokYou services will still remain on the server.")
+                    var descriptionText = qsTr("All settings will be reset to default. You can get a new configs at any time through the Telegram bot.")
                     var yesButtonText = qsTr("Continue")
                     var noButtonText = qsTr("Cancel")
 

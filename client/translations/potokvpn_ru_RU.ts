@@ -1084,8 +1084,8 @@ Already installed containers were found on the server. All installed containers 
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsApplication.qml" line="167"/>
-        <source>All settings will be reset to default. All installed PotokYou services will still remain on the server.</source>
-        <translation>Все данные из приложения будут удалены, все установленные сервисы PotokYou останутся на сервере.</translation>
+        <source>All settings will be reset to default. You can get a new configs at any time through the Telegram bot.</source>
+        <translation>Все данные из приложения будут удалены, но вы можете в любой момент получить новые конфиги через Telegram бота.</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsApplication.qml" line="168"/>
@@ -1491,8 +1491,8 @@ Already installed containers were found on the server. All installed containers 
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsServerData.qml" line="174"/>
-        <source>All installed PotokYou services will still remain on the server.</source>
-        <translation>Все установленные сервисы и протоколы Potok всё ещё останутся на сервере.</translation>
+        <source>You can get a new config at any time through the Telegram bot.</source>
+        <translation>Вы можете в любой момент получить новый конфиг через Telegram-бота.</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsServerData.qml" line="199"/>
@@ -1719,8 +1719,8 @@ It&apos;s okay as long as it&apos;s from someone you trust.</source>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="51"/>
-        <source>The configuration file is given to you after paying for the subscription through our Telegram bot.</source>
-        <translation>Файл конфигурации выдается вам после оплаты подписки через нашего Telegram бота.</translation>
+        <source>The configuration file must be obtained through our Telegram bot.</source>
+        <translation>Файл конфигурации необходимо получить через нашего Telegram бота.</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="60"/>

@@ -173,7 +173,7 @@ PageType {
 
                 clickedFunction: function() {
                     var headerText = qsTr("Do you want to remove the server from application?")
-                    var descriptionText = qsTr("All installed PotokYou services will still remain on the server.")
+                    var descriptionText = qsTr("You can get a new config at any time through the Telegram bot.")
                     var yesButtonText = qsTr("Continue")
                     var noButtonText = qsTr("Cancel")
 

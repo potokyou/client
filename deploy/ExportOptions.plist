@@ -17,9 +17,9 @@
 	<key>provisioningProfiles</key>
 	<dict>
 		<key>org.potok.PotokVPN</key>
-		<string>9ef30fdc-abf7-440b-9d14-e9c6fd85d21b</string>
+		<string>798414b4-09e0-46c3-a1de-f0f63677b980</string>
 		<key>org.potok.PotokVPN.network-extension</key>
-		<string>edbbfac6-fa65-4b79-a106-1d3fa193577c</string>
+		<string>cad7ccf3-2140-410c-a4af-766ea64d3276</string>
 	</dict>
 </dict>
 </plist>

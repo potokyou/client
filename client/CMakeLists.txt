@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.25.0 FATAL_ERROR)
 
-set(PROJECT PotokYou)
+set(PROJECT PotokVPN)
 project(${PROJECT})
 
 
@@ -278,13 +278,13 @@ if(APPLE)
     cmake_policy(SET CMP0114 NEW)
 
     if(NOT BUILD_OSX_APP_IDENTIFIER)
-        set(BUILD_OSX_APP_IDENTIFIER org.potok.PotokYou CACHE STRING "OSX Application identifier")
+        set(BUILD_OSX_APP_IDENTIFIER org.potok.PotokVPN CACHE STRING "OSX Application identifier")
     endif()
     if(NOT BUILD_IOS_APP_IDENTIFIER)
-        set(BUILD_IOS_APP_IDENTIFIER org.potok.PotokYou CACHE STRING "iOS Application identifier")
+        set(BUILD_IOS_APP_IDENTIFIER org.potok.PotokVPN CACHE STRING "iOS Application identifier")
     endif()
     if(NOT BUILD_IOS_GROUP_IDENTIFIER)
-        set(BUILD_IOS_GROUP_IDENTIFIER group.org.potok.PotokYou CACHE STRING "iOS Group identifier")
+        set(BUILD_IOS_GROUP_IDENTIFIER group.org.potok.PotokVPN CACHE STRING "iOS Group identifier")
     endif()
     if(NOT BUILD_VPN_DEVELOPMENT_TEAM)
         set(BUILD_VPN_DEVELOPMENT_TEAM 3FLBWA2Q74 CACHE STRING "Potok VPN Development Team")

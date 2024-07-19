@@ -1,3 +1,3 @@
 FROM atmoz/sftp
 
-LABEL maintainer="PotokYou" 
+LABEL maintainer="PotokVPN" 

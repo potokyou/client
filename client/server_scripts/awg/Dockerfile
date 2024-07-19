@@ -1,6 +1,6 @@
 FROM potokvpn/potok-wg:latest
 
-LABEL maintainer="PotokYou"
+LABEL maintainer="PotokVPN"
 
 #Install required packages
 RUN apk add --no-cache bash curl dumb-init

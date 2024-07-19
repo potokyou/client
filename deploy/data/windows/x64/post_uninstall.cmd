@@ -1,12 +1,12 @@
 set PotokPath=%~dp0
 echo %PotokPath%
 
-"%PotokPath%\PotokYou.exe" -c
+"%PotokPath%\PotokVPN.exe" -c
 timeout /t 1
-sc stop PotokYou-service
-sc delete PotokYou-service
-sc stop AmneziaWGTunnel$PotokYou
-sc delete AmneziaWGTunnel$PotokYou
-taskkill /IM "PotokYou-service.exe" /F
-taskkill /IM "PotokYou.exe" /F
+sc stop PotokVPN-service
+sc delete PotokVPN-service
+sc stop AmneziaWGTunnel$PotokVPN
+sc delete AmneziaWGTunnel$PotokVPN
+taskkill /IM "PotokVPN-service.exe" /F
+taskkill /IM "PotokVPN.exe" /F
 exit /b 0

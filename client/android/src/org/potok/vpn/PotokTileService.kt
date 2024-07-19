@@ -29,7 +29,7 @@ import org.potok.vpn.protocol.ProtocolState.UNKNOWN
 import org.potok.vpn.util.Log
 
 private const val TAG = "PotokTileService"
-private const val DEFAULT_TILE_LABEL = "PotokYou"
+private const val DEFAULT_TILE_LABEL = "PotokVPN"
 
 class PotokTileService : TileService() {
 

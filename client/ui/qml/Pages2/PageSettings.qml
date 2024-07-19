@@ -115,7 +115,7 @@ PageType {
                 id: about
                 Layout.fillWidth: true
 
-                text: qsTr("About PotokYou")
+                text: qsTr("About PotokVPN")
                 rightImageSource: "qrc:/images/controls/chevron-right.svg"
                 leftImageSource: "qrc:/images/controls/download.svg"
 

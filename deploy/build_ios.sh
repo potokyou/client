@@ -12,7 +12,7 @@ mkdir -p $BUILD_DIR
 echo "Project dir: ${PROJECT_DIR}"
 echo "Build dir: ${BUILD_DIR}"
 
-APP_NAME=PotokYou
+APP_NAME=PotokVPN
 APP_FILENAME=$APP_NAME.app
 APP_DOMAIN=org.potokvpn.package
 PLIST_NAME=$APP_NAME.plist
@@ -93,15 +93,15 @@ fi
 xcodebuild \
 "OTHER_CODE_SIGN_FLAGS=--keychain '$KEYCHAIN_FILE'" \
 -configuration Release \
--scheme PotokYou \
+-scheme PotokVPN \
 -destination "generic/platform=iOS,name=Any iOS'" \
--project $BUILD_DIR/PotokYou.xcodeproj
+-project $BUILD_DIR/PotokVPN.xcodeproj
 
 # Build app into archive
-xcodebuild "OTHER_CODE_SIGN_FLAGS=--keychain '$KEYCHAIN_FILE'" -configuration Release -project $BUILD_DIR/PotokYou.xcodeproj -scheme PotokYou -archivePath $BUILD_DIR/PotokYou.xcarchive archive
+xcodebuild "OTHER_CODE_SIGN_FLAGS=--keychain '$KEYCHAIN_FILE'" -configuration Release -project $BUILD_DIR/PotokVPN.xcodeproj -scheme PotokVPN -archivePath $BUILD_DIR/PotokVPN.xcarchive archive
 
 # Export .ipa
-xcodebuild "OTHER_CODE_SIGN_FLAGS=--keychain '$KEYCHAIN_FILE'" -configuration Release -exportArchive -archivePath $BUILD_DIR/PotokYou.xcarchive -exportPath $BUILD_DIR/output -exportOptionsPlist $PROJECT_DIR/deploy/ExportOptions.plist
+xcodebuild "OTHER_CODE_SIGN_FLAGS=--keychain '$KEYCHAIN_FILE'" -configuration Release -exportArchive -archivePath $BUILD_DIR/PotokVPN.xcarchive -exportPath $BUILD_DIR/output -exportOptionsPlist $PROJECT_DIR/deploy/ExportOptions.plist
 
 # restore keychain
 security default-keychain -s login.keychain

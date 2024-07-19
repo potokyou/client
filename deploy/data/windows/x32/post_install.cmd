@@ -1,5 +1,5 @@
-sc stop AmneziaWGTunnel$PotokYou
-sc delete AmneziaWGTunnel$PotokYou
-taskkill /IM "PotokYou-service.exe" /F
-taskkill /IM "PotokYou.exe" /F
+sc stop AmneziaWGTunnel$PotokVPN
+sc delete AmneziaWGTunnel$PotokVPN
+taskkill /IM "PotokVPN-service.exe" /F
+taskkill /IM "PotokVPN.exe" /F
 exit /b 0

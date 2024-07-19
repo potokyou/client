@@ -16,9 +16,9 @@
 	<string>iOS Distribution</string>
 	<key>provisioningProfiles</key>
 	<dict>
-		<key>org.potok.PotokYou</key>
+		<key>org.potok.PotokVPN</key>
 		<string>9ef30fdc-abf7-440b-9d14-e9c6fd85d21b</string>
-		<key>org.potok.PotokYou.network-extension</key>
+		<key>org.potok.PotokVPN.network-extension</key>
 		<string>edbbfac6-fa65-4b79-a106-1d3fa193577c</string>
 	</dict>
 </dict>

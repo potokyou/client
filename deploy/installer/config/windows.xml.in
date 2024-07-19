@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Installer>
-    <Name>PotokYou</Name>
+    <Name>PotokVPN</Name>
     <Version>@CMAKE_PROJECT_VERSION@</Version>
-    <Title>PotokYou</Title>
-    <Publisher>PotokYou</Publisher>
-    <StartMenuDir>PotokYou</StartMenuDir>
-    <TargetDir>@RootDir@/Program Files/PotokYou</TargetDir>
+    <Title>PotokVPN</Title>
+    <Publisher>PotokVPN</Publisher>
+    <StartMenuDir>PotokVPN</StartMenuDir>
+    <TargetDir>@RootDir@/Program Files/PotokVPN</TargetDir>
     <WizardDefaultWidth>600</WizardDefaultWidth>
     <WizardDefaultHeight>380</WizardDefaultHeight>
     <WizardStyle>Modern</WizardStyle>

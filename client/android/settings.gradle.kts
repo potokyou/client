@@ -26,7 +26,7 @@ plugins {
     id("settings-property-delegate")
 }
 
-rootProject.name = "PotokYou"
+rootProject.name = "PotokVPN"
 rootProject.buildFileName = "build.gradle.kts"
 
 include(":qt")

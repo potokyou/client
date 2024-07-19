@@ -1,6 +1,6 @@
 #!/bin/bash
 
-APP_NAME=PotokYou
+APP_NAME=PotokVPN
 PLIST_NAME=$APP_NAME.plist
 LAUNCH_DAEMONS_PLIST_NAME=/Library/LaunchDaemons/$PLIST_NAME
 

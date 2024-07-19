@@ -137,11 +137,11 @@ disabled after 14 days, and all log files will be deleted.")
                         onClicked: {
                             var fileName = ""
                             if (GC.isMobile()) {
-                                fileName = "PotokYou.log"
+                                fileName = "PotokVPN.log"
                             } else {
                                 fileName = SystemController.getFileName(qsTr("Save"),
                                                                         qsTr("Logs files (*.log)"),
-                                                                        StandardPaths.standardLocations(StandardPaths.DocumentsLocation) + "/PotokYou",
+                                                                        StandardPaths.standardLocations(StandardPaths.DocumentsLocation) + "/PotokVPN",
                                                                         true,
                                                                         ".log")
                             }

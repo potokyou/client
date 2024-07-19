@@ -1,5 +1,5 @@
 FROM alpine:3.15
-LABEL maintainer="PotokYou"
+LABEL maintainer="PotokVPN"
 
 ARG SS_RELEASE="v1.18.1"
 

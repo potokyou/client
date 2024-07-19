@@ -14,7 +14,7 @@ set PROJECT_DIR=%cd%
 set SCRIPT_DIR=%PROJECT_DIR:"=%\deploy
 
 set WORK_DIR=%SCRIPT_DIR:"=%\build_%BUILD_ARCH:"=%
-set APP_NAME=PotokYou
+set APP_NAME=PotokVPN
 set APP_FILENAME=%APP_NAME:"=%.exe
 set APP_DOMAIN=org.potokvpn.package
 set OUT_APP_DIR=%WORK_DIR:"=%\client\release

@@ -1,10 +1,10 @@
 #!/usr/bin/env xdg-open
 [Desktop Entry]
 Type=Application
-Name=PotokYou
+Name=PotokVPN
 Version=@CMAKE_PROJECT_VERSION@
 Comment=Client of your self-hosted VPN
-Exec=PotokYou
-Icon=/usr/share/pixmaps/PotokYou.png
+Exec=PotokVPN
+Icon=/usr/share/pixmaps/PotokVPN.png
 Categories=Network;Qt;Security;
 Terminal=false
